@@ -1,0 +1,372 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.229763387297634
+classification: :game
+created_at: 2012-08-27 13:32:52.000000000 Z
+domain: :freestyle
+down_votes: 16
+entry: Ready to (wait for it)... reposition yourself?
+feedback_total: 6
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: Build a Resume
+num_exercises: 8
+num_published_exercises: 8
+num_published_sections: 1
+num_readiness_feedbacks: 28
+num_sections: 1
+num_user_ratings: 803
+project_scope: 0
+published: true
+rating: 117.01889808580462
+read_feedback_total: 2
+readiness: 99.6
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-29 01:08:28.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 3396.5
+up_votes: 160
+updated_at: 2012-11-26 16:40:09.076000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-27 13:32:52.000000000 Z
+  default_view: :console_and_editor
+  entry: Now that you know CSS, it's time to use your newfound skills to craft a resume
+    to show them off.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3LgxT1wACBQ9U
+    created_at: 2012-08-27 13:33:34.000000000 Z
+    default_code: ''
+    entry: ! 'You''ll be using your CSS skills to style an eye-catching resume. You''ll
+      need to call on your knowledge of CSS selectors, classes/IDs, margins, padding,
+      borders, and positioning to make everything look exactly the way you want it
+      to.
+
+
+      That said, this project will be relatively hands-off. We''ve put a demo resume
+      in the editor (check the Result tab) for you to use as a template, but you should
+      feel free to style your resume the way you''d like.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Ready to roll? Click Run to continue!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What you'll be building
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t<div
+        id=\"header\">\n\t\t\t<p id=\"name\">Your Name Here</p>\n\t\t\t<a href=\"mailto:you@yourdomain.com\"><p
+        id=\"email\">you@yourdomain.com</p></a>\n\t\t</div>\n\t\t<div class=\"left\"></div>\n\t\t<div
+        class=\"right\">\n\t\t\t<h4>Objective</h4>\n\t\t\t<p>To take a position as
+        a software engineer.</p>\n\t\t\t<h4>Experience</h4>\n\t\t\t<p>Junior Developer,
+        Software Company (2010 - Present)</p>\n\t\t\t<ul>\n\t\t\t\t<li>Designed and
+        implemented end-user features for Flagship Product</li>\n\t\t\t\t<li>Wrote
+        third-party JavaScript and Ruby libraries</li>\n\t\t\t</ul>\n\t\t\t<h4>Skills</h4>\n\t\t\t<p>Languages:
+        C#, JavaScript, Python, Ruby</p>\n\t\t\t<p>Frameworks: .NET, Node.js, Django,
+        Ruby on Rails</p>\n\t\t\t<h4>Education</h4>\n\t\t\t<p>BS, Economics, My University</p>\n\t\t\t<ul>\n\t\t\t\t<li>Award
+        for best senior thesis</li>\n\t\t\t\t<li>GPA: 3.8</li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<div
+        id=\"footer\">\n\t\t\t<p>123 Your Street, Anytown, State 12345-6789 | Tel:
+        (555) 555-5555</p>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "div {\n\tborder-radius: 5px;\n}\n\n#header {\n\tz-index: 1;\n\tposition:
+        fixed;\n\twidth: 97.5%;\n\tmargin-top: -20px;\n\theight: 60px;\n\tbackground-color:
+        #668284;\n\tmargin-bottom: 10px;\n}\n\n#name {\n\tfloat:left;\n\tmargin-left:
+        5px;\n\tpadding-top: 5px;\n\tfont-size: 16px;\n\tfont-family: Verdana, sans-serif;\n\tcolor:
+        #ffffff;\n}\n\n#email{\n\tfloat:right;\n\tmargin-right: 5px;\n\tpadding-top:
+        5px;\n\tfont-size: 16px;\n\tfont-family: Verdana, sans-serif;\n\tcolor: #ffffff;\n}\n\nh4
+        {\n\tmargin-left: 5px;\n\tmargin-bottom: 15px;\n\tfont-family: Verdana, sans-serif;\n}\n\n.right
+        p {\n\tmargin-left: 5px;\n\tmargin-right: 5px;\n\tmargin-top: -10px;\n\tfont-family:
+        Garamond, serif;\n\tcolor: #000000;\n}\n\nli {\n\tlist-style-type: square;\n}\n\na:hover
+        {\n\tfont-weight: bold;\n}\n\n.left {\n\tposition: relative;\n\tfloat: left;\n\tmargin-top:
+        50px;\n\twidth: 10%;\n\theight: 400px;\n\tbackground-color: #B9D7D9;\n\tmargin-bottom:
+        10px;\n}\n\n.right {\n\tposition: relative;\n\tfloat: right;\n\tmargin-top:
+        50px;\n\twidth: 88%;\n\theight: 400px;\n\tbackground-color: #F4EBC3;\n\tmargin-bottom:
+        10px;\n}\n\n#footer {\n\tposition: relative;\n\theight: 50px;\n\tbackground-color:
+        #668284;\n\tclear: both;\n\tfont-family: Verdana, sans-serif;\n\tfont-size:
+        14px;\n\ttext-align: center;\n\tcolor: #ffffff;\n}\n\n#footer p {\n\tposition:
+        relative;\n\tpadding-top: 15px;\n}"
+    test_functions: return true;
+    updated_at: 2012-08-28 16:53:56.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3L+yTDwACBSfb
+    created_at: 2012-08-27 13:33:35.000000000 Z
+    default_code: ''
+    entry: ! 'First, you''ll want to create four `<div>`s: one for the header, one
+      for the left column, one for the right column, and one for the footer.'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'On the HTML tab, create four `<div>`s: one with an ID of `"header"`,
+      one with a class of `"left"`, one with a class of `"right"`, and one with an
+      ID of `"footer"`.
+
+
+      On the CSS tab, give all your `div`s whatever styling you like! We recommend
+      giving them all a `border-radius` of `5px` for that rounded corner look.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Laying out your divs
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''div#header'').to.exist("Did you create a <div> with an
+      ID of ''header''?");
+
+      $e(''div#footer'').to.exist("Did you create a <div> with an ID of ''footer''?");
+
+      $e(''div.left'').to.exist("Did you create a <div> with a class of ''left''?");
+
+      $e(''div.right'').to.exist("Did you create a <div> with a class of ''right''?");'
+    updated_at: 2012-10-19 14:33:35.034000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3MeaOXAACBRID
+    created_at: 2012-08-27 13:33:37.000000000 Z
+    default_code: ''
+    entry: ! 'Good! Now let''s add dimensions and color to our `<div>`s so we can
+      see them.
+
+
+      You can give the sections of your resume any sizing or color you like—feel free
+      to look back at the first exercise in this project to see what sizing we used.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: ''
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Sizing and color
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "if(code['stylesheet.css'].match(/height|width/i) === null){\n\treturn
+      \"It looks like you haven't added any size (height and width) properties in
+      your CSS!\";\n}\n\nif(code['stylesheet.css'].match(/color/i) === null){\n\treturn
+      \"It looks like you haven't set any colors in your CSS!\";\n}\n\nreturn true;"
+    updated_at: 2012-08-28 16:57:29.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3L+yTDwACBSfd
+    created_at: 2012-08-27 13:33:35.000000000 Z
+    default_code: ''
+    entry: ! 'Great work!
+
+
+      Now it''s time to fix your header—literally—so it stays put on the page as people
+      reading your resume scroll down.
+
+
+      If you read the first exercise''s CSS carefully, you''ll see we''ve snuck in
+      a little trick for you: the `z-index` property. You can think of the z-index
+      as a measure of importance: the higher an element''s z-index, the higher it
+      will be "stacked" on the page. Giving your header a z-index of 1 while not giving
+      any of the other elements a z-index ensures that your header will sit "on top
+      of" your other elements and won''t get stuck behind them.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: Give your `#header` a `position` of `fixed` and a `z-index` of `1`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Fixing your header
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''#header'').to.have.css(''position'',''fixed'',"Did you
+      remember to give your #header a position of fixed?");
+
+      $e(''#header'').to.have.css(''z-index'',''1'',"Did you remember to set your
+      #header''s z-index to 1?");'
+    updated_at: 2012-11-12 15:56:57.630000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3MKSIxwACBQBV
+    created_at: 2012-08-27 13:33:36.000000000 Z
+    default_code: ''
+    entry: ! 'Excellent! Now your readers will always be able to see your header.
+
+
+      Next up: float your columns to the proper sides!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: Float the `div` with a class of `.left` to the left and the `div`
+      with a class of `.right` to the right.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Floating left and right
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''.left'').to.have.css(''float'',''left'',"Did you remember
+      to float .left to the left?");
+
+      $e(''.right'').to.have.css(''float'',''right'',"Did you remember to float .right
+      to the right?");'
+    updated_at: 2012-11-12 15:58:16.709000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDz3kpAQGAACAKzu
+    created_at: 2012-08-28 16:53:38.000000000 Z
+    default_code: ''
+    entry: Great! Now we just need to make sure our footer `clear`s the left and right
+      columns (that is, sits below them on the page).
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Set your `#footer`'s `clear` property to `both`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Clearing the footer
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''#footer'').to.have.css(''clear'',''both'',"Did you remember
+      to set your #footer to clear:both?");'
+    updated_at: 2012-11-12 15:58:40.424000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3MGFRGQACBSGf
+    created_at: 2012-08-27 13:33:36.000000000 Z
+    default_code: ''
+    entry: ! 'Finally, let''s add the content of our resume: headers to describe experience,
+      skills, and education, paragraphs to add details, and lists to... well, make
+      lists!'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: ! 'Include any combination of headers (any kind: h1 through h6),
+      paragraphs, and lists (ordered or unordered) you''d like. Just be sure to include
+      at least one header, one paragraph, and one list.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Headings, paragraphs, and lists
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "if(code['index.html'].match(/\\<h(1|2|3|4|5|6)\\>/) === null){\n\treturn
+      \"It looks like you didn't include any headers.\";\n}\n\n$e('p').to.exist(\"It
+      looks like you didn't include any paragraphs.\");\n\nif(code['index.html'].match(/\\<(u|o)l\\>/)
+      === null){\n\treturn \"It looks like you didn't include any lists.\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-08-28 17:03:12.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3M8BqNQACBSe0
+    created_at: 2012-08-27 13:33:39.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! You''ve created your resume using HTML and CSS. You''ve
+      come a long way since you first started!
+
+
+      Go ahead and make any additional changes you''d like: add or remove columns,
+      reshape `<div>`s (you can experiment with `border-radius`), switch up colors,
+      change font type, and so on.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: ! 'When you''re ready, click Run to complete this project and move
+      on to your next great adventure: JavaScript!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Victory!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: return true;
+    updated_at: 2012-08-28 17:04:33.000000000 Z
+    view: :console_and_editor
+  feedback_total: 6
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Projecting Confidence
+  num_forum_answers: 2
+  num_forum_questions: 2
+  published: true
+  read_feedback_total: 2
+  updated_at: 2012-11-12 15:58:40.444000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

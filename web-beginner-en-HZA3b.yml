@@ -1,0 +1,716 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.506514257620452
+classification: :lesson
+created_at: 2012-08-10 03:47:17.000000000 Z
+domain: :freestyle
+down_votes: 399
+entry: Базовые знания об HTML
+feedback_total: 146
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: ru
+name: Основы языка разметки HTML
+num_exercises: 13
+num_published_exercises: 13
+num_published_sections: 3
+num_readiness_feedbacks: 283
+num_sections: 3
+num_user_ratings: 4068
+project_scope: 0
+published: true
+published_at: 2012-10-10 15:18:00.639000000 Z
+rating: 7004.680091913457
+read_feedback_total: 106
+readiness: 90.0
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-22 02:36:24.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 18332.5
+up_votes: 7446
+updated_at: 2012-11-26 16:40:56.543000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TsQ+SqeP5gABAAdS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-10 03:47:17.000000000 Z
+  default_view: :console_and_editor
+  entry: В этом уроке вы узнаете о том, как построены сайты в сети интернет.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCSERcWnJQACBpNf
+    created_at: 2012-08-10 03:47:17.000000000 Z
+    default_code: ''
+    entry: ! 'Каждая веб-страница в сети интернет - создана с помощью языка, называемом HTML. You
+      can think of HTML as the skeleton that gives every webpage structure. В этом уроке мы узнаем о том,
+      как добавить на веб-страницу параграфы, заголовки, изображения и ссылки.
+
+
+      В редакторе, котрый расположен справа, есть закладка с именем `test.html`. В этом редакторе мы будем
+      создавать нашу веб-страницу. Видите код расположеный в `<>`? Это и есть HTML! Все что находится между `<>`
+      - называется **тег**. Как и любой другой язык программирования, у него тоже есть свой **синтаксис** 
+      (система условных обозначений).
+
+
+      Когда Вы нажмете на кнопку Run, закладка результата будет вести себя как интернет **браузер** (*например*
+      Chrome, Firefox, или Internet Explorer). Задача браузер - превратить код в `test.html` в понятную человеку
+      веб-страницу! Он знает как создать разметку на основании синтаксиса HTML'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 15
+      total: 43
+      typo: 13
+      positive_feedback: 5
+      correctness_test_issue: 8
+      other: 2
+    from_console: false
+    hint: ''
+    instruction: ! "1. Справа у нас есть редактор файла `test.html`. \n2. Поместите любой текст на строке 2
+    to anything you like!\n3. Также Вы можете увидеть закладку 'Results'. Она похожа на браузер.\n4. Нажмите Run,
+    и Вы увидите как будет смотреться `test.html` в веб-брузере. Вы видите нашу страницу? Эдемент разметки 
+    `<strong></strong>` сделал наш текст жирным!"
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Why learn HTML?
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n\t<strong>Feel free to change this text.</strong>"
+    test_functions: return true;
+    updated_at: 2012-11-24 15:57:30.372000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCSHtV2ooAACBrH2
+    created_at: 2012-08-10 04:01:57.000000000 Z
+    default_code: ''
+    entry: ! 'HTML stands for **HyperText Markup Language**.  **Hypertext** means
+      "text with links in it." Any time you click on a word that brings you to a new
+      webpage, you''ve clicked on hypertext!
+
+
+      A **markup language** is a programming language used to make text do more than
+      just sit on a page: it can turn text into images, links, tables, lists, and
+      much more. HTML is the markup language we''ll be learning.
+
+
+      What makes webpages pretty? That''s CSS—**Cascading Style Sheets**. Think of
+      it like skin and makeup that covers the bones of HTML. We''ll learn HTML first,
+      then worry about CSS in later courses.
+
+
+      The first thing we should do is set up the skeleton of the page.
+
+
+      a. Always put `<!DOCTYPE html>` on the first line. This tells the browser what
+      language it''s reading (in this case, HTML).
+
+      b. Always put `<html>` on the next line. This starts the HTML document.
+
+      c. Always put `</html>` on the last line. This ends the HTML document.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 6
+      positive_feedback: 4
+    from_console: false
+    hint: ! 'In HTML, the order you put things in matters! But formatting (*i.e.*
+      empty space) doesn''t matter from a technical point of view.
+
+
+      You *will* notice there''s a pattern in how we indent each line of HTML, though.
+      This is to aid readability and help us catch mistakes. We''ll talk more about
+      indentation later!'
+    instruction: ! '1. Go ahead and put the three lines mentioned above into `test.html`,
+      which is now blank.
+
+
+      2. In between the second and last line (between the `<html>` and the `</html>`),
+      feel free to write whatever message you like.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: HTML and CSS
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ''
+    test_functions: ! "if (code['test.html'].match(/\\<!DOCTYPE html\\>/) === null){\n\treturn
+      'Make sure you put in the <!DOCTYPE> tag!';\n}\n\nif (code['test.html').match(/\\<html\\>/)
+      === null){\n\treturn 'Make sure you put in your open <html> tag!';\n}\n\nif
+      (code['test.html]').match(/\\<\\/html\\>/) === null){\n\treturn 'Make sure you
+      put in your close </html> tag!';\n}\n\nreturn true;"
+    updated_at: 2012-11-24 16:07:50.977000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCVfXwqtcwACAbWg
+    created_at: 2012-08-10 19:22:07.000000000 Z
+    default_code: ''
+    entry: ! "To learn more HTML, we should learn how to talk about HTML. Already
+      you have seen we use `<>`s a lot. \n\n1. Things inside `<>`s are called **tags**.\n2.
+      Tags nearly always come in pairs: an opening tag and a closing tag.\n3. Example
+      of opening tag: `<html>`\n4. Example of closing tag: `</html>`\n\nYou can think
+      of tags as being like parentheses: whenever you open one, you should close it.
+      Tags also **nest**, so you should close them in the right order: the most recently
+      opened tag should be the first one closed, like in the example below.\n\n    <first
+      tag><second tag>Some text!</second tag></first tag>\n\nThe last exercise taught
+      us how to set up our HTML file. Everything we do now will go between `<html>`
+      and `</html>`.\n\nPractice makes perfect! One more time:"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 5
+      total: 11
+      other: 2
+      positive_feedback: 3
+      typo: 1
+    from_console: false
+    hint: Feel free to peek back at earlier exercises if you forget exactly what a
+      tag looks like.
+    instruction: ! '1. Put in the !DOCTYPE HTML tag.
+
+      2. Put in the `html` opening and closing tags.
+
+      3. Between the `html` tags, write whatever you like.
+
+      4. Press Run to see what you''ve written appear on the page!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Basic terminology
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ''
+    test_functions: ! "if (code['test.html'].match(/\\<!DOCTYPE html\\>/) === null){\n\treturn
+      'Make sure you put in the <!DOCTYPE> tag!';\n}\n\nif (code['test.html').match(/\\<html\\>/)
+      === null){\n\treturn 'Make sure you put in your open <html> tag!';\n}\n\nif
+      (code['test.html]').match(/\\<\\/html\\>/) === null){\n\treturn 'Make sure you
+      put in your close </html> tag!';\n}\n\n$e('html').not.to.be.empty(\"Make sure
+      you write something between your <html> and </html> tags!\");"
+    updated_at: 2012-11-18 04:51:50.605000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCvNmvw9eAACBX2y
+    created_at: 2012-08-15 16:26:02.000000000 Z
+    default_code: ''
+    entry: ! "Everything in our HTML file will go between the opening `<html>` and
+      closing `</html>` tags. \n\nThere are always two parts to the file: the head
+      and body. Let's focus on the head.\n\na. It has an opening and a closing tag.\nb.
+      The head includes important information about the webpage, such as its title.
+      \nc. The title is the words we see in the tab (for example, the title of this
+      page is \"Introduction to HTML\")."
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 2
+      total: 9
+      other: 4
+      instructional_text_issue: 3
+    from_console: false
+    hint: ! 'The HTML tags are `<html>` and `</html>`. What do you think the `head`
+      and `title` tags will be?
+
+
+      Also note: the Codecademy editor automatically gives you the closing tag. It
+      also does the spacing for you. Is this cheating? What happens when you leave
+      Codecademy and want to do this in the real world?
+
+
+      Good news: the editors that are used in web development typically have this
+      functionality. It''s built in to help us. Remember, the spacing is NOT technically
+      required for the computer to understand what''s going on. It is to help us when
+      we need to make edits.'
+    instruction: ! "1. Add a head opening and closing tag. See the Hint for more.\n2.
+      Between the head tags, add in opening and closing tags for the title. \n3. In
+      between the title tags, call your webpage **Bad to the Bonez Webpage Inc**\n5.
+      Press run. See how the results tab changes its name!"
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Make the head
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\n\n\t\n\t\n\t\n\t\n</html>"
+    test_functions: ! "if (code['test.html'].match(/\\<head\\>/) === null){\n\treturn
+      'Make sure you put in your open <head> tag!';\n}\n\nif (code['test.html'].match(/\\<\\/head\\>/)
+      === null){\n\treturn 'Make sure you put in your close </head> tag!';\n}\n\n$('title').to.exist(\"Make
+      sure you add in your <title> and </title> tags!\");\n\n$e('title').to.have.text(\"Bad
+      to the Bonez Webpage Inc\",function(){\n\treturn \"Make sure your title is exactly
+      as shown in the instructions!\";\n});"
+    updated_at: 2012-11-05 21:33:49.699000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCvRuGUTHAACBZHC
+    created_at: 2012-08-15 16:43:36.000000000 Z
+    default_code: ''
+    entry: ! "We have set up a lot of the basic things for your HTML file for you.
+      This is so you won't get mad at us for too much repetition—please learn it well!\n\nWe
+      have learned about opening and closing tags. When we put content between the
+      tags, the entire bit is called an **element**.\n\n    element = <opening tag>
+      + content + <closing tag>\n\nNotice we have both title tags now, but we need
+      `<body>` tags. The content in the body is what will be visible on the actual
+      page. The body goes inside the html tags, but not inside the head tags, like
+      this:\n\n    <html>\n        <head></head>\n        <body></body>\n    </html>"
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 3
+      total: 13
+      correctness_test_issue: 2
+      typo: 2
+      other: 2
+      instructional_text_issue: 4
+    from_console: false
+    hint: ! "Under the closing head tag, the code should look something like:\n\n
+      \   <body>\n        <p> The content in the first paragraph </p>\n        <p>
+      Second paragraph's content </p>\n    </body>\n\nAnd of course, the very last
+      line should always be `</html>`."
+    instruction: ! '1. Between the title tags, give your page a name. It can be anything!
+
+      2. Underneath the closing head tag, put in the opening and closing body tags.
+
+      3. Inside the body, let''s create paragraphs! Each paragraph requires opening
+      and closing tags: `<p>` and `</p>`. We put content in between the tags.
+
+      4. Between the body tags, create two paragraphs and write content in each paragraph.
+      (This will require 2 pairs of p tags).'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Paragraphs in the body
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\n\t<head>\n\t\t<title>\n\t\t\n\t\t</title>\n\t\t\n\t</head>\n\n\t\n\t\n\t\n\t\n</html>"
+    test_functions: ! "$e('title').not.to.be.empty(\"Make sure you put a title between
+      your title tags.\");\n\nif (code['test.html').match(/\\<body\\>/) === null){\n\treturn
+      'Make sure you put in your open <body> tag!';\n}\n\nif (code['test.html]').match(/\\<\\/body\\>/)
+      === null){\n\treturn 'Make sure you put in your close </body> tag!';\n}\n\n$e('p').to.exist('Please
+      add at least one p tag to the page.');\n$e('p').to.be.above(1, function(){\n\treturn
+      \"It looks like you only have one p tag. You should have two!\";\n});\n$e('p').not.to.be.empty(\"Make
+      sure you write something between each set of <p></p> tags!\");"
+    updated_at: 2012-10-06 02:39:53.000000000 Z
+    view: :console_and_editor
+  feedback_total: 82
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Introduction to HTML
+  num_forum_answers: 15
+  num_forum_questions: 12
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-11-24 16:07:51.019000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-15 17:30:04.000000000 Z
+  default_view: :console_and_editor
+  entry: Now that you know how to set up an HTML document, it's time to learn about
+    all the things you can display in one.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCvcnbh5vQACABWH
+    created_at: 2012-08-15 17:30:05.000000000 Z
+    default_code: ''
+    entry: ! 'We''re definitely making good progress! We''ve learned when and why
+      we use HTML. We''ve also learned how to:
+
+
+      a. set up an HTML file with tags
+
+      b. title the webpage (in the `<head>`)
+
+      c. create paragraphs (in the `<body>`)
+
+
+      The next step is to give our paragraphs headings using **heading tags**. Let''s
+      start with the `<h1>` tag, which marks something as the most important. (Everyone
+      knows the most important font is the biggest!)'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 4
+      other: 1
+      correctness_test_issue: 1
+    from_console: false
+    hint: ! 'Remember: paragraphs require `<p></p>` tags!'
+    instruction: ! "1. Ask yourself: what's this page's title?\n2. In the body section,
+      create a heading. To do this, create an `<h1>` tag. \n3. Give your content a
+      heading. It can be anything!\n4. Close the element with a closing tag `</h1>`.
+      (Your heading should now be between `<h1>` and `</h1>`.) \n5. Underneath the
+      heading, create two paragraphs with whatever content you like."
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Paragraphs and headings
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\n\t<head>\n\t\t<title>\n\t\t\tHeadings
+        & Paragraphs\n\t\t</title>\n\t\t\n\t</head>\n\t<body>\n\t\t\n\t\t\n\t\t\n\t\t\n\t</body>\n</html>"
+    test_functions: ! "$e('h1').to.exist('Make sure to add your h1 tags!');\n$e('h1').not.to.be.empty('Make
+      sure to write a heading between your <h1> and </h1> tags.');\n$e('p').to.exist('Please
+      add at least one p tag to the page.');\n$e('p').to.be.above(1, function(){\n\treturn
+      \"It looks like you only have one p tag. You should have two!\";\n});\n$e('p').not.to.be.empty(\"Make
+      sure you write something between each set of <p></p> tags!\");"
+    updated_at: 2012-11-18 20:13:36.761000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCv8e+HusgACAAsq
+    created_at: 2012-08-15 19:46:03.000000000 Z
+    default_code: ''
+    entry: ! 'HTML actually lets us have more than one heading size. There are six
+      heading sizes, where `<h1>` is the boss and `<h6>` is puny!
+
+
+      * `<h1>` - The CEO
+
+      * `<h2>` - VP of Fancy Towne
+
+      * `<h3>` - Director of Some Stuff
+
+      * `<h4>` - Middle management
+
+      * `<h5>` - Lowly assistant
+
+      * `<h6>` - Gets coffee for everyone else
+
+
+      Below we''ll ask you to add headings of various sizes. Feel free to write whatever
+      you like for the headings!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 4
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Your code currently has one `<h1>` heading and two paragraphs.
+
+      2. Add an `<h3>` heading before the second paragraph.
+
+      3. Add an `<h5>` heading after the second paragraph, and then add a third paragraph
+      after this heading.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: More about headings!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('h3').to.exist(\"Make sure you include your h3 tags!\");\n$e('h5').to.exist(\"Make
+      sure you include your h5 tags!\");\n$e('p').to.be.above(2,function(){\n\treturn
+      \"Don't forget to add that third set of p tags!\";\n});"
+    updated_at: 2012-10-29 19:56:15.556000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCyKythDQwACAvQ8
+    created_at: 2012-08-16 05:53:14.000000000 Z
+    default_code: ''
+    entry: Nice work! So far, we've used headings of three different sizes. Given
+      that there are six heading sizes altogether, we should make use of all six.
+      (Even `<h6>`, our lowly coffee-getting intern of headings, needs to feel wanted.)
+    expect_error: false
+    feedback_stats:
+      other: 6
+      total: 16
+      instructional_text_issue: 3
+      positive_feedback: 6
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Add three more headings to the code, making use of `<h2>`,
+      `<h4>` and `<h6>`. Make sure to close all your tags!
+
+      2. Under each heading, add a short paragraph. Dont forget paragraphs need opening
+      and closing `<p></p>` tags!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Using every heading
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('h2').to.exist(\"Make sure you use h2 tags!\");\n$e('h2').not.to.be.empty(\"It
+      looks like there's no text between your <h2></h2> tags.\");\n$e('h4').to.exist(\"Make
+      sure you use h4 tags!\");\n$e('h4').not.to.be.empty(\"It looks like there's
+      no text between your <h4></h4> tags.\");\n$e('h6').to.exist(\"Make sure you
+      use h6 tags!\");\n$e('h6').not.to.be.empty(\"It looks like there's no text between
+      your <h6></h6> tags.\");\n$e('p').to.be.above(5,function(){\n\treturn \"Did
+      you remember to add all three extra sets of p tags?\";\n});"
+    updated_at: 2012-11-23 16:33:31.205000000 Z
+    view: :console_and_editor
+  feedback_total: 24
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Body elements
+  num_forum_answers: 12
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 4
+  updated_at: 2012-11-23 16:33:31.222000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-16 05:56:42.000000000 Z
+  default_view: :console_and_editor
+  entry: Your website is really coming along! Let's add some pictures to liven it
+    up.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UCyLmgdTOgACAvKC
+    created_at: 2012-08-16 05:56:42.000000000 Z
+    default_code: ''
+    entry: ! 'You''ve done an awesome job! Here''s a quick summary of things we''ve
+      learned:
+
+
+      1.  HTML is used to give websites structure.
+
+      2.  We open HTML files using a browser, and the browser **renders** (shows us)
+      the file.
+
+      3.  HTML files have a head and a body (just like you!)
+
+      4.  In the head, we have the `<title>` tags, and we use these to specify the
+      webpage''s name.
+
+      5.  How to make headings and paragraphs.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 3
+      total: 10
+      other: 4
+      positive_feedback: 3
+    from_console: false
+    hint: ''
+    instruction: ! '1. Add a title between the title tags.
+
+      2. Create a `<h3>` sized heading in the body. Make your heading say anything
+      you want! (Just don''t forget to close it.)
+
+      3. Create three paragraphs and fill them with content (*e.g.* about cars, your
+      pet, favorite city to travel—whatever you like!)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Mid-lesson breather
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t\n\t\t\n\t\t\n\t\t\n\t</body>\n</html>"
+    test_functions: ! "$e('title').not.to.be.empty('Make sure to put a title between
+      your title tags.');\n$e('h3').to.exist('Make sure you include your h3 tags!');\n$e('p').to.exist('Make
+      sure you include p tags!');\n$e('p').to.be.above(2, function(){\n\treturn \"Make
+      sure you have three paragraphs with three separate sets of p tags!\"\n});"
+    updated_at: 2012-10-26 09:38:57.339000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UC0+N0C1DwACBOLh
+    created_at: 2012-08-16 18:38:47.000000000 Z
+    default_code: ''
+    entry: ! 'You can add images to your websites to make them look ultra fancy. You
+      just need an image tag, like so: `<img>`. This tag is a bit different from the
+      others. Instead of putting the content between the tags, you tell the tag where
+      to get the picture using `src`. It''s also different because this tag **self-closes**:
+      it doesn''t have a separate tag to close it. Note the `/` in the tag to close
+      it: `<img src="url" />`.
+
+
+      Check out the tag to the right—it adds a picture of a rubber duck to the page!
+      (You can see it by clicking on the Result tab.)
+
+
+      See the web address (or **URL**, for **u**niform **r**esource **l**ocator) after
+      `src=`? It''s `"http://bit.ly/PK1euu"`. That tells the `<img>` tag where to
+      get the picture from!'
+    expect_error: false
+    feedback_stats:
+      typo: 1
+      total: 6
+      correctness_test_issue: 1
+      instructional_text_issue: 2
+      other: 1
+      positive_feedback: 1
+    from_console: false
+    hint: That is one busted duck.
+    instruction: ! 'Add a second image below the first one. (Make sure it''s before
+      the closing body tag!) You can choose any image you want. Just search for an
+      image online, then put that image''s URL after `src=` (make sure to put it in
+      quotes, as shown). If you can''t think of a good picture, use this ninja: http://bit.ly/SJxLUx.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Adding images
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t<img
+        src=\"http://bit.ly/PK1euu\" />\n\t</body>\n</html>"
+    test_functions: ! "$e('img').to.be.above(1, function(){\n\treturn \"Make sure
+      you put in a second img tag!\";\n});"
+    updated_at: 2012-10-26 01:12:24.971000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UC1C3Bvz1wACBSCK
+    created_at: 2012-08-16 18:58:36.000000000 Z
+    default_code: ''
+    entry: ! "Good work! Now you know how to add images to your website. But what
+      if you want to click on that image to lead you somewhere else?\n\nThe `<a></a>`
+      tag is the one used to make **hyperlinks** (or just **links**) on webpages.
+      These are the words or images you click to go to a new page!\n\nJust like `<img>`,
+      `<a>` has an **attribute** that tells the link where to go. Instead of `src`,
+      `<a>` uses `href`, like so:\n\n    <a href=\"http://www.codecademy.com\">Learn
+      to code!</a>\n\n`src` stands for \"source.\" It tells the `<img>` link where
+      the picture comes from!\n\n`href` stands for \"hypertext reference.\" Remember
+      when we said that hypertext (that is, links) is text you can click on? Well,
+      `href` tells that link where to go! The text after `href` is the web address,
+      and the text between `<a>` and `</a>` is the text you click on."
+    expect_error: false
+    feedback_stats:
+      other: 4
+      total: 8
+      positive_feedback: 1
+      instructional_text_issue: 3
+    from_console: false
+    hint: Make sure you put in a full web address, like `"http://www.google.com"`.
+      Oh yeah—make sure to put the address in quotes!
+    instruction: ! 'Here''s how to turn an image into a link: put a `<a href="">`
+      tag before your `<img>` tag and a `</a>` tag after them. In the quotes after
+      `href=`, put in your favorite website address!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Click that image
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ''
+    test_functions: ! '$e(''a'').to.exist("Don''t forget to include your a tags!");
+
+      $e(''a > img'').to.exist("Make sure your img tag is inside your a tags.");'
+    updated_at: 2012-11-04 17:36:06.727000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLaFsSWEwACASq5
+    created_at: 2012-08-21 00:45:10.000000000 Z
+    default_code: ''
+    entry: Good work! Let's make sure you really understand images and links before
+      we move on to the review.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 11
+      instructional_text_issue: 5
+      positive_feedback: 1
+    from_console: false
+    hint: ! "Images work like this:\n\n    <img src=\"website URL\" />\n\nLinks work
+      like this:\n\n    <a href=\"website URL\"></a>\n\nYou can put a link around
+      an image: <a href=\"website URL\"><img src=\"website URL\" /></a>"
+    instruction: ! '1. Between the body tags, add two images. One should be a link;
+      the other should not. The link can go anywhere you want.
+
+      2. After your two images, create a link that''s just a line of text. It can
+      link anywhere you want.
+
+
+      Check the Hint if you need help.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Images and links
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t\n\t\t\n\t\t\n\t\t\n\t</body>\n</html>"
+    test_functions: ! "$e('img').to.be.above(1,function(){\n\treturn \"Did you remember
+      to include two images?\";\n});\n$e('a > img').to.exist(\"Make sure at least
+      one of your images is also a link!\");\n$e('a').to.be.above(1,function(){\n\treturn
+      \"Make sure you have two links: one that's an image, and one that's just text.\";\n});"
+    updated_at: 2012-11-13 18:35:44.974000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLaMDMnwgACATOo
+    created_at: 2012-08-21 00:45:36.000000000 Z
+    default_code: ''
+    entry: Well done! You now know the basics of creating a web page. If you're feeling
+      lucky, go ahead and tackle the [Build Your Own Webpage](http://www.codecademy.com/courses/web-beginner-en-LceTK/)
+      project.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 3
+      total: 5
+      other: 2
+    from_console: false
+    hint: ''
+    instruction: Hit Run to complete the course.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Congratulations!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-11-04 17:40:28.486000000 Z
+    view: :console_and_editor
+  feedback_total: 40
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Adding images to your site!
+  num_forum_answers: 14
+  num_forum_questions: 11
+  published: true
+  read_feedback_total: 10
+  updated_at: 2012-11-13 18:35:44.990000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false

@@ -1,0 +1,1388 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.58214920071048
+classification: :lesson
+created_at: 2012-08-22 14:39:32.000000000 Z
+domain: :freestyle
+down_votes: 368
+entry: CSS (Cascading Style Sheets) are what give your HTML pages their beautiful
+  appearance. You've got the HTML structure down pat—now it's time to make your website
+  look great!
+feedback_total: 118
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: ! 'CSS: An Overview'
+num_exercises: 26
+num_published_exercises: 26
+num_published_sections: 5
+num_readiness_feedbacks: 62
+num_sections: 5
+num_user_ratings: 1126
+project_scope: 0
+published: true
+rating: 1168.6933946192623
+read_feedback_total: 48
+readiness: 89.71874999999999
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-29 01:08:16.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 5159.5
+up_votes: 1565
+updated_at: 2012-11-26 16:06:46.551000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-22 14:39:32.000000000 Z
+  default_view: :console_and_editor
+  entry: ! 'Let''s cover the basics: what CSS is, how it works, and why we separate
+    form from function.'
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWJzXOL9wACAgQm
+    created_at: 2012-08-23 01:39:25.000000000 Z
+    default_code: ''
+    entry: ! 'Take a look at the HTML file in `index.html`. Pretty standard, right?
+      You know all this stuff: headers, paragraphs, images, lists, and tables. Click
+      on the Result tab: no surprises there. (In fact, it''s pretty ugly if you ask
+      us.)
+
+
+      The `stylesheet.css` tab (which we''ll teach you how to use in this course)
+      contains all the CSS styling information: where HTML elements should go, what
+      color they should be, how big they should be, and more.
+
+
+      We''ve commented out a crucial line in the `index.html` file. If you remove
+      the comment (the `<!--` from before the text on line 4 and the `-->` from the
+      end of that line), you''ll be able to see the magic CSS imparts. Don''t delete
+      any of the actual `<link>` tag!'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 3
+      typo: 1
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: Remove the comment from around the `<link>` tag on line 4, then click
+      on the Result tab to see what you'll soon be able to do with CSS!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Seeing is believing
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<!--<link type=\"text/css\"
+        rel=\"stylesheet\" href=\"stylesheet.css\"/>-->\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div
+        id=\"header\">\n\t\t\t<div id=\"navbar\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li>Home</li>\n\t\t\t\t\t<li>About
+        Me</li>\n\t\t\t\t\t<li>Plans for World Domination</li>\n\t\t\t\t\t<li>Contact</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<h2>About
+        Me</h3>\n\t\t</div>\n\t\t<div id=\"left\">\n\t\t<img src=\"http://www.thedailybalance.com/wp-content/uploads/angry-puppy.jpg\"/>\n\t\t<p>I
+        am the angriest puppy in the world. This has been scientifically proven in
+        several clinical trials.</p>\n\t\t</div>\n\t\t<div id=\"right\">\n\t\t<table>\n\t\t\t<th
+        colspan=\"3\">My Bros</th>\n\t\t\t<tr>\n\t\t\t\t<td><img src=\"http://thedoggiedish.com/uploads/pictures/1344463888_Puppies%20Training.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://www.humanesociety.org/assets/images/270x224/animals/dogs/dog_puppy_lookinup_270x224.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://funnycrave.frsucrave.netdna-cdn.com/wp-content/uploads/2011/03/puppy.png\"/></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><img
+        src=\"http://2.bp.blogspot.com/_jZHHRfnq9F8/Sw5Kb1D2EhI/AAAAAAAAKkE/fuaDErPNDvU/s1600/Puppy+Training.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://4.bp.blogspot.com/-hvKDf0aMe1g/ToKckj6RZrI/AAAAAAAACf0/oZQNbyPtmns/s1600/cute-puppy-pictures.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://puppiespics.net/wp-content/uploads/2012/04/doberman-puppy5.jpg\"/></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><img
+        id=\"bottom_left\" src=\"http://dailypicksandflicks.com/wp-content/uploads/2011/03/Boo.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://24.media.tumblr.com/tumblr_m825unsFjm1qldzl2o2_500.jpg\"></td>\n\t\t\t\t<td><img
+        id=\"bottom_right\" src=\"http://img.photobucket.com/albums/v649/deadxmansxhand/ewok-closeup.jpg\"/></td>\n\t\t\t</tr>\n\t\t</table>\n\t\t</div>\n\t\t<div
+        id=\"footer\">\n\t\t\t<div id=\"button\">\n\t\t\t\t<p>Send me an <span class=\"bold\">e-mail</span>!</p>\n\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "body {\n\tbackground-color: #b7d1c4\n}\n\nh2 {\n\tfont-family: Verdana;\n\tfont-weight:
+        bold;\n\ttext-align: center;\n\tpadding-top: 25px;\n\tpadding-bottom: 25px;\n\tcolor:
+        #acd1b2;\n}\n\nimg {\n\theight: 170px;\n\twidth: 170px;\n\tbox-shadow: rgba(0,0,0,0.2)
+        10px 10px;\n\n}\n\n#navbar {\n\tposition: fixed;\n\ttop:10px;\n\tleft:50%;\n\tmargin-left:-254px;\n}\n\n#header
+        {\n\tposition: relative;\n\ttop: -10px;\n\tbackground-color: #3c4543;\n\tborder-top-left-radius:
+        15px;\n\tborder-top-right-radius: 15px;\n}\n\nul{\n\tlist-style-type: none;\n\tposition:
+        fixed;\n\tmargin: -10px;\n}\n\nli {\n\tdisplay: inline;\n\tborder: 2px solid
+        #000000;\n\tfont-family: Futura, Tahoma, sans-serif;\n\tcolor: #ffffff;\n\tpadding:
+        5px;\n\tborder-radius: 5px 5px;\n\tbackground-color: #cc0323\n}\n\n#left{\n\twidth:
+        45%;\n\tfloat: left;\n}\n\np {\n\tfont-family: Tahoma;\n\tfont-size: 1em;\n}\n\n#right{\n\twidth:
+        45%;\n\tfloat: right;\n}\n\ntable {\n\tborder: #000000 1px solid;\n\tbackground-color:
+        #acd1b2;\n\tfloat: right;\n\tmargin-right: 10px;\n\tborder-bottom-right-radius:
+        15px;\n\tborder-bottom-left-radius: 15px;\n}\n\ntd {\n\theight: 75px;\n\twidth:
+        75px;\n}\n\ntd img {\n\theight: 75px;\n\twidth: 75px;\n\tbox-shadow: none;\n}\n\nth
+        {\n\tfont-family: Verdana;\n\tfont-size: 1em;\n\tfont-weight: normal;\n\tcolor:
+        #3c4543\n}\n\n#bottom_left{\n\tborder-bottom-left-radius: 15px;\n}\n\n#bottom_right{\n\tborder-bottom-right-radius:
+        15px;\n}\n\n#footer{\n\tclear: both;\n\tposition: relative;\n\tbottom: -20px;\n\tborder-bottom-left-radius:
+        15px;\n\tborder-bottom-right-radius: 15px;\n\theight: 75px;\n\tbackground-color:
+        #3c4543;\n}\n\n#button{\n\tborder: 2px solid #000000;\n\tfloat:left;\n\tposition:
+        relative;\n\tleft: 229px;\n\tbottom: -20px;\n\tborder-radius: 5px;\n\tbackground-color:
+        #cc0323;\n\theight: 30px;\n\twidth: 150px;\n\t\n}\n\n#button p{\n\tposition:
+        relative;\n\tbottom: 10px;\n\tfont-size: 0.8em;\n\tcolor: #acd1b2;\n\ttext-align:
+        center;\n}\n\n.bold{\n\tfont-family: tahoma;\n\tfont-weight: bold;\n\tfont-size:
+        1.2em;\n\tfont-variant: small-caps;\n\tcolor: #ffffff;\n}"
+    test_functions: ! "if(code['index.html'].match(/\\<!--/) !== null){\n\treturn
+      \"Did you remember to remove the comment (the <!-- and the -->)?\";\n}\n\nif(code['index.html'].match(/\\<link
+      type=\"text\\/css\" rel=\"stylesheet\" href=\"stylesheet\\.css\"\\/\\>/) ===
+      null){\n\treturn \"Whoops! Looks like you accidentally removed part of the <link>
+      tag. Hit the red Reset button and try again!\";\n}\n\nreturn true;"
+    updated_at: 2012-10-19 10:04:43.325000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWJzskZsgACAeF1
+    created_at: 2012-08-23 01:39:26.000000000 Z
+    default_code: ''
+    entry: ! 'CSS (which stands for **C**ascading **S**tyle **S**heets) is a language
+      used to describe the appearance and formatting of your HTML.
+
+
+      A **style sheet** is a file that describes how an HTML file should look. That''s
+      it!
+
+
+      We say these style sheets are **cascading** because the sheets can apply formatting
+      when more than one style applies. For instance, if you say all paragraphs should
+      have blue font, but you specifically single out one paragraph to have red font,
+      CSS can do that! (We''ll talk more about cascading in section four.)'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 2
+      correctness_test_issue: 1
+    from_console: false
+    hint: ! 'Use `color: red;` as a model for your own CSS if you''re stuck.'
+    instruction: Check out `stylesheet.css`. We've put in the CSS to make the paragraph's
+      text red, but you need to add the CSS that will make the text between `<span></span>`
+      tags blue. Fill it in and click Run!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What CSS is
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Fancy Fonts</title>\n\t</head>\n\t<body>\n\t\t<p>I'm
+        a paragraph written in red font, but one of my words is <span>blue</span>!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "p {\n\tcolor: red;\n}\n\nspan {\n\t/*Write your CSS here!*/\n}"
+    test_functions: ! "if (code['stylesheet.css'].match(/color:\\s*blue;?/) === null){\n\treturn
+      \"Make sure to add color:blue to the CSS for 'span' in the 'stylesheet.css'
+      tab!\";\n}\n\nreturn true;"
+    updated_at: 2012-09-29 00:21:56.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWJzzlyFQACAgE0
+    created_at: 2012-08-23 01:39:27.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! Look at you. You''re already writing CSS.
+
+
+      There are two main reasons for separating your form/formatting (CSS) from your
+      functional content/structure (HTML):
+
+
+      1. You can apply the same formatting to several HTML elements without rewriting
+      code (*e.g.* `style="color:red":`) over and over
+
+      2. You can apply similar appearance and formatting to several HTML pages from
+      a single CSS file
+
+
+      Look at the HTML in `index.html`. That''s a lot of `<span></span>` tags! All
+      those words are in regular font, but we want them to be super fancy.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 3
+      total: 5
+      instructional_text_issue: 2
+    from_console: false
+    hint: ! "Let's see... making something red meant we had to type\n\n    span {\n
+      \       color: red;\n    }\n\nSo if we put in `font-family: cursive;` instead
+      of `color: red;`, that should fancify our font!"
+    instruction: Go to the `stylesheet.css` tab and tell the `span` selector that
+      you want the `font-family` to be `cursive`. Check the Hint if you need help!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Why separate form from function?
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Even Fancier Fonts</title>\n\t</head>\n\t<body>\n\t\t<p>Much
+        of this is regular text, but some of it is <span>fancy</span>!\n\t\tWe can
+        use our <span>newly fancified font</span> to add some\n\t\t<span>flair</span>
+        to our website. It'd be a <span>royal pain</span> \n\t\tto make each of these
+        span tags <span>fancy</span> individually,\n\t\tbut it's a cinch with <span>CSS</span>!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "span {\n\t/*Add your CSS here!*/\n}"
+    test_functions: ! "if(code['stylesheet.css'].match(/font-family:\\s*cursive;?/)
+      === null){\n\treturn \"Did you remember to add font-family: cursive; to the
+      'span' selector in your CSS tab?\";\n}\n\nreturn true;"
+    updated_at: 2012-09-29 00:22:16.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDYxwyQmkgACAirV
+    created_at: 2012-08-23 13:36:03.000000000 Z
+    default_code: ''
+    entry: ! "We previously showed you how to do **inline styling** with HTML, like
+      so:\n\n    <p style=\"color:red\">Red font!</p>\n\nThis is a less awesome way
+      to style your website for the reasons we just mentioned: you have to write the
+      same code over and over, and if you want to make a big stylistic change to several
+      elements, you have to change every single style tag. With a single CSS file,
+      you only have to make the change in one place!\n\nThere are two ways to put
+      CSS in one place. This first is to put your CSS between `<style></style>` tags,
+      right in the same file as your HTML. These `<style>` tags go inside the `<head></head>`
+      of your webpage; check out the example in the editor to the right."
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Make sense? Good! Hit Run to continue.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: If it's in, it's out!
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<style>\n\t\t\tp {\n\t\t\t\tcolor:
+        purple;\n\t\t\t}\n\t\t</style>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<p>Check
+        it out! I'm purple!</p>\n\t</body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-08-24 13:41:43.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDaLqiQmkgACBOq0
+    created_at: 2012-08-23 19:59:38.000000000 Z
+    default_code: ''
+    entry: ! 'But there''s an even better way.
+
+
+      You know you should write your CSS in a totally separate file. But how do you
+      make sure your HTML file can see that CSS information?
+
+
+      You do this by putting a `<link>` tag (as you saw in the first exercise of this
+      course) between the `<head></head>` tags of your HTML page. Your `<link>` tag
+      needs three attributes:
+
+
+      1. A `type` attribute that should always be equal to `"text/css"`
+
+      2. A `rel` attribute that should always be equal to `"stylesheet"`
+
+      3. A `href` attribute that should point to the web address of your CSS file
+
+
+      In the editor to the right, you''ll see two files: `index.html` and `stylesheet.css`.'
+    expect_error: false
+    feedback_stats:
+      typo: 1
+      total: 9
+      correctness_test_issue: 4
+      instructional_text_issue: 4
+    from_console: false
+    hint: ! "The full syntax should look like this:\n\n    <link type=\"text/css\"
+      rel=\"stylesheet\" href=\"stylesheet.css\"/>"
+    instruction: Insert a `<link>` to `stylesheet.css` in `index.html`. Check the
+      Hint if you need help!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Link it up!
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<p>I
+        want to be SIZE 44 font!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "p {\n\tfont-size: 44px;\n}"
+    test_functions: ! "pfont = $('p').css('font-size');\n\nif (pfont !== '44px') {\n
+      \ return \"Did you remember to link your stylesheet to your HTML file? It looks
+      like your paragraph's font-size is \" + pfont + \" instead of 44px.\";\n}\n\nif
+      (code['index.html'].match(/\\<\\s*link/) === null) {\n  return \"Did you add
+      a link tag to your HTML?\";\n}\n\nreturn true;"
+    updated_at: 2012-10-23 17:17:58.487000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDbJLmJlhgACAIZM
+    created_at: 2012-08-24 00:22:06.000000000 Z
+    default_code: ''
+    entry: ! "This brings us to a quick (but noteworthy!) concept in HTML: the **self-closing
+      tag**.\n\nBecause nothing ever goes between `<link></link>` tags, it's okay
+      to use a single set of `<>`s to be the opening *and* closing tags. You do that
+      like so:\n\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"CSS file address\"/>\n\nYou
+      may have noticed us do something similar with the `<img>` tag:\n\n    <img src=\"web
+      address\"/>\n\n**Most tags are not self-closing**, but we'll point out the self-closing
+      ones to help save you time and typing."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'All right! Hit Run to proceed to the next stop on our whirlwind
+      tour of CSS: syntax!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: ! 'PSA: Self-closing tags'
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-10-23 17:19:44.108000000 Z
+    view: :console_and_editor
+  feedback_total: 20
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: What's CSS?
+  num_forum_answers: 7
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-10-23 17:19:44.137000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:39:36.000000000 Z
+  default_view: :console_and_editor
+  entry: Now that you know what CSS is, it's time to learn how to use it.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWJ2BuRRAACAgnD
+    created_at: 2012-08-23 01:39:36.000000000 Z
+    default_code: ''
+    entry: ! "CSS syntax is different from the HTML you're used to, but don't worry:
+      it's easy to pick up! The general format looks like this:\n\n    selector {\n
+      \       property: value;\n    }\n\nA **selector** can be any HTML element, such
+      as `<p>`, `<img>`, or `<table>`. You just take off the `<>`s! To make a paragraph's
+      text red with CSS, you'd type:\n\n    p {\n        color: red;\n    }\n\nA **property**
+      is an aspect of a selector. For instance, you can change the `font-family`,
+      `color`, and `font-size` of the text on your web pages (in addition to many
+      more).\n\nA **value** is a possible setting for a property. `color` can be red,
+      blue, black, or almost any color; `font-family` can be a whole bunch of different
+      fonts; and so on.\n\nYou need to end each property-value with a semi-colon (`;`).
+      That's how CSS knows you're done with one pair and ready for the next."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 3
+      other: 1
+    from_console: false
+    hint: ! "Remember the general syntax for CSS:\n\n    selector {\n        property:
+      value;\n    }"
+    instruction: ! 'Okay! Time for you to write some CSS all on your own.
+
+
+      In the `stylesheet.css` tab, make the font `color` of the `p` selector `green`.
+      (Check the Hint if you need help.)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Syntax for the wintax
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<p>You're
+        about to style this paragraph with CSS all on your own!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: $e('p').to.have.css('color','#008000', "It looks like your paragraph
+      isn't green! Check the Hint if you're stuck.");
+    updated_at: 2012-09-10 17:34:38.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWKFG3algACAhjL
+    created_at: 2012-08-23 01:40:36.000000000 Z
+    default_code: ''
+    entry: ! "Great work!\n\nAnother cool advantage of CSS is that you can set many
+      properties for one selector. For instance, if you want to set a paragraph's
+      font, font color, and font size, you can simply write:\n\n    p {\n        font-family:
+      Arial;\n        color: blue;\n        font-size: 24px;\n    }\n\nRemember: end
+      each property-value pair with a semicolon!\n\n**Please note:** If you have adjusted
+      your browser's zoom, tests involving `font-size` and `height` will not work
+      correctly. To remedy this, please type Command+0 or Ctrl+0 to reset your view."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 4
+      total: 5
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'Underneath your `color: green` property-value pair (but before
+      the final `}`!), set the `font-family` to `Garamond` and the `font-size` to
+      `24px`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: One selector, many properties
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "fontSize = $('p').css('font-size');\n\n$e('p').to.have.css('font-family','Garamond',\"It
+      looks like your paragraph isn't in the font Garamond.\");\n\nif (fontSize !==
+      '24px') {\n  return \"It looks like your paragraph's font-size is \" + fontSize
+      + \" instead of 24px.\";\n}\n\nreturn true;"
+    updated_at: 2012-10-23 17:23:52.117000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWKFAn26gACAfsM
+    created_at: 2012-08-23 01:40:36.000000000 Z
+    default_code: ''
+    entry: Good work! They say that practice makes perfect, so let's do a couple more.
+      (We'll talk even more about selectors in the next course.)
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 3
+      typo: 1
+      other: 1
+    from_console: false
+    hint: ! "Remember the syntax:\n\n    selector {\n        property: value;\n    }"
+    instruction: ! '1. Make all the h3 headings red.
+
+      2. Set all the paragraphs to the Courier `font-family`.
+
+      3. The second paragraph contains text between `<span></span>` tags. Set the
+      `background-color` of that `<span>` to `''yellow''`. (See the Hint for help!)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Many selectors, many properties
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>I Know Kung Fu (er, CSS)</title>\n\t</head>\n\t<body>\n\t\t<div>\n\t\t\t<h3>What's
+        CSS for?</h3>\n\t\t\t<p>CSS is for styling HTML pages!</p>\n\t\t\t<h3>Why
+        use it?</h3>\n\t\t\t<p>It makes webpages look <span>really rad</span>.</p>\n\t\t\t<h3>What
+        do I think of it?</h3>\n\t\t\t<p>It's awesome!</p>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*You can do this! Write your CSS below.*/
+
+
+'
+    test_functions: ! "typeface = $('p').css('font-family');\nbgcolor = $('span').css('background-color');\n\n$e('h3').to.have.css('color','red',\"Make
+      sure you set your h3 tags to color:red;!\");\n\nif (typeface !== 'courier' &&
+      typeface !== 'Courier') {\n  return \"Make sure you set your p tags to font-family:
+      Courier!\";\n}\n\nif (bgcolor !== 'rgb(255, 255, 0)') {\n  return \"Make sure
+      you set your span tags to background-color: yellow!\";\n}\n\nreturn true;"
+    updated_at: 2012-11-22 01:06:43.898000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWKF3QqTgACAgZv
+    created_at: 2012-08-23 01:40:39.000000000 Z
+    default_code: ''
+    entry: ! 'As you start adding more and more property-value pairs for each CSS
+      selector, it''s important to remember to put a semicolon (`;`) at the end of
+      each line.
+
+
+      The semicolon tells CSS that one property-value pair is over and it''s time
+      to move on to the next one. Without semicolons, it''ll become confused and your
+      page won''t look right.
+
+
+      Also, don''t forget: all property-value pairs for a selector are surrounded
+      by curly braces (`{}`).'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'The CSS in `stylesheet.css` is broken; some of the curly braces
+      (`{}`) are out of whack and semicolons are missing. Your mission (should you
+      choose to accept it): fix this CSS!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The importance of semicolons
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h3>Recent
+        Projects</h3>\n\t\t<p>I've started learning HTML and CSS. I hope to create
+        my own website soon!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "h3 {\n\tfont-family: Verdana\n\tcolor: blue\n)\n\np [\n\tfont-family:
+        Garamond\n\tfont-size: 16px\n{"
+    test_functions: ! "fontSize = $('p').css('font-size');\n\n$e('h3').to.have.css('font-family','Verdana',\"Did
+      you fix the h3 font-family? It should be Verdana!\");\n$e('h3').to.have.css('color','#0000FF',\"Did
+      you fix the h3 color? It should be blue!\");\n$e('p').to.have.css('font-family','Garamond',\"Did
+      you fix the p font-family? It should be Garamond!\");\n\nif (fontSize !== '16px')
+      {\n  return \"Did you fix the p font-size? It looks like it's \" + fontSize
+      + \" instead of 16px. (If your font-size looks funny, adjust your browser's
+      zoom with Ctrl+0 or Command+0, as mentioned.)\";\n}\n\nreturn true;"
+    updated_at: 2012-10-04 16:14:34.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDeWjJIHigACAB0T
+    created_at: 2012-08-24 14:58:20.000000000 Z
+    default_code: ''
+    entry: ! "Great! You're really getting the hang of this.\n\nWhile it's important
+      to get all your syntax down correctly, it's also a good idea to write **comments**
+      as you go along. Good comments will help remind you why you did something a
+      certain way (or will help someone else out if they're reading your code without
+      you there to explain it).\n\nAs you've seen, HTML comments look like this:\n\n
+      \   <!--I'm a comment!-->\n\nCSS comments, on the other hand, look like this:\n\n
+      \   /*I'm a comment!*/\n\nRemember: the computer doesn't look at comments when
+      figuring out what your HTML and CSS should do, but writing good comments is
+      a good habit you want to pick up!"
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: See the CSS we've added for the p selector in `stylesheet.css`? Comment
+      it out! (That is, put `/*` before the `p` in that tab and `*/` after the closing
+      `}`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Color commentary
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<p>I'm
+        currently red, but I'm about to become black!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "p {\n\tcolor:red;\n}"
+    test_functions: ! "$color = $('p').css('color');\n\nif($color === 'rgb(255, 0,
+      0)'){\n\treturn \"It looks like your paragraph is still red! Make sure you comment
+      out ALL the CSS.\";\n}\n\nif(code['stylesheet.css'].match(/\\/\\*/) === null){\n\treturn
+      \"It looks like you didn't add a comment!\";\n}\n\nreturn true;"
+    updated_at: 2012-08-24 15:09:20.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWKF7BGeQACAexA
+    created_at: 2012-08-23 01:40:39.000000000 Z
+    default_code: ''
+    entry: You've learned a lot in just a few short lessons. We're impressed! Let's
+      quickly review to make sure you really know your stuff.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 6
+      total: 12
+      other: 5
+      positive_feedback: 1
+    from_console: false
+    hint: Feel free to peek back at earlier exercises if you need help remembering
+      how to do something!
+    instruction: ! '1. Add a `<link>` to `stylesheet.css` between your `<head></head>`
+      tags.
+
+      2. Change the `<h1>` header''s font to Verdana.
+
+      3. Change the `<h3>` header''s font to Courier.
+
+      4. Make the paragraph text color purple.
+
+      5. Add a comment to the CSS tab! It can say anything you like. (Remember: HTML
+      comments and CSS comments are written differently.)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Check yourself before you wreck yourself
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<!--Add your link tag here!-->\n\t\t\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h1>Change
+        me to Verdana.</h1>\n\t\t<h3>Change me to Courier.</h3>\n\t\t<p>Make me purple!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "if (code['index.html'].match(/\\<\\s*link/) === null) {\n\treturn
+      \"Did you remember to include your <link> tag?\";\n}\n\nif (code['index.html'].match(/type\\s*=\\s*['\"]\\s*text\\s*\\/\\s*css\\s*['\"]/)
+      === null) {\n  return \"Did you remember to include a type=\\\"text/css\\\"
+      in your <link> tag?\";\n}\n\nif (code['index.html'].match(/rel\\s*=\\s*['\"]\\s*stylesheet\\s*['\"]/)
+      === null) {\n  return \"Did you remember to include a rel=\\\"stylesheet\\\"
+      in your <link> tag?\";\n}\n\nif (code['index.html'].match(/href\\s*=\\s*['\"]\\s*stylesheet\\.css\\s*['\"]/)
+      === null) {\n  return \"Did you remember to include a href=\\\"stylesheet.css\\\"
+      in your <link> tag?\";\n}\n\nif (code['index.html'].match(/\\s*\\/\\s*\\>/)
+      === null) {\n  return \"Did you remember to close your <link> tag?\"\n}\n\n$e('h1').to.have.css('font-family','Verdana',\"Did
+      you remember to make your h1 font-family Verdana?\");\n$e('h3').to.have.css('font-family','Courier',\"Did
+      you remember to make your h3 font-family Courier?\");\n$e('p').to.have.css('color','#800080',\"Did
+      you remember to make your p color purple?\");\n\nif(code['stylesheet.css'].match(/\\/\\*/)
+      === null){\n\treturn \"Did you remember to put a comment in the CSS tab?\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-11-24 17:38:11.830000000 Z
+    view: :console_and_editor
+  feedback_total: 24
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: CSS Syntax
+  num_forum_answers: 9
+  num_forum_questions: 6
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-11-24 17:38:11.856000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:39:47.000000000 Z
+  default_view: :console_and_editor
+  entry: You've got basic CSS under your belt—now we'll cover some of the finer aspects.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDeOoZHR7gACBDnz
+    created_at: 2012-08-24 14:24:33.000000000 Z
+    default_code: ''
+    entry: ! 'You''ve got the main ideas—now it''s time to dive into the nitty-gritty.
+
+
+      You''ve noticed that when we''ve asked you to set color properties using CSS,
+      we''ve been having you type things like `color:red`. You may have asked yourself:
+      what if I want maroon? Or fire engine red? Or more of a red-orange? Does CSS
+      know all those words?
+
+
+      The answer is no. It can, however, understand millions of colors in the form
+      of **hexadecimal values**.
+
+
+      You''re already extremely familiar with **decimal** values: it''s everyday counting!
+      You know when you see a number (*e.g.* 1,432) that each digit can only be the
+      ten values 0 through 9. Because there are only ten possibilities, we say that
+      regular counting is **base-10**.
+
+
+      Hexadecimal counting is **base-16**. Each digit can be the numbers 0 through
+      9 **or the letters a through f**! Crazy, right? Check it out:'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'We''ve set the headers in the editor to different hexadecimal
+      values, which you can see on the CSS tab. Click over to the Result tab to see
+      the wide range of colors!
+
+
+      Hit Run to continue.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Hexawhatnow?
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h1>I'm
+        maroon!</h1>\n\t\t<h2>I'm coral!</h2>\n\t\t<h3>I'm goldenrod!</h3>\n\t\t<h4>I'm
+        sea green!</h4>\n\t\t<h5>I'm royal blue!</h5>\n\t\t<h6>I'm plum!</h6>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "h1 {\n\tcolor: #8B1C62;\n}\n\nh2 {\n\tcolor: #FF7256;\n}\n\nh3 {\n\tcolor:
+        #FFC125;\n}\n\nh4 {\n\tcolor: #54FF9F;\n}\n\nh5 {\n\tcolor: #530EE8;\n}\n\nh6
+        {\n\tcolor: #8B668B;\n}"
+    test_functions: return true;
+    updated_at: 2012-10-23 17:42:01.177000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDefweLr1AACAF1X
+    created_at: 2012-08-24 15:37:37.000000000 Z
+    default_code: ''
+    entry: ! 'There are a lot of tools available on the Internet for looking up hexadecimal
+      (or simply **hex**) color values.
+
+
+      Search for "hex color palette" or "hex color picker" with your favorite web
+      browser to find a bunch of options!
+
+
+      Hex values always start with a pound sign (`#`), are up to six "digits" long,
+      and are **case-insensitive**: that is, they don''t care about capitalization.
+      `#FFC125` and `#ffc125` are the same color.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Make the `<h3>` color `#cc6666` and the `<h2>` color `#8a2be2`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Roses are red...
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h3>Roses
+        are red.</h3>\n\t\t<h2>Violets are blue!</h2>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "h3 {\n\t/*Add your CSS hex color here!*/\n}\n\nh2 {\n\t/*Add your
+        CSS hex color here!*/\n}"
+    test_functions: ! '$e(''h3'').to.have.css(''color'',''#cc6666'',"Did you make
+      your h3 rose-colored?");
+
+      $e(''h2'').to.have.css(''color'',''#8a2be2'',"Did you make your h2 violet-colored?");'
+    updated_at: 2012-10-23 17:44:21.146000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDeOosHVFwACBDSg
+    created_at: 2012-08-24 14:24:34.000000000 Z
+    default_code: ''
+    entry: ! "Great work! We'll do more with colors as you learn more CSS.\n\nWhen
+      we've asked you to adjust font size, we've specified that the unit you should
+      use is `px` (for \"pixels\"), like so:\n\n    p {\n        font-size: 10px;\n
+      \   }\n\nA pixel is a dot on your computer screen. Specifying font sizes in
+      pixels is great when you want the user to see exactly on their screen what you
+      designed on yours, though it assumes your screens are of similar size.\n\nWhat
+      if the user is using a screen that's a very different size from yours, though
+      (like a smartphone screen)? Enter **em**s. (Don't confuse these with the `<em></em>`
+      tags we use for *emphasis*!)\n\nThe `font-size` unit **em** is a **relative**
+      measure: one em is equal to the default font size on whatever screen the user
+      is using. That makes it great for smartphone screens, since it doesn't try to
+      tell the smartphone *exactly* how big to make a font: it just says, \"Hey, 1em
+      is the font size that you normally use, so 2em is twice as big and 0.5em is
+      half that size!\"\n\nCheck it out: we've set three different paragraphs to the
+      `font-size`s `1em`, `0.5em`, and `2em`. For now, use whichever unit (`px` or
+      `em`) you're more comfortable with—we just wanted to show you `em` now so you're
+      not surprised when you see it later."
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Hit Run to continue.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Pixels and ems
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<p
+        style=\"font-size: 1em\">One em!</p>\n\t\t<p style=\"font-size: 0.5em\">Half
+        an em!</p>\n\t\t<p style=\"font-size: 2em\">TWO EM!</p>\n\t</body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-09-22 04:51:26.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDeOoyA3bAACBCjC
+    created_at: 2012-08-24 14:24:35.000000000 Z
+    default_code: ''
+    entry: ! 'We''ve also asked you to change the `font-family` of certain elements
+      using CSS. You''ve seen us use the fonts Verdana, Courier, and Garamond. But
+      how many fonts does CSS know?
+
+
+      The answer is: it depends. Most computers will understand popular fonts like
+      Verdana, Courier, and Garamond, but each individual computer has different fonts
+      installed on it. The good news is that CSS has some built-in defaults meant
+      to ensure your users see what you intend. They are:
+
+
+      **serif**: A font with little decorative bits on the ends of the strokes that
+      make up letters. Do a search on "serif" to see what we mean.
+
+
+      **sans-serif**: A plain-looking font, like this one. It doesn''t have the little
+      doohickies on the ends of letters like a serif font does.
+
+
+      **cursive**: A scripty font! It looks like cursive writing.
+
+
+      We''ll show you how to import your own fonts in a later course! This will help
+      make sure the person viewing your page has all the fonts you want them to have.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 3
+      other: 2
+    from_console: false
+    hint: ''
+    instruction: Set the `font-family` of the `<h1>` header to `serif`, the `<h2>`
+      to `sans-serif`, and the `<h3>` to `cursive`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: A font of knowledge
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h1>I'm
+        going to be a serif font when I grow up!</h1>\n\t\t<h2>I'm going to be a sans-serif
+        font.</h2>\n\t\t<h3>I'm going to be in cursive!</h3>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! '$e(''h1'').to.have.css(''font-family'',''serif'',"Did you remember
+      to set your <h1> header font-family to serif?");
+
+      $e(''h2'').to.have.css(''font-family'',''sans-serif'',"Did you remember to set
+      your <h2> header font-family to sans-serif?");
+
+      $e(''h3'').to.have.css(''font-family'',''cursive'',"Did you remember to set
+      your <h3> header font-family to cursive?");'
+    updated_at: 2012-11-17 13:09:25.313000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDe59eZA8gACARvH
+    created_at: 2012-08-24 17:29:25.000000000 Z
+    default_code: ''
+    entry: ! "You don't have to jump straight to a default value like `cursive` or
+      `sans-serif`: you can tell CSS to try several, going from one to the next if
+      the one you want isn't available.\n\nFor example, if you write:\n\n    p {\n
+      \       font-family: Tahoma, Verdana, sans-serif;\n    }\n\nCSS will first try
+      to apply Tahoma to your paragraphs. If the user's computer doesn't have that
+      font, it will try Verdana next, and if that doesn't work, it will show a default
+      sans-serif font."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 2
+      correctness_test_issue: 1
+    from_console: false
+    hint: ! "Here's a freebie. For the serif line, you should have something like\n\n
+      \   h1 {\n        font-family: Times, serif;\n    }"
+    instruction: In the `stylesheet.css` tab, add Times as an option before `serif`,
+      Verdana as an option before `sans-serif`, and Vivaldi as an option before `cursive`.
+      Check the Hint if you need help!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Backup values
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "if(code['stylesheet.css'].match(/font-family:\\s*Times,\\s*serif;/i)
+      === null){\n\treturn \"Did you remember to put Times and a comma between font-family
+      and serif?\";\n}\n\nif(code['stylesheet.css'].match(/font-family:\\s*Verdana,\\s*sans-serif;/i)
+      === null){\n\treturn \"Did you remember to put Verdana and a comma between font-family
+      and sans-serif?\";\n}\n\nif(code['stylesheet.css'].match(/font-family:\\s*Vivaldi,\\s*cursive;/i)
+      === null){\n\treturn \"Did you remember to put Vivaldi and a comma between font-family
+      and cursive?\";\n}\n\nreturn true;"
+    updated_at: 2012-11-18 02:20:42.082000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDebXlwoGQACAD6n
+    created_at: 2012-08-24 15:18:54.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! You''ve learned a ton so far. Let''s take a quick breather
+      to review.
+
+
+      We''ve covered:
+
+
+      * What CSS is
+
+      * Why we separate form from function
+
+      * CSS syntax, including (multiple) selectors, (multiple) property-value pairs,
+      and comments
+
+      * Details of how colors, font sizes, and font families work'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Time for a little free play! Use the HTML and CSS files to the right
+      to practice what you've learned. Hit Run when you're ready to move on.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Review
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Free Play!</title>\n\t</head>\n\t<body>\n\t\t<!--Go
+        bananas!-->\n\t\t\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Write your CSS below!*/
+
+
+'
+    test_functions: return true;
+    updated_at: 2012-11-16 01:52:19.955000000 Z
+    view: :console_and_editor
+  feedback_total: 9
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Details, Details
+  num_forum_answers: 3
+  num_forum_questions: 3
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-11-18 02:20:42.106000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:39:51.000000000 Z
+  default_view: :console_and_editor
+  entry: Let's move beyond just changing font colors and sizes.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDYyE6H0/wACAjDf
+    created_at: 2012-08-23 13:37:23.000000000 Z
+    default_code: ''
+    entry: ! 'Remember our friend `<div>`, and how we used it to make those multi-colored
+      blocks? Time for you to build your own blocks! (Well, block. Let''s not get
+      ahead of ourselves.)
+
+
+      There are three properties you''ll need to set values for:
+
+
+      1. `background-color`, which you set to a color or hex value
+
+      2. `height`, which you set to a value in pixels
+
+      3. `width`, which is also measured in pixels
+
+
+      These exercises will give you a brief overview of the different HTML elements
+      you can select and what some of their property-value pairs are (like the new
+      ones we mention above). We''ll cover HTML element selection more in the next
+      course!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 6
+      typo: 2
+      other: 2
+    from_console: false
+    hint: Make sure you're using `background-color` for your `<div>`, not `color`!
+    instruction: ! 'In the `stylesheet.css` tab:
+
+
+      1. Set the `background-color` to `#cc0000`, like this: `background-color: #cc0000;`
+
+      2. Set the `height` to `100px`, like this: `height: 100px;`
+
+      3. Set the `width` to `100px`, as well.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Background color, height, and width
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div></div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! "color = $('div').css('background-color');\nheight = $('div').css('height');\nwidth
+      = $('div').css('width');\n\nif (color !== 'rgb(204, 0, 0)') {\n\treturn \"It
+      looks like your <div> doesn't have the right background-color (#cc0000)!\";\n}\n\nif
+      (height !== '100px') {\n  return \"It looks like your <div> isn't 100px high;
+      it appears to be \" + height + \" high.\";\n}\n\nif (width !== '100px') {\n
+      \ return \"It looks like your <div> isn't 100px wide; it appears to be \" +
+      width + \" wide.\";\n}\n\nreturn true;"
+    updated_at: 2012-11-22 01:18:26.432000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDYyFeI7DwACAiud
+    created_at: 2012-08-23 13:37:25.000000000 Z
+    default_code: ''
+    entry: ! "Many HTML elements support the `border` property. This can be especially
+      useful with tables.\n\nThe `border` property in turn supports several values.
+      For example, for a border 2 pixels thick, solid, and red, you'd type\n\n    selector
+      {\n        border: 2px solid red;\n    }\n\nBorders: pretty fancy."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 24
+      total: 35
+      instructional_text_issue: 3
+      other: 8
+    from_console: false
+    hint: ''
+    instruction: ! 'In the `stylesheet.css` tab:
+
+
+      1. Set your `td`s (table data cells) to have a `height` of `50px` so we can
+      see them better when we add our border.
+
+      2. Give your `td`s a `border` of `1px dashed blue`.
+
+      3. Give your `table` a `border` of `1px solid black`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Bordering on insanity
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t<table>\n\t\t\t<thead>\n\t\t\t\t<th
+        colspan=\"3\">Nine Blocks!</th>\n\t\t\t</thead>\n\t\t\t<tbody>\n\t\t\t\t<tr>\n\t\t\t\t\t<td></td>\n\t\t\t\t\t<td></td>\n\t\t\t\t\t<td></td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td></td>\n\t\t\t\t\t<td></td>\n\t\t\t\t\t<td></td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td></td>\n\t\t\t\t\t<td></td>\n\t\t\t\t\t<td></td>\n\t\t\t\t</tr>\n\t\t\t</tbody>\n\t\t</table>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! "tdHeight = $('td').css('height');\ntdBorderColor = $('td').css('border-color');\ntdBorderWidth
+      = $('td').css('border-width');\ntdBorderStyle = $('td').css('border-style');\ntableBorderColor
+      = $('table').css('border-color');\ntableBorderWidth = $('table').css('border-width');\ntableBorderStyle
+      = $('table').css('border-style');\n\nif(tdHeight !== '50px'){\n\treturn \"It
+      looks like each td is \" + tdHeight + \" high instead of 50px high.\";\n}\n\nif
+      (tdBorderColor !== 'rgb(0, 0, 255)') {\n\treturn \"It looks like your td border
+      isn't blue.\";\n}\n\nif (tdBorderWidth !== '1px') {\n  return \"It looks like
+      your td border is \" + tdBorderWidth + \" wide instead of 1px wide.\";\n}\n\nif
+      (tdBorderStyle !== 'dashed') {\n  return \"It looks like your td border is \"
+      + tdBorderStyle + \" instead of dashed.\";\n}\n\nif (tableBorderColor !== 'rgb(0,
+      0, 0)') {\n  return \"It looks like your table border isn't black.\";\n}\n\nif
+      (tableBorderWidth !== '1px') {\n  return \"It looks like your table border is
+      \" + tableBorderWidth + \" wide instead of 1px wide.\";\n}\n\nif (tableBorderStyle
+      !== 'solid') {\n  return \"It looks like your table border is \" + tableBorderStyle
+      + \" instead of solid.\";\n}\n\nreturn true;"
+    updated_at: 2012-11-25 23:39:13.163000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDYyFlZD+QACAjjl
+    created_at: 2012-08-23 13:37:26.000000000 Z
+    default_code: ''
+    entry: ! 'Links have a lot of the same properties as regular text: you can change
+      their font, color, size, and so on.
+
+
+      But links also have a property, `text-decoration`, that you can change to give
+      your links a little more custom flair. You''re probably used to seeing links
+      that are blue and underlined, right? Well, that''s not the way it has to be!'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: In the `stylesheet.css` tab, give your `a` selector a `color` of
+      `#cc0000` and a `text-decoration` of `none`. Check out how the link changes
+      in the Result tab!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Links and text decoration
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<p>The
+        below link goes to Google!</p>\n\t\t<a href=\"http://www.google.com/\">Google</a>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! '$e(''a'').to.have.css(''color'',''#cc0000'',"Whoops! It looks
+      like your ''a'' selector doesn''t have the color #cc0000.");
+
+      $e(''a'').to.have.css(''text-decoration'',''none'',"Did you remember to set
+      your ''a''s text-decoration to none?");'
+    updated_at: 2012-08-24 19:04:26.000000000 Z
+    view: :console_and_editor
+  feedback_total: 41
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Selecting HTML Elements
+  num_forum_answers: 64
+  num_forum_questions: 9
+  published: true
+  read_feedback_total: 10
+  updated_at: 2012-11-25 23:39:13.193000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-24 01:45:48.000000000 Z
+  default_view: :console_and_editor
+  entry: Time to go over what you've learned!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDbczZHR7gACAO1c
+    created_at: 2012-08-24 01:45:49.000000000 Z
+    default_code: ''
+    entry: ! 'All right! Final section. Time for some review!
+
+
+      You''re learning a lot, so from here on out, we''ll do more frequent reviews
+      to make sure you''ve got a handle on all this new material.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 3
+      positive_feedback: 1
+      other: 1
+    from_console: false
+    hint: If you don't remember the syntax, check [here](http://www.codecademy.com/courses/web-beginner-en-TlhFi/0#!/exercises/4)
+      for a refresher.
+    instruction: ! 'Okay, all on your lonesome: add a `<link>` tag between the `<head></head>`
+      tags in the HTML tab to the right. The link should have an `href` attribute
+      that points to `stylesheet.css`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: HTML + CSS = BFFs
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Result</title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "var $link = $('link');\n\nif($link.attr('type') !== 'text/css'){\n\treturn
+      \"It looks like your 'type' attribute isn't quite right.\";\n}\n\nif($link.attr('rel')
+      !== 'stylesheet'){\n\treturn \"It looks like your 'rel' attribute isn't quite
+      right.\";\n}\n\nif($link.attr('href') !== 'stylesheet.css'){\n\treturn \"It
+      looks like your 'href' attribute isn't quite right.\";\n}\n\nreturn true;"
+    updated_at: 2012-11-12 09:15:09.607000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDbc2XBUDgACAQex
+    created_at: 2012-08-24 01:46:01.000000000 Z
+    default_code: ''
+    entry: ! "All right! Our HTML bone is connected to our CSS bone.\n\nNext: let's
+      review selectors, properties, and values. Remember, the syntax is\n\n    selector
+      {\n        property: value;\n    }"
+    expect_error: false
+    feedback_stats:
+      typo: 2
+      total: 6
+      correctness_test_issue: 4
+    from_console: false
+    hint: ''
+    instruction: ! '1. Add a pair of `<h1></h1>` tags inside the `body` of our HTML
+      page. Your h1 header can say anything you want! Then, on the CSS tab, make its
+      font Verdana and its color `#576D94`.
+
+      2. Add a pair of `<p></p>` tags below your h1 header. Put any text you like
+      in there, then head over to the CSS tab and set the font size to 18px and its
+      color to `#4A4943`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Many selectors, many properties
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n    <link rel=\"stylesheet\"
+        type=\"text/css\" href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('h1').to.exist(\"Don't forget to put in your <h1></h1> tags!\");\n$e('h1').not.to.be.empty(\"It
+      looks like your <h1></h1> tags don't have any text between them. Your header's
+      gotta say something!\");\n$e('h1').to.have.css('font-family','Verdana',\"Don't
+      forget to set your h1 font to Verdana!\");\n$e('h1').to.have.css('color','#576D94',\"Don't
+      forget to set your h1 color to #576D94!\");\n\np = $('p').css('font-size');\n\n$e('p').to.exist(\"Don't
+      forget to put in your <p></p> tags!\");\n$e('p').not.to.be.empty(\"It looks
+      like your <p></p> tags don't have any text between them. Your paragraph's gotta
+      say something!\");\n$e('p').to.have.css('color','#4A4943',\"Don't forget to
+      set your p color to #4A4943!\");\n\nif (p !== '18px') {\n  return \"Don't forget
+      to set your p font-size to 18px! It looks like it's currently \" + $p + \".\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-11-25 09:37:17.486000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDbc2mdaIgACAO9e
+    created_at: 2012-08-24 01:46:02.000000000 Z
+    default_code: ''
+    entry: As we've seen, sometimes a user's computer doesn't have the mega sweet
+      fonts we wish it had. For that reason, we give their browser a few fallback
+      choices!
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ! "Remember the syntax for backup values?\n\n    selector {\n        property:
+      bestValue, nextBestValue\n    }"
+    instruction: ! '1. Set the `p` `font-family` to Garamond.
+
+      2. Give `h1` a backup font of `sans-serif` and `p` a backup font of `serif`.
+      Check the Hint if you need a refresher!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Fall back!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "if(code['stylesheet.css'].match(/font-family:\\s*Verdana,\\s*sans-serif;?/i)
+      === null){\n\treturn \"Did you remember to add a comma and sans-serif after
+      Verdana?\";\n}\n\nif(code['stylesheet.css'].match(/font-family:\\s*Garamond,\\s*serif;?/i)
+      === null){\n\treturn \"Did you remember to add a comma and serif after Garamond?\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-10-23 16:03:38.425000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDbc26pXFAACAOg+
+    created_at: 2012-08-24 01:46:03.000000000 Z
+    default_code: ''
+    entry: Excellent! Your page is a little bland, though. Let's add a picture with
+      a border.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 6
+      total: 12
+      positive_feedback: 3
+      instructional_text_issue: 1
+      typo: 2
+    from_console: false
+    hint: ! "Remember, your `<img>` tag needs a `src`, like so:\n\n    <img src=\"website
+      address\"/>\n\nCan't find an image you like? Try this one: `\"http://bit.ly/NnVbxt\"`"
+    instruction: ! '1. Add an `<img>` to your HTML document. Its `src` attribute can
+      point anywhere! (Check the Hint if you''re stuck or need a picture.)
+
+      2. On the CSS tab, set you image''s `height` to `100px` and `width` to `300px`.
+
+      3. On the CSS tab, give your image a `border` of `1px solid #4682b4`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Size and borders
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('img').to.exist(\"Did you remember to add an image?\");\n\nif(code['index.html'].match(/src\\s*=/)
+      === null){\n\treturn \"Did you remember to give your image a 'src' attribute?\";\n}\n\nheight
+      = $('img').css('height');\nwidth = $('img').css('width');\n\n$e('img').to.have.css('border','1px
+      solid #4682b4',\"Did you remember to give your image a 1px solid #4682b4 border?\");\n\nif
+      (height !== '100px') {\n  return \"It looks like your image is \" + height +
+      \" high instead of 100px high.\";\n}\n\nif (width !== '300px') {\n  return \"It
+      looks like your image is \" + width + \" wide instead of 300px wide.\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-10-31 06:51:30.228000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDkWjmp/TAACBN8m
+    created_at: 2012-08-25 18:16:46.000000000 Z
+    default_code: ''
+    entry: Great work! We're almost there.
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: ! "Remember how you make links?\n\n    <a href=\"website address\">Link
+      text!</a>"
+    instruction: ! '1. Add a link to your HTML page using `<a></a>` tags, and be sure
+      you include a `href` attribute (check the Hint if you need a reminder). Your
+      link can go anywhere!
+
+      2. On the CSS tab, change your link''s `text-decoration` to `none` and its `color`
+      to `#cc0000`.
+
+
+      You''re done! Revel in the glory of your newfound CSS knowledge for a moment,
+      then head on to the project.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Links and text decoration
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('a').to.exist(\"Did you remember to add a link?\");\n$e('a').not.to.be.empty(\"Did
+      you remember to put some link text between your <a></a> tags? You can't leave
+      them empty!\");\n\nif(code['index.html'].match(/href\\s*=\\s*\"/) === null){\n\treturn
+      \"Did you remember to give your link a 'href' attribute?\";\n}\n\n$e('a').to.have.css('text-decoration','none',\"Did
+      you remember to set your link's text-decoration to none;?\");\n$e('a').to.have.css('color','#cc0000',\"Did
+      you remember to set your link's color to #cc0000;?\");\n\nreturn true;"
+    updated_at: 2012-11-08 18:30:11.752000000 Z
+    view: :console_and_editor
+  feedback_total: 24
+  index: 4
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Review
+  num_forum_answers: 18
+  num_forum_questions: 9
+  published: true
+  read_feedback_total: 2
+  updated_at: 2012-11-25 09:37:17.507000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

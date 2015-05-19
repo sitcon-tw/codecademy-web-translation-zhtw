@@ -1,0 +1,335 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.480882352941176
+classification: :game
+created_at: 2012-08-21 22:09:41.000000000 Z
+domain: :freestyle
+down_votes: 46
+entry: It's hard to believe, but you now know enough HTML to create your own basic
+  social networking profile! Let's get started.
+feedback_total: 11
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: Social Networking Profile
+num_exercises: 7
+num_published_exercises: 7
+num_published_sections: 1
+num_readiness_feedbacks: 97
+num_sections: 1
+num_user_ratings: 2040
+project_scope: 0
+published: true
+rating: 431.7536251087529
+read_feedback_total: 7
+readiness: 97.6
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-25 04:24:49.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 9141.0
+up_votes: 513
+updated_at: 2012-11-26 16:35:01.223000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-21 22:09:41.000000000 Z
+  default_view: :console_and_editor
+  entry: Think about your profile on your favorite social networking site. When you
+    get right down to it, it's basically... a list!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDapqCGoOwACAFu5
+    created_at: 2012-08-23 22:07:36.000000000 Z
+    default_code: ''
+    entry: ! 'You''ll start to see a pattern with these HTML projects: first we''ll
+      show you what you''ll be making, then we''ll walk you through actually making
+      it!
+
+
+      In this course, you''ll be creating your own social networking profile. Check
+      out our profile for King Kong in `index.html` and the Result tab to the right.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 2
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Hit Run when you're ready to start building your own profile!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Here's what you're building
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>The Kingest of Kongs</title>\n\t</head>\n\t<body>\n\t\t<img
+        src=\"http://bit.ly/NM8PWH\" />\n\t\t<p>I'm male, 89 years old, and am a giant,
+        Empire State Building-climbing ape.</p>\n\t\t<ul>\n\t\t\t<li style=\"color:red\">Interests\n\t\t\t\t<ul>\n\t\t\t\t\t<li
+        style=\"font-family:Futura\">Bananas</li>\n\t\t\t\t\t<li style=\"font-family:Futura\">Climbing
+        stuff</li>\n\t\t\t\t\t<li style=\"font-family:Futura\">HTML</li>\n\t\t\t\t</ul>\n
+        \     </li>\n\t\t\t<li style=\"color:red\">Jobs\n\t\t\t\t<ol>\n\t\t\t\t\t<li
+        style=\"font-family:Futura\">Giant ape</li>\n\t\t\t\t\t<li style=\"font-family:Futura\">Web
+        developer</li>\n\t\t\t\t</ol>\n      </li>\n\t\t\t<li style=\"color:red\">Where
+        I Went to School\n\t\t\t\t<ol>\n\t\t\t\t\t<li style=\"font-family:Futura\">Diddy
+        Kong Jr. High School</li>\n\t\t\t\t\t<li style=\"font-family:Futura\">Donkey
+        Kong Sr. High School</li>\n\t\t\t\t\t<li style=\"font-family:Futura\">Harvard
+        University (BA)</li>\n\t\t\t\t\t<li style=\"font-size:18px; font-family:Futura\">Yale
+        University (JD) (Current)</li>\n\t\t\t\t</ol>\n      </li>\n\t\t\t<li style=\"color:red\">Favorite
+        Quotes\n\t\t\t\t<ul>\n\t\t\t\t\t<li style=\"font-family:Futura\">\"If at first
+        you don't succeed, climb a giant building.\"</li>\n\t\t\t\t\t<li style=\"font-family:Futura\">\"A
+        banana in the hand is worth two on the tree.\"</li>\n\t\t\t\t</ul>\n      </li>\n\t\t</ul>\n\t</body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-10-23 20:25:26.249000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDQLDtulfQACAEAg
+    created_at: 2012-08-21 22:26:22.000000000 Z
+    default_code: ''
+    entry: ! 'Have you ever seen your page on a social networking site load really
+      slowly, then come through with only the HTML skeleton? (If not, it looks like
+      [this](http://bit.ly/NjMm7T). Crazy, right?)
+
+
+      Under its fancy skin, a social networking profile is just a list of text, images,
+      and links. And you know all about those!
+
+
+      We''ve set up your profile page with the basics, but the details are up to you.
+      First off, let''s make this page about you!'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ! "Remember, `<img>` tags work like this:\n\n    <img src=\"website URL\"
+      />"
+    instruction: ! '1. Put your name between the `<title></title>` tags.
+
+      2. Put a picture of yourself (or anything you like!) between the `<body></body>`
+      tags. If you can''t think of a good picture, use this ninja: http://bit.ly/SJxLUx.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: You have the power!
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('title').not.to.be.empty(\"Looks like your title's empty!
+      Make sure to put your name between the <title></title> tags.\");\n$e('img').to.exist(\"Make
+      sure you include a picture!\");\n\nif (code['index.html'].match(/src\\s*=/)
+      === null) {\n  return \"Make sure your img tag has a src attribute! Check the
+      Hint if you need help.\";\n}\n\nreturn true;"
+    updated_at: 2012-10-23 20:25:47.330000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDQOBskeSAACAFK5
+    created_at: 2012-08-21 22:39:02.000000000 Z
+    default_code: ''
+    entry: Great! Now we know your name and what you look like, but that's about it.
+      Your profile page should include a little bit about you! (After all, that's
+      the point of a profile in the first place.)
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Create a paragraph below your picture that mentions your age, gender,
+      and hometown. Don't get too carried away—we'll get to your interests, favorite
+      things, and where you've lived, worked, or gone to school in the next section!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: A bit about you
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! '$e(''p'').to.exist("Make sure you add a paragraph about yourself!");
+
+      $e(''p'').not.to.be.empty("You''ve got your <p></p> tags, but it looks like
+      they''re empty. Write a bit about yourself between them!");'
+    updated_at: 2012-09-23 08:21:55.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDQOEXODZwACAFUW
+    created_at: 2012-08-21 22:39:13.000000000 Z
+    default_code: ''
+    entry: ! 'Nice! It''s starting to look like a profile page already.
+
+
+      Most profile pages are divided up into sections: your interests, favorite quotes,
+      where you work, where you went to school, where you live, and so on. We can
+      do this with an unordered list!
+
+
+      Below the paragraph about yourself, create an unordered list. Each list item
+      should be a category: for example, **Interests**, **Jobs**, **Favorite Quotes**,
+      **Where I''ve Lived**, and so on.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Pick any topics you like! You should include at least four.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Profile sections
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('ul').to.exist(\"It looks like you haven't created an unordered
+      list. Use <ul></ul> tags to do that!\");\n$e('li').to.be.above(3,function(){\n\treturn
+      \"Make sure to include at least four list items (<li></li>)!\"\n});\n$e('li').not.to.be.empty(\"It
+      looks like you haven't filled in all your list items. Make sure to put text
+      between each <li></li> pair!\");"
+    updated_at: 2012-08-23 22:07:52.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDQOQbUZ5gACAFW4
+    created_at: 2012-08-21 22:40:01.000000000 Z
+    default_code: ''
+    entry: ! 'You''re a natural. Now that you''ve got your profile sections set up,
+      it''s time to add your favorite things!
+
+
+      Between your unordered list''s list items, create additional lists. These lists
+      should have list items that detail places you''ve visited, your favorite sports
+      teams, or anything at all you like.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 2
+      typo: 1
+    from_console: false
+    hint: ! "Remember, unordered lists work like this:\n\n    <ul>\n        <li>An
+      item</li>\n        <li>Another item</li>\n    </ul>\n\nAnd ordered lists work
+      like this:\n\n    <ol>\n        <li>Item #1</li>\n        <li>Item #2</li>\n
+      \   </ol>\n\nA list within a list might look like this:\n\n    <ul>\n        <li>Interests\n
+      \           <ul>\n                <li>Golf</li>\n                <li>Sleep</li>\n
+      \               <li>Lasers</li>\n            </ul>\n          </li>\n        <li>Favorite
+      Teams</li>"
+    instruction: Go nuts with your lists within lists! The only requirement is that
+      you have at least one ordered list and one unordered list. Check the Hint if
+      you need help!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Lists within lists
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! '$e(''ul ul'').to.exist("Make sure you have at least one unordered
+      list inside your unordered list of profile sections!");
+
+      $e(''ul ol'').to.exist("Make sure you have at least one ordered list inside
+      your unordered list of profile sections!");
+
+      $e(''ul'').not.to.be.empty("Make sure all your unordered lists have at least
+      one list item (<li></li>) each!");
+
+      $e(''ol'').not.to.be.empty("Make sure all your ordered lists have at least one
+      list item (<li></li>) each!");
+
+      $e(''li'').not.to.be.empty("Make sure you include text between all of your list
+      item (<li></li>) tags!");'
+    updated_at: 2012-11-02 10:59:47.107000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDQQosDIsAACAFyM
+    created_at: 2012-08-21 22:50:10.000000000 Z
+    default_code: ''
+    entry: ! 'Perfect. Your profile''s really coming along!
+
+
+      It still looks a bit bland, though. Thankfully, you know how to fancify your
+      fonts with the `font-family`, `font-size`, and `color` properties! Which is
+      exactly what you''re about to do.'
+    expect_error: false
+    feedback_stats:
+      other: 2
+      total: 2
+    from_console: false
+    hint: ! "Remember, these are all properties of the `style` attribute. To make
+      a red `<p>`, you'd write:\n\n    <p style=\"color:red\">I'm red!</p>"
+    instruction: Spice up your profile with different fonts, sizes, and colors. You
+      can do any combination you like, so long as you use `font-family`, `font-size`,
+      and `color` at least once each!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Fancy up your font
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "if (code['index.html'].match(/color\\s*:/i) === null){\n\treturn
+      \"It looks like you haven't used the color attribute! Add a splash of color
+      to make your profile really pop.\";\n}\nif(code['index.html'].match(/font-family\\s*:/i)
+      === null){\n\treturn \"It looks like you haven't used the font-family attribute.
+      Try it at least once. Sticking to a single font is boring!\";\n}\nif(code['index.html'].match(/font-size\\s*:/i)
+      === null){\n\treturn \"It looks like you haven't used the font-size attribute.
+      Give it a try!\";\n}\n\nreturn true;"
+    updated_at: 2012-10-31 19:48:42.001000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDQQo9ulfQACAGOs
+    created_at: 2012-08-21 22:50:11.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! Just one more thing before you can call your profile complete:
+      you''ve got to add just the right number of *emphasized* and **strong** words.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 3
+      other: 2
+    from_console: false
+    hint: ''
+    instruction: How many you use is up to you, but you should use `<em>` and `<strong>`
+      at least once each! Once you do, hit Run to finish the exercise and bask in
+      the glory of your newly created profile.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Bold! Italic! Bold!
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "if(code['index.html'].match(/\\<\\s*strong\\s*\\>/) === null){\n\treturn
+      \"Don't forget to use a <strong> tag somewhere!\";\n}\nif(code['index.html'].match(/\\<\\s*\\/strong\\s*\\>/)
+      === null){\n\treturn \"Looks like you didn't close your </strong> tag!\";\n}\nif(code['index.html'].match(/\\<\\s*em\\s*\\>/)
+      === null){\n\treturn \"Don't forget to use an <em> tag somewhere!\";\n}\nif(code['index.html'].match(/\\<\\s*\\/em\\s*\\>/)
+      === null){\n\treturn \"Looks like you didn't close your </em> tag!\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-11-07 18:53:08.157000000 Z
+    view: :console_and_editor
+  feedback_total: 11
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Listing Your Interests
+  num_forum_answers: 4
+  num_forum_questions: 3
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-07 18:53:08.173000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

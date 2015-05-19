@@ -1,0 +1,304 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.574289876183539
+classification: :game
+created_at: 2012-08-25 18:39:35.000000000 Z
+domain: :freestyle
+down_votes: 16
+entry: Now that you know some CSS, you can style great-looking buttons for your webpages.
+feedback_total: 9
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: Design a Button for Your Website
+num_exercises: 6
+num_published_exercises: 6
+num_published_sections: 1
+num_readiness_feedbacks: 67
+num_sections: 1
+num_user_ratings: 1374
+project_scope: 0
+published: true
+rating: 243.32426777706476
+read_feedback_total: 6
+readiness: 95.2
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-29 01:08:26.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 6280.5
+up_votes: 294
+updated_at: 2012-11-26 15:55:05.017000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-25 18:39:36.000000000 Z
+  default_view: :console_and_editor
+  entry: Awesome buttons are within your grasp! All you need is a sprinkling of CSS.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDkb6HpqogACBOwL
+    created_at: 2012-08-25 18:39:36.000000000 Z
+    default_code: ''
+    entry: ! 'You''ve probably seen all kinds of nifty-looking buttons on your favorite
+      websites that link you to different webpages. In this project, we''ll show you
+      how to make your own!
+
+
+      We''ve included sample images and text here, but feel free to substitute your
+      own in the next exercises.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Check out the HTML and CSS we've used, and have a look at the button
+      on the Result tab. Hit Run when you're ready to start building your button!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What you'll be building
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>About Me</title>\n\t</head>\n\t<body>\n\t\t<img
+        src=\"http://bit.ly/NnVbxt\"/>\n\t\t<p>We're Codecademy! We're here to help
+        you learn to code.</p><br/><br/>\n\t\t<div>\n\t\t\t<a href=\"https://www.facebook.com/codecademy\">Friend
+        us on <span>Facebook!</span></a>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "img {\n\tdisplay: block;\n\theight: 100px;\n\twidth: 300px;\n\tmargin:
+        auto;\n}\n\np {\n\ttext-align: center;\n\tfont-family: Garamond, serif;\n\tfont-size:
+        18px;\n}\n\ndiv {\n\tborder-radius: 5px;\n\tborder: 2px solid #6495ED;\n\tbackground-color:
+        #BCD2EE;\n\theight: 50px;\n\twidth: 120px;\n\tmargin: auto;\n\ttext-align:
+        center;\n}\n\na {\n\ttext-decoration: none;\n\tcolor: #3D59AB;\n\tfont-family:
+        Verdana, sans-serif;\n}\n\nspan {\n\tfont-weight: bold;\n\tfont-size: 18px;\n\tcolor:
+        #ffffff;\n}"
+    test_functions: return true;
+    updated_at: 2012-08-25 21:14:56.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDkcNCb2FgACBPrA
+    created_at: 2012-08-25 18:40:52.000000000 Z
+    default_code: ''
+    entry: ! 'Let''s get started! First things first: we''ll need to create our button.
+      We''ll do this with `<div></div>` tags.
+
+
+      **Please note:** If you have adjusted your browser''s zoom, tests involving
+      `height` and `width` will not work correctly. To remedy this, please type Command+0
+      or Ctrl+0 to reset your view.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: ! 'On the CSS tab, add a `div` selector and add property: value pairs
+      of:
+
+
+      1. height: 50px
+
+      2. width: 120px
+
+      3. border: color of #6495ED
+
+      4. background-color: #BCD2EE.
+
+
+      Your border can be any type (dashed, solid, and so on) and any width. (We like
+      2px.)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Drawing your button
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>About Me</title>\n\t</head>\n\t<body>\n\t\t<img
+        src=\"http://bit.ly/NnVbxt\"/>\n\t\t<p>We're Codecademy! We're here to help
+        you learn to code.</p><br/><br/>\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "img {\n\tdisplay: block;\n\theight: 100px;\n\twidth: 300px;\n\tmargin:
+        auto;\n}\n\np {\n\ttext-align: center;\n\tfont-family: Garamond, serif;\n\tfont-size:
+        18px;\n}\n\n/*Start adding your CSS below!*/\n\n"
+    test_functions: ! "height = $('div').css('height');\nwidth = $('div').css('width');\n\nif
+      (height !== '50px') {\n  return \"Did you remember to give your div a height
+      of 50px? It looks like it's \" + height + \".\";\n}\n\nif (width !== '120px')
+      {\n  return \"Did you remember to give your div a width of 120px? It looks like
+      it's \" + width + \".\";\n}\n\n$e('div').to.have.css('border-color','#6495ED',\"Is
+      your border color #6495ED?\");\n$e('div').to.have.css('background-color','#BCD2EE',\"Did
+      you remember to set your div's background color to #BCD2EE?\");\n\nreturn true;"
+    updated_at: 2012-10-04 16:15:39.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDkcNFm39QACBQ7I
+    created_at: 2012-08-25 18:40:52.000000000 Z
+    default_code: ''
+    entry: This involves a new property called **border-radius**. (We'll learn more
+      about it in later courses and projects.) This property modifies the corners
+      of HTML objects; it's how you get those cool rounded buttons!
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 3
+      total: 3
+    from_console: false
+    hint: ''
+    instruction: Set your `div`'s `border-radius` to `5px`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Shaping your button
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$div = $('div');\n\nif($div.css('border-radius') === '5px')
+      {\n  return true;\n} else if($div.css('-webkit-border-radius') === '5px') {\n
+      \ return true;\n} else if($div.css('-moz-border-radius') === '5px') {\n  return
+      true;\n} else if (($div.css('border-top-left-radius') === '5px') && ($div.css('border-top-right-radius')
+      === '5px') && ($div.css('border-bottom-left-radius') === '5px') && ($div.css('border-bottom-right-radius')
+      === '5px')) {\n  return true;\n} else {\n  return \"Did you remember to set
+      your div's border-radius to 5px?\";\n}"
+    updated_at: 2012-09-25 21:15:22.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDkcNoUXfAACBPol
+    created_at: 2012-08-25 18:40:54.000000000 Z
+    default_code: ''
+    entry: ! 'Nice work! Now we''ll work on centering your button on the page.
+
+
+      We''ll go over positioning in the next course or two, but we think it''s a good
+      idea to give you a preview here. Here''s how it works:
+
+
+      1. `margin: auto;` is the CSS you use to tell the browser: "Hey! Make sure to
+      set equal margins on each side of this HTML element." When the margins are equal,
+      the object is centered.
+
+      2. `text-align: center;` is how you center text elements.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: On the CSS tab, set your `div`'s `margin` to `auto` and its `text-align`
+      property to `center`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Positioning your button
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: $e('div').to.have.css('text-align','center',"Did you remember
+      to set your div's text-align to center;?");
+    updated_at: 2012-08-25 21:22:03.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDkcNTnIogACBQDk
+    created_at: 2012-08-25 18:40:53.000000000 Z
+    default_code: ''
+    entry: ! "Great! Now we want to add a link with text to our button.\n\nIn our
+      example back in the first exercise, you may have noticed that we used `<span></span>`
+      tags to create a different font color for `\"Facebook!\"`, like so:\n\n    <a>Friend
+      us on <span>Facebook!</span></a>\n\nYou can do this too, if you like, but it's
+      not required."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 3
+    from_console: false
+    hint: ''
+    instruction: ! 'On the HTML tab:
+
+
+      Add a link (using `<a></a>` tags) between your `<div></div>` tags. You can set
+      its `href` attribute to go to any website, and you can make the link text itself
+      say whatever you want!
+
+
+      On the CSS tab:
+
+
+      Set your link''s text-decoration to `"none"`. Give it whatever color or font
+      type you like!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Adding the link
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('div > a').to.exist(\"Did you remember to add a link between
+      your <div></div> tags?\");\n\nif(code['index.html'].match(/a href\\s*=\\s*\"/)
+      === null){\n\treturn \"Did you remember to give your <a> tag a href attribute?\";\n}\n$e('a').not.to.be.empty(\"Make
+      sure you put some text for your link between your <a></a> tags!\");\n$e('a').to.have.css('text-decoration','none',\"Did
+      you remember to set your link's text-decoration to none;?\");"
+    updated_at: 2012-10-31 12:24:21.285000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDkcNhiZwwACBRtx
+    created_at: 2012-08-25 18:40:54.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! In just a few short steps, you''ve made a functioning button
+      that will send your website''s visitors wherever you''d like them to go.
+
+
+      Feel free to go ahead and play with the settings on your button, such as changing
+      its colors, the font size, or the `border-radius` value.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Click on your button to have it take you wherever your heart desires!
+      (Or, at least, wherever your `href` attribute goes.) Then hit Run to finish
+      this course move on to more CSS lessons.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: It's alive!
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: return true;
+    updated_at: 2012-10-02 20:02:51.000000000 Z
+    view: :console_and_editor
+  feedback_total: 9
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Coding in Style
+  num_forum_answers: 3
+  num_forum_questions: 2
+  published: true
+  read_feedback_total: 4
+  updated_at: 2012-10-31 12:24:21.327000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

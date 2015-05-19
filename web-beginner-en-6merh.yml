@@ -1,0 +1,1244 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.530209617755857
+classification: :lesson
+created_at: 2012-08-23 01:51:00.000000000 Z
+domain: :freestyle
+down_votes: 116
+entry: Now that you know exactly how to style any HTML element you want, it's time
+  to learn how to place them exactly where you want them to appear on the page.
+feedback_total: 32
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: CSS Positioning
+num_exercises: 25
+num_published_exercises: 25
+num_published_sections: 5
+num_readiness_feedbacks: 43
+num_sections: 5
+num_user_ratings: 811
+project_scope: 0
+published: true
+rating: 545.9362326761055
+read_feedback_total: 7
+readiness: 96.8
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-29 01:08:24.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 3674.0
+up_votes: 693
+updated_at: 2012-11-26 16:04:47.465000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:51:00.000000000 Z
+  default_view: :console_and_editor
+  entry: You know how to style a whole bunch of HTML elements using CSS. Now you'll
+    learn how to use CSS to control exactly where your HTML elements appear on the
+    page!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt3f3i06wACBR9v
+    created_at: 2012-08-27 13:34:55.000000000 Z
+    default_code: ''
+    entry: ! 'All right! Now that you know all about CSS, it''s time to learn the
+      last (but certainly not least) major piece of the puzzle: positioning.
+
+
+      Controlling the position of HTML elements allows you incredibly fine control
+      over how your pages look. No longer will your `<div>`s sit directly on top of
+      one another! (Unless you want them to.)
+
+
+      As we mentioned, elements populate the page in what''s known as the **CSS box
+      model**. Each HTML element is like a tiny box or container that holds the pictures
+      and text you specify.
+
+
+      Check out the image in the Result tab: that''s what the box model looks like!
+      (We''ll cover the details of margins, borders, and padding in the next section.)'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 8
+      total: 9
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'See for yourself—use the universal selector to draw a 1px dashed
+      border of hex color #0000FF around every HTML element.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: See it to believe it
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h3>The
+        Box Model</h3>\n\t\t<img src=\"http://bit.ly/OoKWYd\"/>\n\t\t<p>Image courtesy
+        of www.w3.org!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "borderColorAll = $('*').css('border-color');\nborderWidthAll
+      = $('*').css('border-width');\nborderStyleAll = $('*').css('border-style');\n\nif
+      (borderColorAll != \"rgb(0, 0, 255)\") {\n  return \"It looks like your border-color
+      isn't #0000FF.\";\n}\n\nif (borderWidthAll != \"1px\") {\n  return \"It looks
+      like your border is \" + borderWidthAll + \" wide instead of 1px wide.\";\n}\n\nif
+      (borderStyleAll != \"dashed\") {\n  return \"It looks like your border is \"
+      + borderStyleAll + \" instead of dashed.\";\n}\n\nreturn true;"
+    updated_at: 2012-11-26 09:38:09.784000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGkf4JNQACAE+4
+    created_at: 2012-08-25 21:41:37.000000000 Z
+    default_code: ''
+    entry: ! 'Cool, right? Each HTML element gets its own box to live in.
+
+
+      As you saw, the outermost box of each element went all the way across the page.
+      This is why until now, your HTML elements have been sitting on top of one another:
+      by default, they take up the full width of the page.
+
+
+      We can change all this with the first positioning property we''ll learn: the
+      **display** property. We''ll learn about four possible values.
+
+
+      **block**: This makes the element a block box. It won''t let anything sit next
+      to it on the page! It takes up the full width.
+
+
+      **inline-block**: This makes the element a block box, but will allow other elements
+      to sit next to it on the same line.
+
+
+      **inline**: This makes the element sit on the same line as another element,
+      but without formatting it like a block. It only takes up as much width as it
+      needs (not the whole line).
+
+
+      **none**: This makes the element and its content disappear from the page entirely!'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Let's get cracking. Set the `display` of all `<div>`s to `block`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Taking up space
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div
+        id=\"one\"></div>\n\t\t<div id=\"two\"></div>\n\t\t<div id=\"three\"></div>\n\t\t<div
+        id=\"four\"></div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "* {\n\tborder: 1px dashed blue;\n}\n\ndiv {\n\theight: 50px;\n\twidth:
+        100px;\n\tborder: 2px solid black;\n\tborder-radius: 5px;\n\t/*Add your CSS
+        here!*/\n\t\n}\n\n#one {\n\tbackground-color: #FF0000;\n}\n\n#two {\n\tbackground-color:
+        #0000FF;\n}\n\n#three {\n\tbackground-color: #FFD700;\n}\n\n#four {\n\tbackground-color:
+        #308014;\n}"
+    test_functions: ! "if(code['stylesheet.css'].match(/display:\\s*block;?/) ===
+      null){\n\treturn \"Did you remember to set the display property of your <div>s
+      to block?\";\n}\n\nreturn true;"
+    updated_at: 2012-08-27 16:03:37.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDuSkcBqNQACBhlN
+    created_at: 2012-08-27 15:30:25.000000000 Z
+    default_code: ''
+    entry: ! 'Good work! If you didn''t notice much of a difference, don''t worry.
+      Our `<div>`s were `block` elements by default; as we specify different display
+      values, they''ll start to move around.
+
+
+      As mentioned, any element that comes in as a block (say, a paragraph) will automatically
+      take up the full width of the page, no matter how much or how little content
+      you put in.
+
+
+      If we specify a display of `inline-block`, however, our blocks are still blocks,
+      but will be able to sit next to each other on the same line.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Change the `display` property of all your `<div>`s so the value is
+      now `inline-block` instead of `block`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Inline-block
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: $e('div').to.have.css('display','inline-block',"Did you remember
+      to set the display of your <div>s to inline-block?");
+    updated_at: 2012-08-27 16:11:25.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDuSk+aOXAACBgAm
+    created_at: 2012-08-27 15:30:27.000000000 Z
+    default_code: ''
+    entry: ! 'Did you see that? Your `<div>`s all moved onto the same line! You can
+      already start to see how this type of positioning can be useful for navigation
+      bars like the one at the top of this page (where you can click "Learn," "Teach,"
+      and so on).
+
+
+      The `inline-block` value allows you to put several block elements on the same
+      line. The `inline` value places all your elements next to one another, but not
+      as blocks: they don''t keep their dimensions.'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Try it and see! Set all your `<div>`s to have a `display` value of
+      `inline`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Inline
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: $e('div').to.have.css('display','inline',"Did you remember to
+      set the display of your <div>s to inline?");
+    updated_at: 2012-11-02 21:03:37.668000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDuSseyTDwACBhUt
+    created_at: 2012-08-27 15:30:57.000000000 Z
+    default_code: ''
+    entry: ! 'The good news is, `inline` places all your elements on a single line.
+      The bad news is that it doesn''t maintain their "box"ness: as you saw, all your
+      `<div>`s got squished to the smallest possible width!
+
+
+      The `inline` display value is better suited for HTML elements that are blocks
+      by default, such as headers and paragraphs.
+
+
+      Finally, we''ll try out the display value `none`. As you might expect, this
+      prevents the page from displaying the selected element. As you might *not* expect,
+      this removes the selected element from the page *entirely*, including any children
+      and any content. Poof! Gone! (But not gone forever—changing the display value
+      away from `none` will bring everything back.)'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Give it a whirl! Set all your `<div>`s' `display` property to the
+      `none` value.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: None!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: $e('div').to.have.css('display','none',"Did you remember to set
+      the display of your <div>s to none?");
+    updated_at: 2012-10-15 23:53:26.987000000 Z
+    view: :console_and_editor
+  feedback_total: 11
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: The Box Model
+  num_forum_answers: 10
+  num_forum_questions: 3
+  published: true
+  read_feedback_total: 2
+  updated_at: 2012-11-26 09:38:09.805000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:51:31.000000000 Z
+  default_view: :console_and_editor
+  entry: You've got the hang of displaying elements and how they fit in the CSS box
+    model. Now it's time to fine-tune the position of each box with padding, borders,
+    and margins.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGqIDwTgACAEIb
+    created_at: 2012-08-25 21:42:00.000000000 Z
+    default_code: ''
+    entry: ! 'Now that you understand more about the display property and the box
+      model, we can delve into the details of how each individual box behaves.
+
+
+      Check out the diagram in the Result tab (it''s the one from the first exercise
+      in this lesson). As you can see, each box is made of layers. From the outermost
+      to the innermost:
+
+
+      The **margin** is the space around the element. The larger the margin, the more
+      space between our element and the elements around it. We can adjust the margin
+      to move our HTML elements closer to or farther from each other.
+
+
+      The **border** is the edge of the element. It''s what we''ve been making visible
+      every time we set the `border` property.
+
+
+      The **padding** is the spacing between the content and and the border. We can
+      adjust this value with CSS to move the border closer to or farther from the
+      content.
+
+
+      The **content** is the actual "stuff" in the box. If we''re talking about a
+      `<p>` element, the "stuff" is the text of the paragraph.
+
+
+      You''ll see abbreviations like **TM**, **TB**, and **TP** in the diagram. These
+      stand for "top margin," "top border," and "top padding." As we''ll see, we can
+      adjust the top, right, left, and bottom padding, border, and margin individually.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Study the diagram in the Result tab until you're comfortable with
+      where the padding, border, and margin go. Then hit Run to start adjusting these
+      properties!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Sketching it out
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h3>The
+        Box Model</h3>\n\t\t<img src=\"http://bit.ly/OoKWYd\"/>\n\t\t<p>Image courtesy
+        of www.w3.org!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: return true;
+    updated_at: 2012-11-16 09:30:41.234000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGpv4JNQACAFBG
+    created_at: 2012-08-25 21:41:58.000000000 Z
+    default_code: ''
+    entry: ! 'Let''s start with our margins. Adjusting our margins not only moves
+      our element relative to other elements on the page, but also relative to the
+      "walls" of the HTML document.
+
+
+      For instance, if we take an HTML element with a specific width (such as our
+      `<div>` in the editor) and set its `margin` to `auto`, this tells the document
+      to `auto`matically put equal left and right margins on our element, centering
+      it on the page.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Try it out! Set our div's `margin` property to `auto` to center our
+      div on the page.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Margin
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div></div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "* {\n\tborder: 1px dashed black;\n}\n\ndiv {\n\theight: 50px;\n\twidth:
+        100px;\n\tborder: 2px solid black;\n\tborder-radius: 5px;\n\tbackground-color:
+        #308014;\n}"
+    test_functions: ! "if(code['stylesheet.css'].match(/margin:\\s*auto;?/) === null){\n\treturn
+      \"Did you remember to set the <div>'s margin to auto?\";\n}\n\nreturn true;"
+    updated_at: 2012-08-27 19:04:09.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGp+PQPwACAFMu
+    created_at: 2012-08-25 21:41:59.000000000 Z
+    default_code: ''
+    entry: ! "If you want to specify a particular margin, you can do it like this:\n\n
+      \   margin-top: /*some value*/\n    margin-right: /*some value*/\n    margin-bottom:
+      /*some value*/\n    margin-left: /*some-value*/\n\nYou can also set an element's
+      margins all at once: you just start from the top margin and go  around clockwise
+      (going from top to right to bottom to left). For instance,\n\n    margin: 1px
+      2px 3px 4px;\n\nwill set a top margin of 1 pixel, a right margin of  2, a bottom
+      of 3, and a left of 4."
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: ! 'Remove our div''s `margin: auto;` on the CSS tab. Using whichever
+      method you like best, give it a top margin of 20px, a right margin of 50px,
+      a bottom margin of 10px, and a left margin of 5px.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Margin top, right, bottom, left
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''div'').to.have.css(''margin-top'',''20px'',"It looks like
+      your top margin isn''t 20px.");
+
+      $e(''div'').to.have.css(''margin-right'',''50px'',"It looks like your right
+      margin isn''t 50px.");
+
+      $e(''div'').to.have.css(''margin-bottom'',''10px'',"It looks like your bottom
+      margin isn''t 10px.");
+
+      $e(''div'').to.have.css(''margin-left'',''5px'',"It looks like your left margin
+      isn''t 5px.");'
+    updated_at: 2012-08-27 19:04:09.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDuOevSXmwACBcXG
+    created_at: 2012-08-27 15:12:58.000000000 Z
+    default_code: ''
+    entry: ! 'Well done! You can see how fine-tuning your margins will help you place
+      elements where you''d like them to be on the page.
+
+
+      We''ve worked with borders before, but it never hurts to have extra practice.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 6
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Change your div's border to 4 pixels wide and solid, with the hex
+      color `#FF0000`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Borders
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "borderColor = $('div').css('border-color');\nborderWidth =
+      $('div').css('border-width');\nborderStyle = $('div').css('border-style');\n\nif
+      (borderColor != \"rgb(255, 0, 0)\") {\n  return \"It looks like your border-color
+      isn't #FF0000.\";\n}\n\nif (borderWidth != \"4px\") {\n  return \"It looks like
+      your border is \" + borderWidth + \" wide instead of 4px wide.\";\n}\n\nif (borderStyle
+      != \"solid\") {\n  return \"It looks like your border is \" + borderStyle +
+      \" instead of solid.\";\n}\n\nreturn true;"
+    updated_at: 2012-11-15 00:48:10.891000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGp9dmawACAFjY
+    created_at: 2012-08-25 21:41:59.000000000 Z
+    default_code: ''
+    entry: ! "Good! Let's adjust the padding. Remember, the padding is the space between
+      your border and your innermost layer: the actual content.\n\nPadding can be
+      set in two ways, just like your margins. You can either select them individually,
+      like this:\n\n    padding-top: /*some value*/\n    padding-right: /*some value*/\n
+      \   padding-bottom: /*some value*/\n    padding-left: /*some-value*/\n\nOr select
+      them all in one declaration, like this:\n\n    padding: value value value value;\n\nYou
+      should also know that if you want your padding to be the same for all four sides,
+      you can declare that value only once. `padding: 10px` will give your HTML element
+      10 pixels of padding on all sides."
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Go ahead and use your preferred method to give your div `padding`
+      of `40px` on all sides.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Padding
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''div'').to.have.css(''padding-top'',''40px'',"It looks
+      like your padding-top isn''t 40px.");
+
+      $e(''div'').to.have.css(''padding-right'',''40px'',"It looks like your padding-right
+      isn''t 40px.");
+
+      $e(''div'').to.have.css(''padding-bottom'',''40px'',"It looks like your padding-bottom
+      isn''t 40px.");
+
+      $e(''div'').to.have.css(''padding-left'',''40px'',"It looks like your padding-left
+      isn''t 40px.");'
+    updated_at: 2012-08-27 19:04:09.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDvEnbzHPAACAIrc
+    created_at: 2012-08-27 19:03:57.000000000 Z
+    default_code: ''
+    entry: ! 'Did you see that? Your `<div>` got huge! That''s because the background
+      color is the same for the content and the padding.
+
+
+      When you give CSS a positive padding or margin value, it puts that space between
+      the element and its reference: for instance, if you have a `<div>` and you give
+      it a `margin-left` of `20px`, it puts twenty pixels between the left margin
+      of that `<div>` and the side of the screen. This effectively moves the `<div>`
+      twenty pixels to the *right*.
+
+
+      If you want to move an element in the other direction, you can give CSS a *negative*
+      value: `margin-left: -20px` will move the element twenty pixels to the *left*.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Give your `<div>` a `margin-top` of `-20px` to see what happens.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Negative values
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: $e('div').to.have.css('margin-top','-20px',"Did you set your <div>'s
+      margin-top to -20px?");
+    updated_at: 2012-08-27 19:50:44.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDt9aJIx0wACBTzy
+    created_at: 2012-08-27 14:00:08.000000000 Z
+    default_code: ''
+    entry: ! 'Cool, right? You can move HTML elements clear off the page with negative
+      margins values.
+
+
+      Time for a quick review to make sure you''ve got a handle on all this margin
+      and padding stuff!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 5
+      positive_feedback: 1
+      other: 1
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'We''ve put a `<div>` for you to use on the HTML tab. On the CSS
+      tab:
+
+
+      1. Give that div a border of 1px solid black.
+
+      2. Give it a background color of `#CC0000`.
+
+      3. Set its top margin to 10px, its right margin to 5px, its bottom margin to
+      5px, and its left margin to 50px.
+
+      4. Set its top padding to 0px, its right padding to 30px, its bottom padding
+      to 0px, and its left padding to 10px.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Review
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div></div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! '$e(''div'').to.have.css(''border-width'',''1px'',"Did you set
+      your <div>''s border to 1px wide?");
+
+      $e(''div'').to.have.css(''border-style'', ''solid'', "Did you set your <div>''s
+      border style to solid?");
+
+      $e(''div'').to.have.css(''border-color'', ''black'', "Did you set your <div>''s
+      border color to black?");
+
+
+      $e(''div'').to.have.css(''background-color'',''#CC0000'',"Did you set your <div>''s
+      background-color to #CC0000?");
+
+      $e(''div'').to.have.css(''margin-top'',''10px'',"Did you set your margin-top
+      to 10px?");
+
+      $e(''div'').to.have.css(''margin-right'',''5px'',"Did you set your margin-right
+      to 5px?");
+
+      $e(''div'').to.have.css(''margin-bottom'',''5px'',"Did you set your margin-bottom
+      to 5px?");
+
+      $e(''div'').to.have.css(''margin-left'',''50px'',"Did you set your margin-left
+      to 50px?");
+
+      $e(''div'').to.have.css(''padding-top'',''0px'',"Did you set your padding-top
+      to 0px?");
+
+      $e(''div'').to.have.css(''padding-right'',''30px'',"Did you set your padding-right
+      to 30px?");
+
+      $e(''div'').to.have.css(''padding-bottom'',''0px'',"Did you set your padding-bottom
+      to 0px?");
+
+      $e(''div'').to.have.css(''padding-left'',''10px'',"Did you set your padding-left
+      to 10px?");'
+    updated_at: 2012-11-23 07:25:22.418000000 Z
+    view: :console_and_editor
+  feedback_total: 12
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Margins, Borders, and Padding
+  num_forum_answers: 7
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 3
+  updated_at: 2012-11-23 07:25:22.442000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:51:36.000000000 Z
+  default_view: :console_and_editor
+  entry: ! 'We can control our display values and our padding and margins, but how
+    do we set the overall positioning of elements on a page? The answer: floats!'
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGsSfN/wACAGJE
+    created_at: 2012-08-25 21:42:09.000000000 Z
+    default_code: ''
+    entry: ! 'Okay! So we know how our individual elements are constructed. But how
+      do we determine where they go on the page?
+
+
+      One way is to use **floats**. When you float an element on the page, you''re
+      telling the webpage: "I''m about to tell you where to put this element, but
+      you have to put it into the **flow** of other elements." This means that if
+      you have several elements all floating, they all know the others are there and
+      don''t land on top of each other.
+
+
+      You can think of the HTML page as sort of like a sea, and floating elements
+      as boats on it: all the boats have positions on the sea, and they all see and
+      steer clear of each other.
+
+
+      (Some of the positioning methods we''ll learn in upcoming sections *can* accidentally
+      drop elements on top of each other.)'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Let's get started. Set your div's `float` property to `right`!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: To the right!
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div></div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "div {\n\theight: 300px;\n\twidth: 100px;\n\tborder: 2px solid black;\n\tborder-radius:
+        5px;\n\tbackground-color: #308014;\n\t/*Add your CSS here!*/\n\t\n}"
+    test_functions: $e('div').to.have.css('float','right',"Did you remember to set
+      your <div>'s float to right?");
+    updated_at: 2012-08-27 18:11:38.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGsoYDngACAFTF
+    created_at: 2012-08-25 21:42:10.000000000 Z
+    default_code: ''
+    entry: Good! As you saw, your div moved over to the right side of the page.
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Move it back by changing your div's `float` from `right` to `left`!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: To the left!
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: $e('div').to.have.css('float','left',"Did you remember to set
+      your <div>'s float to left?");
+    updated_at: 2012-08-27 18:02:45.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGspGbFAACAFK+
+    created_at: 2012-08-25 21:42:10.000000000 Z
+    default_code: ''
+    entry: As you may have already guessed, we can use floated elements to naturally
+      divide our pages into different sections. Try it!
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "Remember your syntax:\n\n    element {\n        float: /*right or left*/\n
+      \   }"
+    instruction: Set your `<div>` to float to the right and your `<p>` to float to
+      the left.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Float for two
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div></div>\n\t\t<p>Check
+        it out! I'm a block of text, but the &lt;div&gt; and I can live in harmony.
+        Boats on a sea, man. Boats on a sea.</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "div {\n\theight: 300px;\n\twidth: 300px;\n\tborder: 2px solid black;\n\tborder-radius:
+        5px;\n\tbackground-color: #308014;\n\t/*Add your CSS here!*/\n\t\n}\n\np {\n\tfont-family:
+        Verdana, sans-serif;\n\tfont-size: 20px;\n\twidth: 280px;\n\t/*Add your CSS
+        here!*/\n\t\n}"
+    test_functions: ! '$e(''div'').to.have.css(''float'',''right'',"Did you remember
+      to float your <div> to the right?");
+
+      $e(''p'').to.have.css(''float'',''left'',"Did you remember to float your <p>
+      to the left?");'
+    updated_at: 2012-08-27 18:21:59.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDu5FYv0QwACAACP
+    created_at: 2012-08-27 18:14:45.000000000 Z
+    default_code: ''
+    entry: ! "Unfortunately, we sometimes mix large floating elements with non-floating
+      ones, and elements *do* end up on top of each other.\n\nSee your footer (the
+      blue bit between the two columns)? It's stuck back there because we haven't
+      told it something very important: to `clear` the other elements on the page!\n\nIf
+      you tell an element to `clear: left`, it will immediately move below any floating
+      elements on the left side of the page; it can also clear elements on the `right`.
+      If you tell it to `clear: both`, it will get out of the way of elements floating
+      on the left *and* right!\n\nThe syntax is what you're used to:\n\n    element
+      {\n        clear: /*right, left, or both*/\n    }"
+    expect_error: false
+    feedback_stats:
+      other: 3
+      total: 3
+    from_console: false
+    hint: ''
+    instruction: Tell the div with the ID `#footer` to `clear` `both`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Clearing elements
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div
+        id=\"header\"></div>\n\t\t<div class=\"left\"></div>\n\t\t<div class=\"right\"></div>\n\t\t<div
+        id=\"footer\"></div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "div {\n\tborder-radius: 5px;\n}\n\n#header {\n\theight: 50px;\n\tbackground-color:
+        #F38630;\n\tmargin-bottom: 10px;\n}\n\n.left {\n\theight: 300px;\n\twidth:
+        150px;\n\tbackground-color: #A7DBD8;\n\tfloat: left;\n\tmargin-bottom: 10px;\n}\n\n.right
+        {\n\theight: 300px;\n\twidth: 450px;\n\tbackground-color: #E0E4CC;\n\tfloat:
+        right;\n\tmargin-bottom: 10px;\n}\n\n#footer {\n\theight: 50px;\n\tbackground-color:
+        #69D2E7;\n\t/*Add your CSS here!*/\n\n}"
+    test_functions: ! '$e(''#footer'').to.have.css(''clear'',''both'',"Did you make
+      sure to set your #footer to clear:both?");'
+    updated_at: 2012-11-04 19:01:10.112000000 Z
+    view: :console_and_editor
+  feedback_total: 3
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Floating
+  num_forum_answers: 2
+  num_forum_questions: 1
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-11-04 19:01:10.142000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:51:40.000000000 Z
+  default_view: :console_and_editor
+  entry: ! 'Sometimes floating just isn''t enough: we need finer control over how
+    our HTML elements appear on the page. Absolute, relative, and fixed positioning
+    help us do this.'
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGzJj1OgACAFiq
+    created_at: 2012-08-25 21:42:36.000000000 Z
+    default_code: ''
+    entry: ! 'Great work so far! Now that you understand positioning elements with
+      `float`, let''s move on to slightly more complex positioning methods.
+
+
+      If you don''t specify an element''s positioning type, it defaults to `static`.
+      This just means "where the element would normally go." If you don''t tell an
+      element how to position itself, it just plunks itself down in the document.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Check out the `<div>`s in the editor. They currently have static
+      positioning, but we're about to change all that. Hit Run to begin!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Static by default
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div
+        id=\"outer\"><div id=\"inner\"></div></div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "div {\n\tborder-radius: 5px;\n\tborder: 2px solid black;\n}\n\n#inner
+        {\n\theight: 75px;\n\twidth: 75px;\n\tbackground-color: #547980;\n\t/*Add
+        your CSS here!*/\n\t\n}\n\n#outer {\n\theight: 500px;\n\twidth: 150px;\n\tbackground-color:
+        #45ADA8;\n\tposition: absolute;\n\tmargin-left: 100px;\n}"
+    test_functions: return true;
+    updated_at: 2012-08-27 19:24:41.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGw6K+uQACADSa
+    created_at: 2012-08-25 21:42:27.000000000 Z
+    default_code: ''
+    entry: ! 'The first type of positioning is **absolute** positioning. When an element
+      is set to `position: absolute`, it''s then positioned in relation to the first
+      parent element it has that *doesn''t* have `position: static`. If there''s no
+      such element, the element with `position: absolute` gets positioned relative
+      to `<html>`.
+
+
+      To show you how this works, we''ve set the `#outer` div to have absolute positioning.
+      This means that when you position the `#inner` div, it will be relative to `#outer`.
+      (If `#outer` had the default positioning of `static`, then `#inner` would get
+      positioned relative to the entire HTML document.)'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "The syntax is exactly what you'd expect:\n\n    element {\n        position:
+      /*position type*/\n    }"
+    instruction: ! 'Try it out: set `#inner`''s `position` to `absolute` and give
+      it a `margin-left` of `20px`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Absolute positioning
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''#inner'').to.have.css(''position'',''absolute'',"Did you
+      give your #inner <div> absolute positioning?");
+
+      $e(''#inner'').to.have.css(''margin-left'',''20px'',"Did you set #inner''s margin-left
+      to 20px?");'
+    updated_at: 2012-08-27 19:13:20.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGxG8FFQACACwJ
+    created_at: 2012-08-25 21:42:28.000000000 Z
+    default_code: ''
+    entry: ! 'Good! Did you notice how the `#inner` div moved 20 pixels in from the
+      edge of the `#outer` div? That''s absolute positioning at work.
+
+
+      **Relative** positioning is more straightforward: it tells the element to move
+      relative to where it would have landed if it just had the default `static` positioning.
+
+
+      If you give an element relative positioning and tell it to have a `margin-top`
+      of `10px`, it doesn''t move down ten pixels from any particular thing—it moves
+      down ten pixels from where it *otherwise would have been*.'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'Give it a try: change `#inner`''s `position` to `relative` and
+      give it a `margin-left` of `200px`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Relative positioning
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''#inner'').to.have.css(''position'',''relative'',"Did you
+      set #inner''s position to relative?");
+
+      $e(''#inner'').to.have.css(''margin-left'',''200px'',"Did you set #inner''s
+      margin-left to 200px?")'
+    updated_at: 2012-09-26 23:47:20.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlGxciq6gACAG0s
+    created_at: 2012-08-25 21:42:29.000000000 Z
+    default_code: ''
+    entry: ! 'Perfect! See? This positioning stuff''s not so hard.
+
+
+      Finally, **fixed** positioning anchors an element to the browser window—you
+      can think of it as gluing the element to the screen. If you scroll up and down,
+      the fixed element stays put even as other elements scroll past.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Set `#inner`'s position to `fixed`, then scroll up and down a bit.
+      It stays put even as `#outer` moves out of the frame!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Fixed positioning
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''#inner'').to.have.css(''position'',''fixed'',"Did you
+      set #inner''s position to fixed?");'
+    updated_at: 2012-10-03 19:14:24.000000000 Z
+    view: :console_and_editor
+  feedback_total: 1
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Absolute, Relative, and Fixed Positioning
+  num_forum_answers: 2
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-08-29 01:08:24.000000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-24 15:57:14.000000000 Z
+  default_view: :console_and_editor
+  entry: Let's go over what we've learned.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDekZJVfogACAIJi
+    created_at: 2012-08-24 15:57:24.000000000 Z
+    default_code: ''
+    entry: ! 'Great work—you''ve learned a lot about CSS positioning! We''ve covered:
+
+
+      * The CSS box model
+
+      * Display values, including block, inline-block, inline, and none
+
+      * Margins, borders, and padding
+
+      * Positioning elements with `float`
+
+      * Giving elements absolute, relative, and fixed positioning'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Take a moment to reflect on what you've done so far. When you're
+      ready, hit Run to prove yourself a positioning master.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The story so far
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-08-27 19:34:10.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDekZEXOogACAIMM
+    created_at: 2012-08-24 15:57:24.000000000 Z
+    default_code: ''
+    entry: ! 'Check out the website we''ve started in the Result tab. Do you recognize
+      it? It''s the demo we showed you in [the first CSS lesson](http://www.codecademy.com/courses/web-beginner-en-TlhFi/0#!/exercises/0)!
+
+
+      It doesn''t look quite the same, though. This is because much of the crucial
+      display and positioning CSS we used has been removed. Your job? Add it back
+      in!'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: There's a navigation bar here somewhere, but it's lost due to display
+      problems! On the CSS tab, give `#navbar` a position of fixed and a top margin
+      of -10px.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Navigation bar, where are you?
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div
+        id=\"header\">\n\t\t\t<div id=\"navbar\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li>Home</li>\n\t\t\t\t\t<li>About
+        Me</li>\n\t\t\t\t\t<li>Plans for World Domination</li>\n\t\t\t\t\t<li>Contact</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<h2>About
+        Me</h3>\n\t\t</div>\n\t\t<div id=\"left\">\n\t\t<img src=\"http://www.thedailybalance.com/wp-content/uploads/angry-puppy.jpg\"/>\n\t\t<p>I
+        am the angriest puppy in the world. This has been scientifically proven in
+        several clinical trials.</p>\n\t\t</div>\n\t\t<div id=\"right\">\n\t\t<table>\n\t\t\t<th
+        colspan=\"3\">My Bros</th>\n\t\t\t<tr>\n\t\t\t\t<td><img src=\"http://thedoggiedish.com/uploads/pictures/1344463888_Puppies%20Training.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://www.humanesociety.org/assets/images/270x224/animals/dogs/dog_puppy_lookinup_270x224.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://funnycrave.frsucrave.netdna-cdn.com/wp-content/uploads/2011/03/puppy.png\"/></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><img
+        src=\"http://2.bp.blogspot.com/_jZHHRfnq9F8/Sw5Kb1D2EhI/AAAAAAAAKkE/fuaDErPNDvU/s1600/Puppy+Training.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://4.bp.blogspot.com/-hvKDf0aMe1g/ToKckj6RZrI/AAAAAAAACf0/oZQNbyPtmns/s1600/cute-puppy-pictures.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://puppiespics.net/wp-content/uploads/2012/04/doberman-puppy5.jpg\"/></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><img
+        id=\"bottom_left\" src=\"http://dailypicksandflicks.com/wp-content/uploads/2011/03/Boo.jpg\"/></td>\n\t\t\t\t<td><img
+        src=\"http://24.media.tumblr.com/tumblr_m825unsFjm1qldzl2o2_500.jpg\"></td>\n\t\t\t\t<td><img
+        id=\"bottom_right\" src=\"http://img.photobucket.com/albums/v649/deadxmansxhand/ewok-closeup.jpg\"/></td>\n\t\t\t</tr>\n\t\t</table>\n\t\t</div>\n\t\t<div
+        id=\"footer\">\n\t\t\t<div id=\"button\">\n\t\t\t\t<p>Send me an <span class=\"bold\">e-mail</span>!</p>\n\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "body {\n\tbackground-color: #b7d1c4\n}\n\nh2 {\n\tfont-family: Verdana;\n\tfont-weight:
+        bold;\n\ttext-align: center;\n\tpadding-top: 25px;\n\tpadding-bottom: 25px;\n\tcolor:
+        #acd1b2;\n}\n\nimg {\n\theight: 170px;\n\twidth: 170px;\n\tbox-shadow: rgba(0,0,0,0.2)
+        10px 10px;\n\n}\n\n#navbar {\n\t/*Add your CSS here!*/\n\t\n\tleft:50%;\n\tmargin-left:-254px;\n}\n\n#header
+        {\n\tposition: relative;\n\ttop: -10px;\n\tbackground-color: #3c4543;\n\tborder-top-left-radius:
+        15px;\n\tborder-top-right-radius: 15px;\n}\n\nul{\n\tlist-style-type: none;\n\tposition:
+        fixed;\n\tmargin: -10px;\n}\n\nli {\n\t/*Add your CSS here!*/\n\t\n\tborder:
+        2px solid #000000;\n\tfont-family: Futura, Tahoma, sans-serif;\n\tcolor: #ffffff;\n\tborder-radius:
+        5px 5px;\n\tbackground-color: #cc0323\n}\n\n#left{\n\t/*Add your CSS here!*/\n\t\n}\n\np
+        {\n\tfont-family: Tahoma;\n\tfont-size: 1em;\n}\n\n#right{\n\t/*Add your CSS
+        here!*/\n\t\n}\n\ntable {\n\tborder: #000000 1px solid;\n\tbackground-color:
+        #acd1b2;\n\tfloat: right;\n\tmargin-right: 10px;\n\tborder-bottom-right-radius:
+        15px;\n\tborder-bottom-left-radius: 15px;\n}\n\ntd {\n\theight: 75px;\n\twidth:
+        75px;\n}\n\ntd img {\n\theight: 75px;\n\twidth: 75px;\n\tbox-shadow: none;\n}\n\nth
+        {\n\tfont-family: Verdana;\n\tfont-size: 1em;\n\tfont-weight: normal;\n\tcolor:
+        #3c4543\n}\n\n#bottom_left{\n\tborder-bottom-left-radius: 15px;\n}\n\n#bottom_right{\n\tborder-bottom-right-radius:
+        15px;\n}\n\n#footer{\n\t/*Add your CSS here!*/\n\t\n\tposition: relative;\n\tbottom:
+        -20px;\n\tborder-bottom-left-radius: 15px;\n\tborder-bottom-right-radius:
+        15px;\n\theight: 75px;\n\tbackground-color: #3c4543;\n}\n\n#button{\n\tborder:
+        2px solid #000000;\n\tfloat:left;\n\tposition: relative;\n\tleft: 229px;\n\tbottom:
+        -20px;\n\tborder-radius: 5px;\n\tbackground-color: #cc0323;\n\theight: 30px;\n\twidth:
+        150px;\n\t\n}\n\n#button p{\n\tposition: relative;\n\tbottom: 10px;\n\tfont-size:
+        0.8em;\n\tcolor: #acd1b2;\n\ttext-align: center;\n}\n\n.bold{\n\tfont-family:
+        tahoma;\n\tfont-weight: bold;\n\tfont-size: 1.2em;\n\tfont-variant: small-caps;\n\tcolor:
+        #ffffff;\n}"
+    test_functions: ! '$e(''#navbar'').to.have.css(''position'',''fixed'',"Did you
+      set #navbar''s position to fixed?");
+
+      $e(''#navbar'').to.have.css(''margin-top'',''-10px'',"Did you set #navbar''s
+      margin-top to -10px?");'
+    updated_at: 2012-10-24 07:29:24.862000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDekZXmzNgACAH8L
+    created_at: 2012-08-24 15:57:25.000000000 Z
+    default_code: ''
+    entry: Good work! The navigation bar is all stacked up, however, instead of being
+      laid out horizontally.
+    expect_error: false
+    feedback_stats:
+      typo: 1
+      total: 3
+      correctness_test_issue: 2
+    from_console: false
+    hint: ''
+    instruction: ! 'Fix this by:
+
+      1. Setting `li`''s display value to `inline`;
+
+      2. Giving it 5 pixels of padding all around.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Displaying it properly
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! '$e(''li'').to.have.css(''display'',''inline'',"Did you set
+      li''s display value to inline?");
+
+      $e(''li'').to.have.css(''padding-top'',''5px'',"It looks like your li''s padding-top
+      isn''t 5px.");
+
+      $e(''li'').to.have.css(''padding-right'',''5px'',"It looks like your li''s padding-right
+      isn''t 5px.");
+
+      $e(''li'').to.have.css(''padding-bottom'',''5px'',"It looks like your li''s
+      padding-bottom isn''t 5px.");
+
+      $e(''li'').to.have.css(''padding-left'',''5px'',"It looks like your li''s padding-left
+      isn''t 5px.");'
+    updated_at: 2012-11-15 05:32:06.109000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDuJNni06wACBbqp
+    created_at: 2012-08-27 14:50:30.000000000 Z
+    default_code: ''
+    entry: Good work! You want to make sure everything floats nicely, however. Your
+      footer is currently stuck behind your other elements!
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Set `#left` to float left and have a width of `45%`, and set `#right`
+      to float right and also have a width of `45%`. Finally, make sure your `#footer`
+      `clear`s both of them!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Floating right along
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('#left').to.have.css('float','left',\"Did you remember to
+      float #left to the left?\");\n\nif(code['stylesheet.css'].match(/width:\\s*45%;?/)
+      === null){\n\treturn \"Did you remember to set #left's and #right's widths to
+      45%?\";\n}\n\n$e('#right').to.have.css('float','right',\"Did you remember to
+      float #right to the right?\");\n\n$e('#footer').to.have.css('clear','both',\"Did
+      you set your #footer to clear:both?\");"
+    updated_at: 2012-08-27 20:16:04.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDuJOUbCzQACBad0
+    created_at: 2012-08-27 14:50:33.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! You''ve corrected all the CSS and everything''s working
+      beautifully.
+
+
+      You now know enough to build and design your own websites. Think about it! You''ve
+      got the power to make and share content on the Internet. The more you practice,
+      the better you''ll get.'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'Speaking of practice, hit Run to finish this course and move on
+      to your next project: creating a fancy HTML/CSS resume!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: You've done it!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: return true;
+    updated_at: 2012-11-23 09:09:17.975000000 Z
+    view: :console_and_editor
+  feedback_total: 5
+  index: 4
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Review
+  num_forum_answers: 1
+  num_forum_questions: 1
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-23 09:09:18.004000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

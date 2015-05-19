@@ -1,0 +1,286 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.509550712940544
+classification: :game
+created_at: 2012-08-21 00:54:54.000000000 Z
+domain: :freestyle
+down_votes: 64
+entry: Now that you know HTML, you can create your very own webpage. Let's get started!
+feedback_total: 19
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: Build Your Own Webpage
+num_exercises: 6
+num_published_exercises: 6
+num_published_sections: 1
+num_readiness_feedbacks: 175
+num_sections: 1
+num_user_ratings: 3717
+project_scope: 0
+published: true
+rating: 855.0419228865201
+read_feedback_total: 10
+readiness: 92.6
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-25 04:24:21.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 16762.0
+up_votes: 958
+updated_at: 2012-11-26 16:39:23.578000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-21 00:54:54.000000000 Z
+  default_view: :console_and_editor
+  entry: You have the tools. Let's start building!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDaiHCGoOwACACm4
+    created_at: 2012-08-23 21:35:24.000000000 Z
+    default_code: ''
+    entry: ! 'Before we ask you to write a bunch of code, we think it''s helpful for
+      you to see exactly what you''ll be making in this project.
+
+
+      Check out the `index.html` file and the Result tab for an example—we''ve made
+      our very own webpage.'
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 3
+      total: 6
+      other: 3
+    from_console: false
+    hint: What? We really like sandwiches.
+    instruction: Hit Run to start building your own!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What you'll be making
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Result</title>\n\t</head>\n\t<body><h1>YEAH
+        SANDWICHES</h1>\n\t<img src=\"http://bit.ly/RhrMEn\" />\n\t\t<p>I like eggs.</p>\n\t\t<p>And
+        ham!</p>\n\t\t<p>But mostly sandwiches.</p>\n\t</body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-10-29 01:31:28.851000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLcrrTk0AACATAA
+    created_at: 2012-08-21 00:56:14.000000000 Z
+    default_code: ''
+    entry: ! 'An HTML page is sort of like a house: it needs a certain number of essential
+      structures in order to work. Just like a house, an HTML page needs a frame.
+      In this case, your frame is made of !DOCTYPE, `html`, `head`, and `body` tags.'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 3
+      instructional_text_issue: 1
+      correctness_test_issue: 1
+    from_console: false
+    hint: Feel free to peek back at [HTML Basics](http://www.codecademy.com/courses/web-beginner-en-HZA3b)
+      if you get stuck.
+    instruction: ! 'Your webpage is blank as the day it was born! Let''s add five
+      things:
+
+
+      1. The !DOCTYPE tag
+
+      2. Your `html` tags
+
+      3. Your `head` tags
+
+      4. `title` tags (with any title you like!) between your head tags
+
+      5. Your `body` tags'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Every house needs a frame
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ''
+    test_functions: ! "if (code['index.html').match(/\\<!DOCTYPE html\\>/) === null){\n\treturn
+      'Make sure you put in your <!DOCTYPE> tag!';\n}\n\nif (code['index.html').match(/\\<html\\>/)
+      === null){\n\treturn 'Make sure you put in your open <html> tag!';\n}\n\nif
+      (code['index.html]').match(/\\<\\/html\\>/) === null){\n\treturn 'Make sure
+      you put in your close </html> tag!';\n}\n\nif (code['index.html').match(/\\<head\\>/)
+      === null){\n\treturn 'Make sure you put in your open <head> tag!';\n}\n\nif
+      (code['index.html]').match(/\\<\\/head\\>/) === null){\n\treturn 'Make sure
+      you put in your close </head> tag!';\n}\n\nif (code['index.html').match(/\\<body\\>/)
+      === null){\n\treturn 'Make sure you put in your open <body> tag!';\n}\n\nif
+      (code['index.html]').match(/\\<\\/body\\>/) === null){\n\treturn 'Make sure
+      you put in your close </body> tag!';\n}\n\n$e('title').to.exist(\"Did you include
+      a title in your head?\");\n$e('title').not.to.be.empty(\"Make sure you put an
+      actual title between your title tags!\");"
+    updated_at: 2012-10-03 14:22:15.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLcr8SWEwACATjg
+    created_at: 2012-08-21 00:56:15.000000000 Z
+    default_code: ''
+    entry: ! "Remember: [if it rhymes, it's true!][1]\n\nYour webpage could use an
+      `h1` header between the body tags to let everyone know that the page is about
+      you.\n\n\n  [1]: http://en.wikipedia.org/wiki/Chewbacca_defense"
+    expect_error: false
+    feedback_stats:
+      other: 3
+      total: 3
+    from_console: false
+    hint: ''
+    instruction: Create an `h1` tag inside your body tags. Between your opening and
+      closing `h1` tags, type your name for all to see!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: It's better with a header
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! '$e(''h1'').to.exist("Make sure you put in an h1 tag!");
+
+      $e(''h1'').not.to.be.empty("Don''t forget to put your name between the opening
+      and closing h1 tags.");'
+    updated_at: 2012-09-24 19:03:39.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLcsAqoXgACAS0s
+    created_at: 2012-08-21 00:56:16.000000000 Z
+    default_code: ''
+    entry: Your page is coming along, but it's not telling us much yet. You could
+      use a paragraph or two telling your readers what your interests are, what you
+      do for a living, how much you love learning HTML, and so on.
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: Keep it clean! Children read the Internet, you know.
+    instruction: Insert three `p` tags after your `h1` tag (but before your closing
+      `body` tag!). Write a little bit about yourself in each of the three paragraphs.
+      You can say whatever you want! It's your webpage.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Tell us about yourself
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('p').to.be.above(2,function(){\n\treturn \"Make sure you've
+      included three sets of p tags.\";\n});\n$e('p').not.to.be.empty(\"No empty p
+      tags! Make sure to write a bit about yourself in all three paragraphs.\");"
+    updated_at: 2012-09-22 00:16:58.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLcsMSWEwACATji
+    created_at: 2012-08-21 00:56:16.000000000 Z
+    default_code: ''
+    entry: Nice work! Your page is still looking a bit spare, though. Better add an
+      image or two to spruce things up a bit.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: ! "Remember how the `img` tag works? If not, here's a refresher:\n\n    <img
+      src=\"website URL\" />"
+    instruction: Insert an `img` tag between your `body` tags. Feel free to put it
+      anywhere! (We think it'd look best after your `h1` tag, but before your `p`
+      tags.) You can make the `src` attribute point to any image you like.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: A picture's worth a thousand words
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('img').to.exist(\"Make sure you put in at least one img
+      tag!\");\n\nif (code['index.html'].match(/src\\s*=/) === null) {\n  return \"Make
+      sure your img tag has a src attribute! Check the Hint if you need help.\";\n}"
+    updated_at: 2012-10-23 20:09:52.599000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLcv1LhiQACATm8
+    created_at: 2012-08-21 00:56:31.000000000 Z
+    default_code: ''
+    entry: ! 'Great! There''s only one problem: your webpage is like a house with
+      no doors. There''s no way to get in or out! We''ll fix that by adding a couple
+      of links.
+
+
+      Once you successfully add your links and hit Run, you''ve finished! Revel in
+      the glory of your newly created webpage.
+
+
+      If it still looks a little basic to you, don''t worry. We''ll soon teach you
+      CSS to make your webpages look sharp!'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 4
+      positive_feedback: 3
+    from_console: false
+    hint: ! "Remember how to make links? If not, here's how:\n\n    <a href=\"website
+      URL\">Text or image!</a>"
+    instruction: ! 'Add at least two links to your webpage. You can turn an image
+      or a bit of text into a link; you can even turn part of the text inside your
+      `p` tags into a link!
+
+
+      Check out the Hint if you''ve forgotten how the `a` tag works.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Link me!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('a').to.be.above(1,function(){\n\treturn \"Make sure you've
+      included at least two links!\";\n});"
+    updated_at: 2012-11-20 18:47:23.248000000 Z
+    view: :console_and_editor
+  feedback_total: 19
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Web FTW!
+  num_forum_answers: 7
+  num_forum_questions: 6
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-11-20 18:47:23.280000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

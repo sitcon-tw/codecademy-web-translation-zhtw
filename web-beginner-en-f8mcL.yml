@@ -1,0 +1,812 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.571503680336488
+classification: :lesson
+created_at: 2012-08-21 05:13:49.000000000 Z
+domain: :freestyle
+down_votes: 182
+entry: Paragraphs and lists are great, but sometimes you want to lay your webpage
+  out in a more complex way. Enter tables, divs, and spans!
+feedback_total: 87
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: HTML Basics III
+num_exercises: 15
+num_published_exercises: 15
+num_published_sections: 3
+num_readiness_feedbacks: 97
+num_sections: 3
+num_user_ratings: 1902
+project_scope: 0
+published: true
+published_at: 2012-10-10 15:19:10.218000000 Z
+rating: 827.5152574613205
+read_feedback_total: 64
+readiness: 92.8
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-22 02:42:02.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 8695.0
+up_votes: 1041
+updated_at: 2012-11-26 16:24:22.669000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TsQ+SqeP5gABAAdS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-21 05:13:49.000000000 Z
+  default_view: :console_and_editor
+  entry: Tables, columns and rows.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMZDbxHpgACAPXW
+    created_at: 2012-08-21 05:13:49.000000000 Z
+    default_code: ''
+    entry: ! 'Our HTML journey has been progressing very nicely. We''ve covered:
+
+
+      1.  how to set up the skeleton of an HTML file
+
+      2.  headings, paragraphs, images and links
+
+      3.  font colors, sizes, and types
+
+      4.  background colors, aligning text, **bold**ing and *italic* izing font
+
+
+      In this course, we''ll cover some important structural aspects of HTML: `<table>`s,
+      `<div>`s, and `<span>`s!'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 10
+      total: 14
+      other: 2
+      instructional_text_issue: 1
+      typo: 1
+    from_console: false
+    hint: ! "Remember to wrap your `img` tag in an `a` tag, like so:\n\n    <a href=\"website
+      address for link\"><img src=\"website address for picture\" /></a>"
+    instruction: ! 'To get warmed up:
+
+
+      1. Make the heading have the font family Garamond and the color red.
+
+      2. Add an image!
+
+      3. Add a second image which is clickable and links to a site. (Check the Hint
+      if you don''t remember how to do this.)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Introduction
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Table Time</title>\n\t</head>\n\t<body>\n\t\t<h1>Tables
+        Are Mega Sweet</h1>\n\t\t\n\t\t\n\t</body>\n</html>"
+    test_functions: ! '$e(''h1'').to.have.css(''font-family'',''Garamond'', "Make
+      sure your h1 header is in the font Garamond!");
+
+      $e(''h1'').to.have.css(''color'',''red'',"Make sure your h1 header font is the
+      color red!");
+
+
+      $e(''img'').to.be.above(1,''Make sure to put in at least two images: one regular,
+      the other a link.'');
+
+      $e(''a > img'').to.exist(''Make sure at least one of your images is a link!'');'
+    updated_at: 2012-10-23 20:27:20.369000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMc9PudYgACAQNl
+    created_at: 2012-08-21 05:30:28.000000000 Z
+    default_code: ''
+    entry: ! "Tables are very useful. We use them to store tabular data so it is easy
+      to read! When you want to present information neatly in a table with rows and
+      columns—you guessed it—the `<table>` tag is what you need. \n\nThere are many
+      tags associated with tables, but it all starts with the `<table>` tag, so let's
+      add that first."
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: Recall that an open `<table>` tag should be followed by a closed `</table>`
+      tag.
+    instruction: ! '1. Add an opening and closing set of `<table>` tags to the body
+      of this HTML document.
+
+      2. Go to the Result view. You''ll notice that nothing visible was added. That''s
+      because our table''s not populated yet! We''ll learn how to do that soon.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: What are tables?
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        \n        \n    </body>\n\n</html>"
+    test_functions: $e('table').to.exist('Did you remember to add your table tags?');
+    updated_at: 2012-09-28 14:51:35.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMdWXMX3gACARjE
+    created_at: 2012-08-21 05:32:09.000000000 Z
+    default_code: ''
+    entry: ! 'A table is just a bunch of information arranged in rows and columns.
+
+
+      We use the `<tr>` tag to create a **table row**. We''ll learn how to create
+      columns shortly, and everything will start to come together. (You don''t really
+      create columns in `<table>`s: instead, you tell each row how many cells to have,
+      and that determines your number of columns).'
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! "We'll get to the details of table cells in a minute. In the meantime,
+      we've added a set of `<tr></tr>` tags to the table on line 9, creating a table
+      row. \n\nAdd two more rows to the table on line 11 and line 12."
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Rows of information
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        <table>\n            <tr></tr>\n            <!--
+        Add two more rows below this! -->\n            \n            \n        </table>\n
+        \       \n    </body>\n\n</html>"
+    test_functions: ! "$e('tr').to.be.above(2,function(){\n\treturn 'Make sure to
+      add two more rows to the table with two sets of tr tags.';\n});"
+    updated_at: 2012-10-20 15:36:28.240000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMdkR4ehAACARkt
+    created_at: 2012-08-21 05:33:05.000000000 Z
+    default_code: ''
+    entry: ! 'Look at the HTML now. Can you tell that there are still three rows?
+      We''ve added a little more whitespace to make it easier to deal with **table
+      columns** and **table data**.
+
+
+      We''ve added a single `<td>` ("table data") cell to the first row, essentially
+      creating a single column. If you view the Result tab now, you''ll see that we''ve
+      drawn a border around it. it''s not that impressive, but don''t worry: we''re
+      about to add more table data cells.
+
+
+      We''re starting to add a lot of HTML elements now. Make sure to indent your
+      tags as you nest them so you don''t get confused!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 3
+      other: 1
+      typo: 1
+    from_console: false
+    hint: ! 'In between the second and third sets of `<tr>` tags, you want to add
+      a data cell like this: `<td>Cell</td>`. Remember: indent to avoid confusion!'
+    instruction: ! '1. In the second row, add a table data (`<td></td>`) cell and
+      type `Two` between the tags.
+
+      2. In the third row, add another cell with `Three` between the tags.
+
+      3. Go to the Result view. You can see that we have 1 column with 3 rows, and
+      each row contains exactly one cell.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: A single column
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        <table border=\"1px\">\n            <tr>\n
+        \               <td>One</td>\n            </tr>\n            \n            <tr>\n
+        \               \n            </tr>\n            \n            <tr>\n                \n
+        \           </tr>\n        </table>\n        \n    </body>\n\n</html>"
+    test_functions: ! "$e('td').to.be.above(2,function(){\n\treturn 'Did you remember
+      to add two more table data cells using td tags?';\n});\n\n$e('td').not.to.be.empty('Make
+      sure you put \"Two\" and \"Three\" in your table cells as shown!');"
+    updated_at: 2012-11-26 02:58:20.412000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMd5vbnUAACARu9
+    created_at: 2012-08-21 05:34:30.000000000 Z
+    default_code: ''
+    entry: ! 'It may not have seemed like much, but you just created a single-column
+      table in the last exercise. Nice work!
+
+
+      Now take a look at what we have on our page. Notice in the first table row we
+      now have *two* table data cells.
+
+
+      Adding a second table data cell has the effect of adding a second table column,
+      although if you go to the Result view, it may look funny because only the first
+      row has two cells. Let''s fix that!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 13
+      correctness_test_issue: 5
+      typo: 4
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Add to the second row a table data cell with the value `1897`
+
+      2. Add to the third row a table data cell with the value `1935`
+
+      3. Check out the Result view. We now have a total of 2 columns and 3 rows, and
+      each row has 2 cells.
+
+      4. Sweet! We now have a basic table. Go on to the next section to find out how
+      to add a header and a title to our table.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Adding a second column
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        <table border=\"1px\">\n            <tr>\n
+        \               <td>King Kong</td>\n                <td>1933</td>     \n            </tr>\n
+        \           \n            <tr>\n                <td>Dracula</td>\n                \n
+        \           </tr>\n            \n            <tr>\n                <td>Bride
+        of Frankenstein</td>\n                \n            </tr>\n        </table>\n
+        \       \n    </body>\n\n</html>"
+    test_functions: ! "if($('tr:eq(1)').find('td').length !== 2) {\n    return 'Did
+      you add a td to the second row?';\n}\nif($('tr:eq(2)').find('td').length !==
+      2) {\n    return 'Did you add a td to the third row?';\n}\nif($('tr:eq(1)').find('td').last().html()
+      !== \"1897\") {\n    return 'Make sure your second table data cell in the second
+      row has a value of \"1897\" (no quotes)';\n}\nif($('tr:eq(2)').find('td').last().html()
+      !== \"1935\") {\n    return 'Make sure your second table data cell in the third
+      row has a value of \"1935\" (no quotes)';\n}\n\nreturn true;"
+    updated_at: 2012-10-20 15:40:38.238000000 Z
+    view: :console_and_editor
+  feedback_total: 32
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Learning about tables
+  num_forum_answers: 5
+  num_forum_questions: 2
+  published: true
+  read_feedback_total: 13
+  updated_at: 2012-11-26 02:58:20.441000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-21 05:36:13.000000000 Z
+  default_view: :console_and_editor
+  entry: Great—you can make tables! Now you're going to learn how to make even better
+    ones.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMeTvbnUAACAR1c
+    created_at: 2012-08-21 05:36:14.000000000 Z
+    default_code: ''
+    entry: ! 'Here''s the table we made earlier. It''s okay, but it just looks like
+      we have a list of famous Hollywood people (monsters?) and their birth years.
+      To make our table look a little more like a table, we''ll use the `<thead>`
+      and `<tbody>` tags. These go within the `<table>` tag and stand for "**t**able
+      head" and "**t**able body," respectively.
+
+
+      The `<head>` HTML tag contains information about a web page (*e.g.* its title)
+      and the `<body>` tag contains the contents of the web page. In the same way,
+      the `<thead>` tag can be thought of as containing information about a table
+      and the `<tbody>` tag containing the actual tabular data.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "The original `<tr>`s should be within `<tbody>` now. `<tbody>` should
+      be within `<table>`. \n\nYou won't notice a visual difference between this markup
+      and the last one."
+    instruction: Since everything we currently have is just tabular data, put everything
+      we have in our table so far between a set of `<tbody></tbody>` tags. We'll add
+      the table head next!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Head of the table
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        <table border=\"1px\">\n            \n
+        \               <tr>\n                    <td>King Kong</td>\n                    <td>1933</td>
+        \    \n                </tr>\n                \n                <tr>\n                    <td>Dracula</td>\n
+        \                   <td>1897</td>\n                </tr>\n                \n
+        \               <tr>\n                    <td>Bride of Frankenstein</td>\n
+        \                   <td>1935</td>\n                </tr>\n            \n        </table>\n
+        \       \n    </body>\n\n</html>"
+    test_functions: ! "if(code['test.html'].match(/\\<tbody\\>/) === null){\n\treturn
+      \"Make sure to put all the table information (except for the <table></table>
+      tags) inside <tbody></tbody> tags.\";\n}\n\nreturn true;"
+    updated_at: 2012-09-28 20:48:43.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMerQFVcwACAR5x
+    created_at: 2012-08-21 05:37:49.000000000 Z
+    default_code: ''
+    entry: ! 'You''ll notice now that we added a `<thead>` tag above the `<tbody>`.
+      This works much the same way as `<tbody>` in that you can add rows to a `<thead>`.
+
+
+      Why learn `<thead>` or `<tbody>` if nothing visible changes? Well, it''s a good
+      idea to separate a table into head and body because it will help us style the
+      table in CSS, which you''ll learn very soon!'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 5
+      total: 14
+      correctness_test_issue: 5
+      typo: 4
+    from_console: false
+    hint: ! "Remember, you create table rows with `<tr></tr>`. \n\nYou can create
+      table data cells with `<th></th>`\n\nAnd don't forget about the all-important
+      nesting rule!"
+    instruction: ! '1. Add a single row (with the `<tr>`) within the table heading
+      section.
+
+      2. Within this row, add two table header cells with the values `Famous Monster`
+      and `Birth Year`. (If Table Data cells were made with `<td>`, how do you think
+      you can make Table Header cells? Check the Hint if you need help.)'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Invisible head
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        <table border=\"1px\">\n            <thead>\n
+        \               \n            </thead>\n            <tbody>\n                <tr>\n
+        \                   <td>King Kong</td>\n                    <td>1933</td>
+        \    \n                </tr>\n                \n                <tr>\n                    <td>Dracula</td>\n
+        \                   <td>1897</td>\n                </tr>\n                \n
+        \               <tr>\n                    <td>Bride of Frankenstein</td>\n
+        \                   <td>1935</td>\n                </tr>\n            </tbody>\n
+        \       </table>\n        \n    </body>\n\n</html>"
+    test_functions: ! "if($('thead').children('tr').length !== 1) {\n    return 'Did
+      you add a new table row within thead?';\n}\nif($('thead').children('tr').children('th').length
+      !== 2) {\n    return \"Did you add two table header cells within the row you
+      just created within thead? Table header cells are th, not td!\";\n}\nif($('thead').children('tr').children('th').first().html()
+      !== 'Famous Monster') {\n    return 'Make sure your first header cell has a
+      value of \"Famous Monster\" (no quotes... note the capitalization!)';\n}\nif($('thead').children('tr').children('th').last().html()
+      !== 'Birth Year') {\n    return 'Make sure your second header cell has a value
+      of \"Birth Year\" (no quotes... note the capitalization!)';\n}\nreturn true;"
+    updated_at: 2012-10-23 14:08:40.581000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMe67BBowACASK1
+    created_at: 2012-08-21 05:38:51.000000000 Z
+    default_code: ''
+    entry: ! "Our table is missing a title. We want to add a title row that goes all
+      the way across the top.\n\nTo do so, we need to use the **colspan** attribute
+      for the `<th>` tag. By default, table cells take up 1 column. If we want a table
+      cell to take up the space of 3 columns instead of 1, we can set the `colspan`
+      attribute to 3. \n\nIt looks like this:\n\n    <th colspan=\"3\">3 columns across!</th>"
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: ! '1. Go to the Result view. We''ve added the title row for you,
+      but it only spans 1 column right now.
+
+      2. Make the column span 2 columns with the `colspan` attribute. Adding the attribute
+      `colspan="2"` to a `<th>` tag should do the trick.
+
+      3. Return to the Result view again. Our title spans 2 columns now!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Naming your table
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        <table border=\"1px\">\n            <thead>\n
+        \               <tr>\n                    <th>Famous Monsters by Birth Year</th>\n
+        \               </tr>\n                <tr>\n                    <th>Famous
+        Monster</th>\n                    <th>Birth Year</th>\n                </tr>\n
+        \           </thead>\n            <tbody>\n                <tr>\n                    <td>King
+        Kong</td>\n                    <td>1933</td>     \n                </tr>\n
+        \               \n                <tr>\n                    <td>Dracula</td>\n
+        \                   <td>1897</td>\n                </tr>\n                \n
+        \               <tr>\n                    <td>Bride of Frankenstein</td>\n
+        \                   <td>1935</td>\n                </tr>\n            </tbody>\n
+        \       </table>\n        \n    </body>\n\n</html>"
+    test_functions: ! "if ($('thead > tr').first().children('th').attr('colspan')
+      !== '2') {\n    return \"Did you add a colspan attribute to the th tag of the
+      first row?\";\n}\nreturn true;"
+    updated_at: 2012-10-08 01:18:36.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMfM3MX3gACASCw
+    created_at: 2012-08-21 05:40:03.000000000 Z
+    default_code: ''
+    entry: ! "Your table is starting to look great, but it's still a little bland.
+      We've gone ahead and added some styling to the table to make it a bit easier
+      to read. It's your job to add the finishing touches!\n\nFeel free to play around
+      with any of the `style` attributes we added; you'll learn much more about these
+      things later during the CSS courses.\n\nIf you want to add more than one style,
+      you just separate your styles with a semicolon, like so:\n\n    <th style=\"font-size:12px;
+      color:red\"></th>"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 7
+      total: 12
+      correctness_test_issue: 2
+      typo: 2
+      other: 1
+    from_console: false
+    hint: ! 'Look to the previous section on [strong and emphasized text](http://www.codecademy.com/courses/web-beginner-en-y2Yjd/2?curriculum_id=50579fb998b470000202dc8b#!/exercises/2)
+      for a refresher on how to style text.
+
+
+      You should add a `style` attribute to the first `th` in order to change its
+      color. It''s just like how we [changed the color of a paragraph](insert link)
+      with the `style` attribute!'
+    instruction: ! "1. Make the \"Famous Monster\" and \"Birth Year\" labels emphasized
+      (*i.e.* make them italicized). \n2. Make the \"Famous Monsters by Birth Year\"
+      title red."
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Style that head!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<html>\n    <head>\n        <title>Table Time</title>\n    </head>\n
+        \   \n    <body>\n        \n        <table style=\"border-collapse:collapse;\">\n
+        \           <thead>\n                <tr>\n                    <th colspan=\"2\">Famous
+        Monsters by Birth Year</th>\n                </tr>\n                <tr style=\"border-bottom:1px
+        solid black;\">\n                    <th style=\"padding:5px;\">Famous Monster</th>\n
+        \                   <th style=\"padding:5px;border-left:1px solid black;\">Birth
+        Year</th>\n                </tr>\n            </thead>\n            <tbody>\n
+        \               <tr>\n                    <td style=\"padding:5px;\">King
+        Kong</td>\n                    <td style=\"padding:5px;border-left:1px solid
+        black;\">1933</td>     \n                </tr>\n                \n                <tr>\n
+        \                   <td style=\"padding:5px;\">Dracula</td>\n                    <td
+        style=\"padding:5px;border-left:1px solid black;\">1897</td>\n                </tr>\n
+        \               \n                <tr>\n                    <td style=\"padding:5px;\">Bride
+        of Frankenstein</td>\n                    <td style=\"padding:5px;border-left:1px
+        solid black;\">1944</td>\n                </tr>\n            </tbody>\n        </table>\n
+        \       \n    </body>\n\n</html>"
+    test_functions: ! "var title_row = $('thead > tr').first();\nif(title_row.children('th').first().css('color')
+      !== \"rgb(255, 0, 0)\") {\n    return 'Add a \"style\" attribute to the first
+      th tag! Set the value of this attribute to \"color:red;\"';\n}\n\nvar label_row
+      = $('thead > tr').last();\nif(label_row.children('th').first().children('em').length
+      === 0) {\n    return 'Surround \"Famous Monsters\" with an em tag!';\n}\nif(label_row.children('th').last().children('em').length
+      === 0) {\n    return 'Surround \"Birth Year\" with an em tag!';\n}\nreturn true;"
+    updated_at: 2012-11-13 01:18:35.963000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMffbLlcAACARh5
+    created_at: 2012-08-21 05:41:17.000000000 Z
+    default_code: ''
+    entry: ! 'Woosh! We''ve learned quite a bit.
+
+
+      **What can you do now?**
+
+
+      1. Write an HTML comment
+
+      2. Create a list (ordered and unordered)
+
+      3. Make text stand out using `<em>` and `<strong>`
+
+      4. Change the color, size, and alignment of text using the `style` attribute
+
+      5. Create HTML tables
+
+'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'Hit Run to complete this section and learn about two incredibly
+      useful tags: `<div>` and `<span>`!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Recap
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-11-21 05:53:51.018000000 Z
+    view: :console_and_editor
+  feedback_total: 30
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Better tables
+  num_forum_answers: 6
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 2
+  updated_at: 2012-11-21 05:53:51.055000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-21 05:47:20.000000000 Z
+  default_view: :console_and_editor
+  entry: ! 'The last two tags that will make your HTML framework complete: ''div''
+    and ''span''.'
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMg6VTEXQACARdT
+    created_at: 2012-08-21 05:47:21.000000000 Z
+    default_code: ''
+    entry: ! 'One of the most versatile structure tags available to you is the `<div></div>`
+      tag. Short for "division," `<div>` allows you to divide your page into containers
+      (that is, different pieces). This will come in handy when you begin learning
+      CSS in the next unit: you''ll be able to style different parts of your website
+      individually!
+
+
+      Check out the Result tab. You should see three blocks: one red, one blue, and
+      one green. Each one is its own `<div>` container.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 3
+      other: 1
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Now you try! On line 10, create your own `<div>` and give it the
+      background-color yellow. Use the width and height syntax we've used for the
+      other `<div>`s as a guide.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: ! '''Div''ide and conquer'
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div
+        style=\"width:50px; height:50px; background-color:red\"></div>\n\t\t<div style=\"width:50px;
+        height:50px; background-color:blue\"></div>\n\t\t<div style=\"width:50px;
+        height:50px; background-color:green\"></div>\n\t\t\n\t</body>\n</html>"
+    test_functions: ! "width = $('div:nth-child(4)').css('width');\nheight = $('div:nth-child(4)').css('height');\nbgcolor
+      = $('div:nth-child(4)').css('background-color');\n\n$e('div:nth-child(4)').to.exist(\"Did
+      you add your div on line 10?\");\n\nif (width != '50px') {\n  return \"It looks
+      like your <div> is \" + width + \" wide instead of 50px wide.\";\n}\n\nif (height
+      != '50px') {\n  return \"It looks like your <div> is \" + height + \" high instead
+      of 50px high.\";\n}\n\nif (bgcolor != 'rgb(255, 255, 0)') {\n  return \"Did
+      you remember to make your <div>'s background-color yellow?\";\n}\n\nreturn true;"
+    updated_at: 2012-11-07 17:37:07.675000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDPWSLrebwACAG0U
+    created_at: 2012-08-21 18:41:12.000000000 Z
+    default_code: ''
+    entry: ! 'Nice work! As you can probably guess, the smart use of `<div>`s will
+      eventually allow you to create visual HTML objects like sidebars, menus, and
+      more.
+
+
+      Just like with images, you can make `<div>`s clickable by wrapping them in `<a></a>`
+      tags.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 1
+    from_console: false
+    hint: ! "Remember, the `<a></a>` tags go around the thing you want to make a link,
+      like so:\n\n    <a href=\"website address\"><div></div></a>"
+    instruction: Go ahead and make your yellow `<div>` link to your favorite site!
+      Check the Hint if you need a refresher.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Link it!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<div
+        style=\"width:50px; height:50px; background-color:red\"></div>\n\t\t<div style=\"width:50px;
+        height:50px; background-color:blue\"></div>\n\t\t<div style=\"width:50px;
+        height:50px; background-color:green\"></div>\n\t\t<div style=\"width:50px;
+        height:50px; background-color:yellow\"></div>\n\t</body>\n</html>"
+    test_functions: $e('a > div').to.exist("Make sure you put your <div> between <a>
+      and </a> tags.");
+    updated_at: 2012-10-15 22:03:28.959000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDPOU+vuqAACADE4
+    created_at: 2012-08-21 18:07:15.000000000 Z
+    default_code: ''
+    entry: While `<div>` allows you to divide your webpage up into pieces you can
+      style individually, `<span>` allows you to control styling for smaller parts
+      of your page, such as text. For example, if you always want the first word of
+      your paragraphs to be red, you can wrap each first word in `<span></span>` tags
+      and make them red using CSS!
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 10
+      total: 14
+      other: 3
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: For now, we'll continue to use the style attribute to change colors.
+      Wrap the word `"red"` in the editor in `<span></span>` tags and give the `<span>`
+      tag `style="color:red"`. Notice how only the word between the `<span></span>`
+      tags changes color!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Spantastic
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t<p>This
+        text is black, except for the word red!</p>\n\t</body>\n</html>"
+    test_functions: ! "if (code['index.html'].match(/\\<span\\s*style\\s*=\\s*[\"']\\s*color\\s*:\\s*red\\s*['\"];?\\s*\\>/)
+      === null) {\n\treturn 'Make sure only to wrap the word \"red\" in the <span></span>
+      tags!';\n}\nif (code['index.html'].match(/<\\s*\\/\\s*span\\s*>/) === null)
+      {\n  return \"Did you remember to close your <span></span> tags?\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-11-26 08:34:29.501000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDPWTP19/AACAG9p
+    created_at: 2012-08-21 18:41:16.000000000 Z
+    default_code: ''
+    entry: ! 'Great! You''re really getting the hang of this. These tags can be a
+      little tricky, though, so let''s go through one more example.
+
+
+      Color is just one attribute you can selectively change with `<span>` tags; you
+      can also change font size, font family, and any other style attribute you can
+      think of!'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 7
+      instructional_text_issue: 1
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: Use `<span>` tags to change the word `"Futura"` to the font Futura.
+      Leave the rest of the text as-is—don't include the exclamation point in the
+      `<span>` tag!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Span is the man
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<p>My
+        favorite font is Futura!</p>\n\t</body>\n</html>"
+    test_functions: ! "if(code['index.html'].match(/\\<span\\s*style\\s*=\\s*[\"']\\s*font-family\\s*:\\s*Futura\\s*['\"];?\\s*\\>/i)
+      === null){\n\treturn 'Make sure only to wrap the word \"Futura\" in the <span></span>
+      tags!';\n}\n\nif (code['index.html'].match(/<\\s*\\/\\s*span\\s*>/) === null)
+      {\n  return \"Did you remember to close your <span></span> tags?\";\n}\n\nreturn
+      true;"
+    updated_at: 2012-11-23 12:55:27.170000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDPWT02WDQACAHFo
+    created_at: 2012-08-21 18:41:19.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! In addition to what you''ve already learned, you now know
+      how to:
+
+
+      1. Divide up your webpage for easy styling with `<div>` tags
+
+      2. Select pieces of text and change their properties using `<span>` tags
+
+
+      In the next course, we''ll see how we can take much of the styling we''ve been
+      doing—such as controlling font family, font color, and text alignment—and put
+      it in its own separate file. By doing that, we can use tags like `<div>` and
+      `<span>` to impart style to our pages without writing `style="color:red"` every
+      single time!'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: ! 'We''ve given you a taste of how `<span>` can be powered by CSS
+      in the editor. Check it out on the Result tab. Cool, huh?
+
+
+      Hit Run to finish this course and move on to the wonderful world of CSS.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Recap
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ye Olde Fancye Booke</title>\n\t\t<link
+        type=\"text/css\" rel=\"stylesheet\" href=\"stylesheet.css\"/>\n\t</head>\n\t<body>\n\t\t<h3>Ye
+        Olde Storye</h3>\n\t\t<p><span>A</span> long time ago there was an intrepid
+        young student who wanted to learn CSS...</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "p {\n\tfont-family:Garamond;\n\tfont-size:16px;\n}\n\nh3 {\n\tfont-family:cursive;\n\tcolor:#36648b;\n\ttext-align:center;\n}\n\nspan
+        {\n\tcolor:#cc0000;\n\tfont-size:24px;\n}"
+    test_functions: return true;
+    updated_at: 2012-08-21 21:01:35.000000000 Z
+    view: :console_and_editor
+  feedback_total: 25
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Div and span
+  num_forum_answers: 14
+  num_forum_questions: 5
+  published: true
+  read_feedback_total: 3
+  updated_at: 2012-11-26 08:34:29.549000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false

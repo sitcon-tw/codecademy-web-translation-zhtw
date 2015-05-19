@@ -1,0 +1,1267 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.5220430107526886
+classification: :lesson
+created_at: 2012-08-23 01:46:57.000000000 Z
+domain: :freestyle
+down_votes: 154
+entry: You've learned a bit about CSS—now it's time to dive into the details of selectors,
+  including multiple selectors, universal selectors, and class and ID selectors.
+feedback_total: 81
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: CSS Selectors
+num_exercises: 23
+num_published_exercises: 23
+num_published_sections: 5
+num_readiness_feedbacks: 44
+num_sections: 5
+num_user_ratings: 930
+project_scope: 0
+published: true
+rating: 676.1470216790839
+read_feedback_total: 34
+readiness: 97.8
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-29 01:08:23.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 4205.5
+up_votes: 861
+updated_at: 2012-11-26 16:29:56.751000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:46:57.000000000 Z
+  default_view: :console_and_editor
+  entry: You're familiar with a number of CSS selectors already, such as div, span,
+    h1 through h6, and p. Now we're going to learn a few more!
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWLkfPjfwACAgOd
+    created_at: 2012-08-23 01:46:57.000000000 Z
+    default_code: ''
+    entry: ! 'We''ve used a number of HTML elements as CSS selectors so far: we''ve
+      styled the HTML tags `<h1></h1>` with the CSS selector `h1`, `<p></p>` with
+      `p`, and so on.
+
+
+      You may have guessed this, but if not, we''ll say it outright: *any* HTML element
+      can be a CSS selector! You can modify `<ul>`s, `<table>`s, and even the entire
+      `<body>` by selecting `ul`, `table`, and `body`, respectively.'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 6
+      other: 1
+    from_console: false
+    hint: ! "You can target the `<body>` just like any other HTML element:\n\n    body
+      {\n        /*CSS stuff!*/\n    }"
+    instruction: Give it a whirl! Change the entire HTML body's `background-color`
+      to `#C6E2FF`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: All HTML elements are selectors
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "if(code['stylesheet.css'].match(/body\\s*\\{\\s*background-color\\s*:\\s*#C6E2FF;/i)
+      === null){\n\treturn \"Did you remember to set the <body>'s background color
+      to #C6E2FF?\";\n}\n\nreturn true;"
+    updated_at: 2012-11-13 06:21:16.118000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWL1bh+jwACAiCS
+    created_at: 2012-08-23 01:48:05.000000000 Z
+    default_code: ''
+    entry: ! "As you've seen, it's possible to nest HTML elements inside one another,
+      like so:\n\n    <div>\n        <div>\n            <p>I like tacos!</p>\n\nSo
+      what if you want to grab `<p>`s that are inside two `<div>`s, and not *all*
+      `<p>`s?\n\nYou select those in the CSS tab like this:\n\n    div div p {\n        /*CSS
+      stuff!*/\n    }"
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: On the CSS tab, select only the h3 header nested inside three `<div>`s
+      and change its `color` to `red`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Multiple Selectors
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h3>I'm
+        plain old font!</h3>\n\t\t<div>\n\t\t\t<h3>Me, too!</h3>\n\t\t\t<div>\n\t\t\t\t<h3>Me
+        three!</h3>\n\t\t\t\t<div>\n\t\t\t\t\t<h3>Forget you guys. I'm about to be
+        red!</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "firsth3 = $('h3').css('color');\nsecondh3 = $('div > h3').css('color');\nthirdh3
+      = $('div > div > h3').css('color');\nfourthh3 = $('div > div > div > h3').css('color');\n\nif(firsth3
+      !== 'rgb(0, 0, 0)'){\n\treturn \"It looks like you accidentally turned the first
+      h3 red!\";\n}\n\nif(secondh3 !== 'rgb(0, 0, 0)'){\n\treturn \"It looks like
+      you accidentally turned the second h3 red!\";\n}\n\nif(thirdh3 !== 'rgb(0, 0,
+      0)'){\n\treturn \"It looks like you accidentally turned the third h3 red!\";\n}\n\nif(fourthh3
+      !== 'rgb(255, 0, 0)'){\n\treturn \"It looks like you didn't turn the h3 nested
+      inside three <div>s red!\";\n}\n\nreturn true;"
+    updated_at: 2012-10-03 17:59:11.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWL1nQqTgACAhBR
+    created_at: 2012-08-23 01:48:06.000000000 Z
+    default_code: ''
+    entry: ! "There's also a very special selector you can use to apply CSS styling
+      to *every element* on the page: the `*` selector. For example, if you type\n\n
+      \   * {\n        border: 2px solid black;\n    }\n\nYou'll create a two-pixel
+      wide solid black border around *every* element on the HTML page."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: Go ahead and use the universal selector to put a `1px dashed blue`
+      border around every element on the page. See how each element looks like it's
+      in its own box on the page? This is part of the HTML/CSS "box model," which
+      we'll cover in the next lesson.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: One selector to rule them all
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h3>Boxes
+        within boxes!</h3>\n\t\t<div>\n\t\t\t<p>Paragraph One</p>\n\t\t</div>\n\t\t<div>\n\t\t\t<p>Paragraph
+        Two</p>\n\t\t</div>\n\t\t<div>\n\t\t\t<p>Paragraph Three</p>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "if(code['stylesheet.css'].match(/\\*\\s*\\{\\s*border\\s*:\\s*1px\\s*dashed\\s*blue;?\\s*\\}/)
+      === null){\n\treturn \"Did you use the universal selector * to put a 1px dashed
+      blue border around every element?\";\n}\n\nreturn true;"
+    updated_at: 2012-10-08 15:52:01.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWL16m2VQACAhTp
+    created_at: 2012-08-23 01:48:07.000000000 Z
+    default_code: ''
+    entry: Great work! Selectors can be a bit tricky, but the more you use them, the
+      more comfortable you'll become.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: Because saying "`<p>`s inside `<div>`s" is more specific than "all `<p>`s,"
+      the paragraphs outside divs will turn teal and those inside divs will turn deep
+      red. This behavior is called cascading, and we'll learn about it in the next
+      section!
+    instruction: ! 'Let''s make sure you really know your stuff.
+
+
+      On the CSS tab:
+
+
+      1. Set all paragraph text to the hexadecimal color #00E5EE.
+
+      2. Set all paragraph text for paragraphs nested inside div tags to the hex color
+      #CC0000. (What color will they turn if they''ve already been told in step #1
+      to be #00E5EE? See the Hint!)
+
+      3. Put a border with the hex color #3A5FCD around every HTML element. It can
+      be solid, dotted, dashed, 2px, 3px, whatever you like!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Rock Your Selectors
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Strut Your Stuff!</title>\n\t</head>\n\t<body>\n\t\t<p>I'm
+        about to become a lovely shade of teal.</p>\n\t\t<p>Me, too!</p>\n\t\t<p>I
+        think I'll do the same.</p>\n\t\t<div>\n\t\t\t<p>We're going to become a truly
+        striking scarlet!</p>\n\t\t\t<p>I was thinking more vermillion.</p>\n\t\t\t<p>No,
+        crimson!</p>\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! '$e(''body > p'').to.have.css(''color'',''#00E5EE'',"Did you
+      remember to set the color of the paragraphs outside divs to #00E5EE?");
+
+      $e(''div > p'').to.have.css(''color'',''#CC0000'',"Did you remember to set the
+      color of the paragraphs inside divs to #CC0000?");
+
+      $e(''*'').to.have.css(''border-color'', ''#3A5FCD'',"Did you remember to add
+      a border of color #3A5FCD around every element?");'
+    updated_at: 2012-11-24 19:39:44.729000000 Z
+    view: :console_and_editor
+  feedback_total: 10
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: A Greater Selection
+  num_forum_answers: 14
+  num_forum_questions: 10
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-24 19:39:44.751000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:49:25.000000000 Z
+  default_view: :console_and_editor
+  entry: ! 'Now that you understand more about CSS selectors, we''ll cover its most
+    powerful feature: cascading.'
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWMJgn26gACAgRR
+    created_at: 2012-08-23 01:49:26.000000000 Z
+    default_code: ''
+    entry: ! 'You can think of an HTML document as a tree: elements "branch out" from
+      the main trunk (the `<html></html>` tags). The first two big branches are `<head>`
+      and `<body>`, and branches multiply and become finer as you get to elements
+      like `<div>`s, `<table>`s, and text (headers and paragraphs).'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: We've sketched a potential family tree out for you in the editor
+      (check the Result tab). When you think you've wrapped your mind around the HTML
+      "tree," hit Run!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Branching
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>The Great Tree of HTML</title>\n\t</head>\n\t<body>\n\t\t<div
+        id=\"p1\">P</div>\n\t\t<div id=\"p2\">P</div>\n\t\t<div id=\"p3\">P</div>\n\t\t<div
+        class=\"space\"></div>\n\t\t<div id=\"title\">Title</div>\n\t\t<div id=\"div\">Div</div>\n\t\t<div
+        class=\"space\"></div>\n\t\t<div id=\"head\">Head</div>\n\t\t<div id=\"body\">Body</div>\n\t\t<div
+        class=\"space\"></div>\n\t\t<div id=\"html\">HTML</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "div {\n\tborder-radius: 5px;\n\tborder: 2px solid #6495ED;\n\tbackground-color:
+        #BCD2EE;\n\theight: 18px;\n\ttext-align: center;\n\tfont-family: Garamond,
+        serif;\n}\n\n#p1 {\n\tdisplay: inline;\n\tposition: relative;\n\tmargin-left:
+        138px;\n}\n\n#p2 {\n\tdisplay: inline;\n\tposition: relative;\n\tmargin-left:
+        10px;\n}\n\n#p3 {\n\tdisplay: inline;\n\tposition: relative;\n\tmargin-left:
+        10px;\n}\n\n#div {\n\tdisplay: inline;\n\tposition: relative;\n\tmargin-left:
+        70px;\n\tmargin-top: 10px;\n}\n\n#title {\n\tdisplay: inline;\n\tposition:
+        relative;\n\tmargin-left: 50px;\n}\n\n#body {\n\tdisplay: inline;\n\tposition:
+        relative;\n\tmargin-left: 25px;\n}\n\n#head {\n\tdisplay: inline;\n\tposition:
+        relative;\n\tmargin-left: 65px;\n}\n\n#html {\n\twidth: 50px;\n\tposition:
+        relative;\n\tmargin-left: 93px;\n}\n\n.space {\n\topacity: 0;\n}"
+    test_functions: return true;
+    updated_at: 2012-08-26 03:44:37.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWMSGc36AACAgYZ
+    created_at: 2012-08-23 01:50:00.000000000 Z
+    default_code: ''
+    entry: ! 'If you think of the `<html>` tag as the trunk of the tree, you can think
+      of its immediate branches—`<head>` and `<body>`—as its **children**. Both tags
+      are children of `<html>`, and `<html>` is their **parent** element. Because
+      they are both immediate children of `<html>` (that is, they are both only one
+      element away), they are **siblings**.
+
+
+      Just like a real family, elements have children, grandchildren, great-grandchildren,
+      and so on (though we don''t make this distinction with HTML—a child of an element,
+      and all that child''s children, are children of the first parent).'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 4
+      total: 5
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: ! 'For those of you who think more visually, there''s a little diagram
+      in the `index.html` tab to the right.
+
+
+      Remember: an element is a child of EVERY element wrapped around it, even if
+      that element is several "branches" away!
+
+
+      When you''re ready, hit Run to continue.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Parents, children, and siblings
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html> <!--The root of the tree!-->\n\t<head> <!--Child
+        of html, parent of title,\n\t\t   sibling of body-->\n\t\t<title></title>
+        <!--Immediate child of head,\n\t\t\t\t\t\tchild of head AND html-->\n\t</head>\n\t<body>
+        <!--Child of html, parent of p,\n\t\t   sibling of head-->\n\t\t<p></p> <!--Immediate
+        child of body,\n\t\t\t\tchild of head AND html-->\n\t</body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-11-15 21:10:50.371000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWMUKm2VQACAhau
+    created_at: 2012-08-23 01:50:08.000000000 Z
+    default_code: ''
+    entry: All right! Now that you have an idea of how HTML documents are structured,
+      it's time to see how good you are at navigating from branch to branch.
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 2
+      positive_feedback: 1
+    from_console: false
+    hint: If you need a refresher on how to only select elements that are the children
+      of other elements, feel free to peek back to [this exercise](http://www.codecademy.com/courses/web-beginner-en-WF0CF/0?curriculum_id=50579fb998b470000202dc8b#!/exercises/1).
+    instruction: ! 'We''ve added some links in the editor to the right. On the CSS
+      tab, target ONLY the links that are children of `<li>`s and
+
+
+      1. Set their `text-decoration` to `none`
+
+      2. Set their `font-family` to `cursive`
+
+
+      Don''t change the link that''s not part of the unordered list!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Swinging from branch to branch
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Linkapalooza</title>\n\t</head>\n\t<body>\n\t\t<a
+        href=\"http://www.codecademy.com/\">Codecademy!</a>\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<a
+        href=\"http://www.codecademy.com/learn\">Learn</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a
+        href=\"http://www.codecademy.com/create/creator\">Teach</a>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<a
+        href=\"http://www.codecademy.com/edit_account/basic_info\">Settings</a>\n\t\t\t</li>\n\t\t</ul>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! '$e(''body > a'').to.have.css(''text-decoration'',''underline'',"It
+      looks like you accidentally removed the text-decoration from the link outside
+      the unordered list.");
+
+      $e(''li > a'').to.have.css(''text-decoration'',''none'',"Did you remember to
+      set the text-decoration of all the links inside the unordered list to none;?");'
+    updated_at: 2012-11-02 20:18:14.929000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWMV2c36AACAgZA
+    created_at: 2012-08-23 01:50:15.000000000 Z
+    default_code: ''
+    entry: ! "Good work! Let's try something a little more involved.\n\nRemember,
+      you can reach an element that is a child of another element like this:\n\n    div
+      div p { /* Some CSS */ }\n\nwhere in this case, we'd be grabbing any `<p>` that
+      is nested *somewhere* inside a `<div>` that is nested *somewhere* inside another
+      `<div>`. If you want to grab *direct children*—that is, an element that is *directly*
+      nested inside another element, with no elements in between—you can use the `>`
+      symbol, like so:\n\n    div > p { /* Some CSS */ }\n\nThis only grabs `<p>`s
+      that are nested *directly* inside of `<div>`s; it won't grab any paragraphs
+      that are, say, nested inside lists that are in turn nested inside `<div>`s."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 4
+      total: 14
+      correctness_test_issue: 8
+      other: 2
+    from_console: false
+    hint: What happens if you just set all `<p>` tags to have the font Garamond? Since
+      nothing "downstream" of the cascade (that is, no other selector that's more
+      specific than just `p`) changes the font-family, this should make all paragraphs
+      have the same font!
+    instruction: ! '1. Make all `<p>` tags have a font-family of Garamond. (Do NOT
+      use the universal selector for this! There''s a better way; see the Hint for
+      help.)
+
+      2. Make the introduction paragraph and the summary paragraph have a `font-weight`
+      of `bold` (this is a new property for you, but it works just like the others
+      you''ve learned).
+
+      3. Make the synopsis paragraph have the color `#7AC5CD`.
+
+      4. Make the paragraphs in the unordered list have the color `#000000` and text-decoration
+      `underline`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Can you swing it?
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Ultimate Text Challenge</title>\n\t</head>\n\t<body>\n\t\t<p>Introduction:
+        Cascading with CSS</p>\n\t\t<div>\n\t\t\t<p>Synopsis: When you set a property
+        of a selector like 'p' to a certain value, that value applies to <em>all</em>
+        p tags.\n\t\t\tIf, however, you change that same property to a different value
+        for a more specific instance of p,\n\t\t\tthat change will <em>override</em>
+        the 'general rule'.\n\t\t\t</p>\n\t\t\t<ul>\n\t\t\t\t<li><p>If you say p {
+        font-family: Garamond}, all 'p's will have the font Garamond.</p></li>\n\t\t\t\t<li><p>BUT
+        if you say li p {font-family: Verdana}, 'p's outside of 'li's will be\n\t\t\t\t\t
+        \  in Garamond, and 'p's INSIDE 'li's will be in Verdana.\n\t\t\t\t</p></li>\n\t\t\t\t<li><p>The
+        more specific your selectors are, the higher importance CSS gives to the styling
+        you apply!</p></li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<p>Summary: Greater specificity
+        makes CSS prioritize that particular styling.</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! "pfont = $('p').css('font-family');\n\nif (pfont !== 'garamond'
+      && pfont !== 'Garamond') {\n  return \"Did you remember to make all paragraphs
+      have the font Garamond?\";\n}\n\n$e('body > p').to.have.css('font-weight','bold',\"Did
+      you remember to bold the introduction and summary paragraphs?\");\n$e('div >
+      p').to.have.css('color','#7AC5CD',\"Did you remember to set the color of the
+      synopsis paragraph to #7AC5CD?\");\n$e('li > p').to.have.css('text-decoration','underline',\"Did
+      you remember to set the paragraphs inside <li> tags to the text-decoration:
+      underline;?\");\n$e('li > p').to.have.css('color','#000000',\"Did you remember
+      to make the paragraphs inside <li> tags have color #000000;?\");\n\nreturn true;"
+    updated_at: 2012-11-25 20:55:32.510000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDpDpm445QACBFS4
+    created_at: 2012-08-26 15:41:26.000000000 Z
+    default_code: ''
+    entry: ! 'Excellent! You''ve got the hang of this, and you''re starting to learn
+      more about cascading.
+
+
+      As we mentioned, certain selectors will "override" others if they have a greater
+      **specificity value**. `ul li p {` is more specific CSS than just `p {`, so
+      when CSS sees tags that are *both* `<p>` tags *and* happen to be inside unordered
+      lists, it will apply the more specific styling (`ul li p {`) to the text inside
+      the lists.
+
+
+      There are two selectors that are even more specific than nested selectors like
+      the ones above: **classes** and **IDs**. Check them out in the editor to the
+      right.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: ! 'See how the classes and IDs alter the way the paragraph looks?
+      (Note how the `li p {` CSS overrides the `p {` CSS, and the class `.list_item`
+      overrides the `li p {` CSS.)
+
+
+      Hit Run to learn how to use these new selectors!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: See it to believe it
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Ultimate Text Challenge</title>\n\t</head>\n\t<body>\n\t\t<p
+        id=\"intro\">Cascading with CSS</p>\n\t\t<div>\n\t\t\t<p>When you set a property
+        of a selector like 'p' to a certain value, that value applies to <em>all</em>
+        p tags.\n\t\t\tIf, however, you change that same property to a different value
+        for a more specific instance of p,\n\t\t\tthat change will <em>override</em>
+        the 'general rule'.\n\t\t\t</p>\n\t\t\t<ul>\n\t\t\t\t<li><p>If you say p {
+        font-family: Garamond}, all 'p's will have the font Garamond.</p></li>\n\t\t\t\t<li><p
+        class=\"list_item\">BUT if you say li p {font-family: Verdana}, 'p's outside
+        of 'li's will be\n\t\t\t\t\t   in Garamond, and 'p's INSIDE 'li's will be
+        in Verdana.\n\t\t\t\t</p></li>\n\t\t\t\t<li><p class=\"list_item\">The more
+        specific your selectors are, the higher importance CSS gives to the styling
+        you apply!</p></li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<p id=\"summary\">Greater
+        specificity makes CSS prioritize that particular styling.</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "p {\n\tfont-family: Garamond, serif;\n}\n\n#intro {\n\tfont-weight:
+        bold;\n\tcolor: #000000;\n}\n\ndiv p {\n\tcolor: #7AC5CD;\n}\n\nli p {\n\tfont-family:
+        Verdana, sans-serif;\n\tcolor: #000000;\n}\n\n.list_item {\n\tfont-family:
+        Vivaldi, cursive;\n}\n\n#summary {\n\tfont-size: 20px;\n\tcolor: #000000;\n}"
+    test_functions: return true;
+    updated_at: 2012-10-03 18:36:07.000000000 Z
+    view: :console_and_editor
+  feedback_total: 21
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: ! '"C" is for "Cascading"'
+  num_forum_answers: 20
+  num_forum_questions: 11
+  published: true
+  read_feedback_total: 4
+  updated_at: 2012-11-25 20:55:32.602000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-23 01:50:23.000000000 Z
+  default_view: :console_and_editor
+  entry: It's true that all HTML elements can be CSS selectors, CSS selectors can
+    include more than HTML elements! It's time to learn about CSS classes and IDs.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlEc57lgAACAFpI
+    created_at: 2012-08-25 21:32:35.000000000 Z
+    default_code: ''
+    entry: ! 'HTML elements can be CSS selectors, but as we saw with the universal
+      selector `*`, they''re not the *only* selectors available.
+
+
+      There are two important selectors you can use in addition to the universal selector
+      and HTML elements: **classes** and **IDs**.'
+    expect_error: false
+    feedback_stats:
+      other: 3
+      total: 4
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: You'll see a class and an ID declared in the HTML tab. We'll get
+      to the syntax for these in the next exercise—in the meantime, remove the comment
+      (the leading `/*` and trailing `*/`) from the CSS tab to see how they work!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Beyond HTML elements
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h3
+        class=\"red\">I'm an h3 header in the red class!</h3>\n\t\t<h3>I'm just a
+        regular old h3 header.</h3>\n\t\t<p class=\"red\">I'm a paragraph in the red
+        class!</p>\n\t\t<p>I'm just a regular old paragraph.</p>\n\t\t<p id=\"rogue\">I'm
+        a rogue paragraph! I do what I want!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "/*\n.red {\n\tcolor: red;\n}\n\n#rogue {\n\tcolor: #FF00FF;\n\tfont-weight:
+        bold;\n\tfont-family: cursive;\n}\n/*"
+    test_functions: ! '$e(''.red'').to.have.css(''color'',''#FF0000'',"Did you remember
+      to remove the comment from the CSS tab?");
+
+      $e(''#rogue'').to.have.css(''color'',''#FF00FF'',"Did you remember to remove
+      the comment from the CSS tab?");'
+    updated_at: 2012-10-01 00:00:45.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDWMYBuRRAACAhYZ
+    created_at: 2012-08-23 01:50:24.000000000 Z
+    default_code: ''
+    entry: ! "Classes are useful when you have a bunch of elements that should all
+      receive the same styling. Rather than applying the same rules to several selectors,
+      you can simply apply the same class to all those HTML elements, then define
+      the styling for that class in the CSS tab.\n\nClasses are assigned to HTML elements
+      with the word `class` and an equals sign, like so:\n\n    <div class=\"square\"></div>\n
+      \   <img class=\"square\"/>\n    <td class=\"square\"></td>\n\nClasses are identified
+      in CSS with a dot (`.`), like so:\n\n    .square {\n        height: 100px;\n
+      \       width: 100px;\n    }\n\nThis allows you to take elements of different
+      types and give them the same styling."
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Create any number of HTML elements you like and give them the class
+      `"fancy"`. On the CSS tab, set `.fancy` to have a font-family of cursive and
+      a color of `#0000CD`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Keeping it classy
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<!--Add
+        your HTML elements with the class \"fancy\" below!-->\n\t\t\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Define your CSS class .fancy below!*/
+
+
+'
+    test_functions: ! '$e(''.fancy'').to.exist("Did you create at least one HTML element
+      with the class ''fancy''?");
+
+      $e(''.fancy'').to.have.css(''font-family'',''cursive'',"Did you set the font-family
+      of the .fancy class to cursive;?");
+
+      $e(''.fancy'').to.have.css(''color'',''#0000CD'',"Did you set the color of the
+      .fancy class to #0000CD;?");'
+    updated_at: 2012-08-26 16:26:45.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlEXl6mHgACAEVV
+    created_at: 2012-08-25 21:32:14.000000000 Z
+    default_code: ''
+    entry: ! "IDs, on the other hand, are great for when you have exactly *one* element
+      that should receive a certain kind of styling.\n\nIDs are assigned to HTML elements
+      with the word `id` and an equals sign:\n\n    <div id=\"first\"></div>\n    <div
+      id=\"second></div>\n    <p id=\"intro\"></p>\n\nIDs are identified in CSS with
+      a pound sign (`#`):\n\n    #first {\n        height: 50px;\n    }\n    \n    #second
+      {\n        height: 100px;\n    }\n    \n    #intro {\n        color: #FF0000;\n
+      \   }\n\nThis allows you to apply style to a single instance of a selector,
+      rather than *all* instances."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 7
+      typo: 3
+      correctness_test_issue: 1
+    from_console: false
+    hint: ''
+    instruction: Create any number of HTML elements you like and give one of them
+      the ID `"serious"`. On the CSS tab, set `#serious` to have a font-family of
+      Courier and a color of `#CC0000`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: ID, please!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<!--Add
+        your HTML elements with the ID \"serious\" below!-->\n\t\t\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Define your CSS id #serious below!*/
+
+
+'
+    test_functions: ! "$e('#serious').to.exist(\"Did you create at least one HTML
+      element with an ID 'serious'?\");\n\nfont = $('#serious').css('font-family');\n\nif
+      (font !== 'courier' && font !== 'Courier') {\n  return \"Did you set the font-family
+      of the #serious ID to Courier?\";\n}\n\n$e('#serious').to.have.css('color','#CC0000',\"Did
+      you set the color of the #serious ID to #CC0000;?\");\n\nreturn true;"
+    updated_at: 2012-11-25 12:59:01.930000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDlEdIAi9QACACDy
+    created_at: 2012-08-25 21:32:36.000000000 Z
+    default_code: ''
+    entry: ! 'Well done! You''re doing great.
+
+
+      Now it''s time to put all our newfound knowledge together:'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 4
+      other: 1
+      positive_feedback: 1
+    from_console: false
+    hint: ! "Remember: on the HTML tab, you assing IDs and classes like this:\n\n
+      \   class=\"classname\"\n    id=\"idname\"\n\nOn the CSS tab, you set styling
+      like so:\n\n    .classname {\n        /*Some CSS!*/\n    }\n\n    #idname {\n
+      \       /*Some CSS!*/\n    }"
+    instruction: ! 'Check out the text in the editor to the right. On the HTML tab:
+
+
+      1. Give the h2 header an ID of `"intro"`.
+
+      2. Give the first h3 and first p a class of `"standout"`. Don''t do anything
+      to the second h3 and p!
+
+
+      On the CSS tab:
+
+
+      1. Set the `#intro` ID''s color to `#B83C3A`.
+
+      2. Set the `.standout` class''s color to `#F7AC5F` and font-family to Verdana.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Putting it all together
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<h2>Introduction</h2>\n\t\t<h3>Classes
+        and IDs in CSS</h3>\n\t\t<p>Classes and IDs are super easy in CSS. You're
+        using them right now!</p>\n\t\t<h3>Regular HTML Selectors</h3>\n\t\t<p>If
+        you don't bother with a class or ID, an HTML element just gets\n\t\t   the
+        regular CSS styling for that element—or the default styling if you\n\t\t   don't
+        specify any particular styling on the stylesheet.\n\t\t</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! "$e('h2').to.have.attr('id','intro',\"Did you remember to add
+      the intro ID to the h2 header?\");\n$e('h3').to.have.attr('class','standout',\"Did
+      you remember to add the standout class to the first h3 header?\");\n$e('p').to.have.attr('class','standout',\"Did
+      you remember to add the standout class to the first paragraph?\");\n$e('#intro').to.have.css('color','#B83C3A',\"Did
+      you remember to set #intro's color to #B83C3A?\");\n$e('.standout').to.have.css('color','#F7AC5F',\"Did
+      you remember to set .standout's color to #F7AC5F?\");\n\nfont = $('.standout').css('font-family');\n\nif
+      (font !== 'Verdana' && font !== 'verdana') {\n  return \"Did you remember to
+      set .standout's font-family to Verdana?\";\n}\n\nreturn true;"
+    updated_at: 2012-10-19 01:24:12.963000000 Z
+    view: :console_and_editor
+  feedback_total: 15
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Class and ID Selectors
+  num_forum_answers: 5
+  num_forum_questions: 6
+  published: true
+  read_feedback_total: 2
+  updated_at: 2012-11-25 12:59:02.099000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-24 15:17:09.000000000 Z
+  default_view: :console_and_editor
+  entry: You know how to style a link with CSS. But how would you use CSS to make
+    a link one color if it hasn't been clicked, and a different color once it has?
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDea9kAY/AACAEM1
+    created_at: 2012-08-24 15:17:10.000000000 Z
+    default_code: ''
+    entry: ! "You've learned about class selectors. Now it's time to learn about **pseudo-class
+      selectors**.\n\nA **pseudo-class selector** is a way of accessing HTML items
+      that aren't part of the document tree (remember the tree structure we talked
+      about earlier?). For instance, it's very easy to see where a link is in the
+      tree. But where would you find information about whether a link had been clicked
+      on or not? It isn't there!\n\nPseudo-class selectors let us style these kinds
+      of changes in our HTML document. For example, we saw we could change a link's
+      text-decoration property to make it something other than blue and underlined.
+      Using pseudo selectors, you can control the appearance of unvisited and visited
+      links—even links the user is hovering over but hasn't clicked!\n\nThe CSS syntax
+      for pseudo selectors is\n\n    selector:pseudo-class_selector {\n        property:
+      value;\n    }\n\nIt's just that little extra colon (`:`)."
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Uncomment the pseudo-class selector in the CSS tab, then check out
+      the Result to see what happens when you pass your cursor over the links!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Even finer control
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t<ul>\n\t\t<li><a
+        href=\"http://www.codecademy.com/\">Codecademy Home</a></li>\n\t\t<li><a href=\"http://www.codecademy.com/learn\">Learn</a></li>\n\t\t<li><a
+        href=\"http://www.codecademy.com/create/creator\">Teach</a></li>\n\t\t<li><a
+        href=\"http://www.codecademy.com/edit_account/basic_info\">Settings</a></li>\n\t</ul>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! "/*\n\na:hover {\n\tcolor: #cc0000;\n\tfont-weight: bold;\n\ttext-decoration:
+        none;\n}\n*/"
+    test_functions: ! "if(code['stylesheet.css'].match(/\\/\\*/) !== null){\n\treturn
+      \"Did you remove the comment in the CSS tab?\";\n}\n\nreturn true;"
+    updated_at: 2012-08-26 18:02:37.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDl5wW445QACAYc1
+    created_at: 2012-08-26 01:20:01.000000000 Z
+    default_code: ''
+    entry: ! 'There are a number of useful pseudo-class selectors for links, including:
+
+
+      `a:link`: An unvisited link.
+
+      `a:visited`: A visited link.
+
+      `a:hover`: A link you''re hovering your mouse over.
+
+
+      Let''s try a few!'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 3
+      total: 5
+      instructional_text_issue: 1
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Add three links between the div tags. They can link to any
+      websites you like!
+
+      2. On the CSS tab, set all `a:link`s to have no text decoration and a color
+      of `#008B45`.
+
+      3. Set all `a:hover`s to have a color of `#00FF00`.
+
+      4. Set all `a:visited`s to have a color of `#EE9A00`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Links
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('a').to.be.above(2,function(){\n\treturn \"Did you remember
+      to add at least three links?\";\n});\n\nif(code['index.html'].match(/a\\s*href/)
+      === null){\n\treturn \"Do your <a> tags all have href attributes?\";\n}\n\n$e('a').not.to.be.empty(\"Make
+      sure you put some text between your <a></a> tags!\");\n$e('a:link').to.have.css('color','#008B45',\"Did
+      you remember to set your a:link to the color #008B45?\");\n$e('a:link').to.have.css('text-decoration','none',\"Did
+      you remember to set your a:link to have a text-decoration of none?\");\n$e('a:hover').to.have.css('color','#00FF00',\"Did
+      you remember to set your a:hover to the color #00FF00?\");\n$e('a:visited').to.have.css('color','#EE9A00',\"Did
+      you remember to set your a:visited to the color #EE9A00?\");"
+    updated_at: 2012-11-25 07:20:28.942000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDl5wGJC7wACAWMQ
+    created_at: 2012-08-26 01:20:00.000000000 Z
+    default_code: ''
+    entry: ! "Another useful pseudo-class selector is `first-child`. It's used to
+      apply styling to *only* the elements that are the first children of their parents.
+      For instance:\n\n    p:first-child {\n        color: red;\n    }\n\nWould make
+      all paragraphs that are the first children of their parent elements red."
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: On the CSS tab, set the first paragraph's font-family to cursive.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: First child
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t\t<div>\n\t\t\t<p>I'm
+        the first child!</p>\n\t\t\t<p>We're not.</p>\n\t\t\t<p>We're not.</p>\n\t\t\t<p>We're
+        not.</p>\n\t\t\t<p>We're not.</p>\n\t\t\t<p>We're not.</p>\n\t\t\t<p>We're
+        not.</p>\t\t\t\n\t\t</div>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! "$e('p:first-child').to.have.css('font-family','cursive',\"Did
+      you set the first paragraph to have a font-family of cursive?\");\n\np2 = $('p:nth-child(2)').css('font-family')\n\nif(p2
+      === 'cursive' || p2 === 'Cursive'){\n\treturn \"It looks like paragraphs beyond
+      the first one have the cursive font-family.\";\n}"
+    updated_at: 2012-10-03 18:19:26.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDl5wJz0kgACAWIv
+    created_at: 2012-08-26 01:20:00.000000000 Z
+    default_code: ''
+    entry: ! "Well done! You can actually select *any* child of an element after the
+      first child with the pseudo-class selector `nth-child`; you just add the child's
+      number in parentheses after the pseudo-class selector. For example,\n\n    p:nth-child(2)
+      {\n        color: red;\n    }\n\nWould turn every paragraph that is the *second*
+      child of its parent element red.\n\nThe element that **is the child** goes before
+      `:nth-child`; its parent element is the element that contains it."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 4
+      positive_feedback: 2
+    from_console: false
+    hint: ''
+    instruction: ! 'On the CSS tab:
+
+
+      1. Set the second paragraph to the font-family Tahoma.
+
+      2. Set the third paragraph to have the color #CC0000.
+
+      3. Set the fourth paragraph to have the background-color #00FF00.
+
+      4. Set the fifth paragraph to have the font-size 22px.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Nth child
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "p2 = $('p:nth-child(2)').css('font-family');\nif (p2 !== 'Tahoma'
+      && p2 !== 'tahoma') {\n  return \"Did you remember to make the second paragraph's
+      font-family Tahoma?\";\n}\n\np3 = $('p:nth-child(3)').css('color');\nif (p3
+      !== 'rgb(204, 0, 0)') {\n  return \"Did you remember to make the third paragraph's
+      color #CC0000? It looks like it's currently \" + p3 + \".\";\n}\n\np4 = $('p:nth-child(4)').css('background-color');\nif
+      (p4 !== 'rgb(0, 255, 0)') {\n  return \"Did you remember to set the fourth paragraph's
+      background-color to #00FF00? It looks like it's currently \" + p4 + \".\";\n}\n\np5
+      = $('p:nth-child(5)').css('font-size');\nif (p5 !== '22px') {\n  return \"Did
+      you remember to set the fifth paragraph's font-size to 22px? It looks like it's
+      currently \" + p5 + \".\";\n}\n\nreturn true;"
+    updated_at: 2012-11-17 03:47:19.173000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDl5wqaPrAACAXkr
+    created_at: 2012-08-26 01:20:02.000000000 Z
+    default_code: ''
+    entry: Feel like you're really starting to understand this CSS stuff? Prove it!
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 9
+      total: 15
+      other: 4
+      typo: 1
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Add three links to the body of the HTML document. They can
+      go anywhere and the text between the tags can say whatever you like.
+
+      2. On the CSS tab, set the all `link:hover`s to have no text-decoration.
+
+      3. Set the first link to the font color `#CDBE70`. (Remember: in this case,
+      the first link also happens to be the first child of the `body` element.)
+
+      4. Set the third link to the font color `#FFC125`.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Show it if you know it!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<!--Add
+        your HTML below!-->\n\t\t\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! "$e('a').to.be.above(2,function(){\n\treturn \"Did you remember
+      to add at least three links?\";\n});\n\nif (code['index.html'].match(/a\\s*href/)
+      === null) {\n  return \"Do your <a> tags all have href attributes?\";\n}\n\n$e('a').not.to.be.empty(\"Make
+      sure you put some text between your <a></a> tags!\");\n$e('a:hover').to.have.css('text-decoration','none',\"Did
+      you remember to set your a:hover to have a text-decoration of none?\");\n$e('a:first-child').to.have.css('color','#CDBE70',\"Did
+      you remember to set your first <a> to the color #CDBE70?\");\n$e('a:nth-child(3)').to.have.css('color','#FFC125',\"Did
+      you remember to set your third <a> to the color #FFC125?\");\n\n$p2 = $('p:nth-child(2)').css('color');\n\nif
+      (($p2 === '#CDBE70') || ($p2 === '#cdbe70') {\n\treturn \"It looks like you
+      accidentally gave your second paragraph the color #CDBE70!\";\n}\n\nreturn true;"
+    updated_at: 2012-11-19 14:18:51.314000000 Z
+    view: :console_and_editor
+  feedback_total: 24
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Pseudo-Class Selectors
+  num_forum_answers: 12
+  num_forum_questions: 7
+  published: true
+  read_feedback_total: 3
+  updated_at: 2012-11-25 07:20:28.983000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-26 01:21:44.000000000 Z
+  default_view: :console_and_editor
+  entry: Let's go over what you've learned in this lesson.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDpQwpGbFAACBHLU
+    created_at: 2012-08-26 16:37:22.000000000 Z
+    default_code: ''
+    entry: ! 'Great work! So far in this course, you''ve learned:
+
+
+      * A wider range of CSS selectors
+
+      * About cascading
+
+      * The universal selector
+
+      * Class and ID selectors
+
+      * Pseudo selectors
+
+
+      That''s a lot of material. We''re done covering new stuff for now—let''s go
+      over what you''ve learned.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Take a minute to collect your thoughts, then hit Run to start the
+      review exercises!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Final section breather
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-08-26 19:26:53.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDmeJ6cTkgACAecN
+    created_at: 2012-08-26 03:55:19.000000000 Z
+    default_code: ''
+    entry: ! "Remember how to reach selectors nested inside others? If you have a
+      paragraph inside a div that's inside *another* div, you can get to it like this:\n\n
+      \   div div p {\n        /*Some CSS*/\n    }\n\nThis will style all paragraphs
+      nested inside two divs and will leave all paragraphs that don't meet these criteria
+      alone.\n\n**Please note:** If you have adjusted your browser's zoom, tests involving
+      `font-size` and `height` will not work correctly. To remedy this, please type
+      Command+0 or Ctrl+0 to reset your view."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Give the paragraphs inside the list item tags a font size of 30px.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Multiple selectors
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t<div>\n\t\t<ul>\n\t\t\t<li><p>Grab
+        me!</p></li>\n\t\t\t<li><p>Me, too!</p></li>\n\t\t</ul>\n\t</div>\n\t\t<p>Don't
+        grab me!</p>\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! "targetPs = $('div > ul > li > p').css('font-size');\nif (targetPs
+      !== '30px') {\n  return \"Make sure you give the paragraphs inside the list
+      a font size of 30px! It looks like they're currently \" + targetPs + \".\";\n}\n\n$p
+      = $('body > p').css('font-size');\nif($p === '30px'){\n\treturn \"It looks like
+      you changed the font size of the paragraph outside the list by accident!\";\n};\n\nreturn
+      true;"
+    updated_at: 2012-10-04 16:58:51.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDmeJ3YZYgACAhAo
+    created_at: 2012-08-26 03:55:19.000000000 Z
+    default_code: ''
+    entry: You've also learned how to use class selectors to modify different elements
+      (that is, you can give the same styling to an h3 header, a paragraph, a link,
+      and a table).
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: ! 'Speaking of which, those sound like great examples. On the HTML
+      tab:
+
+
+      1. Create an h3 header and a paragraph.
+
+      2. Give them both a class of `"fancy"`.
+
+
+      On the CSS tab, set the `.fancy` class to have a font-family of cursive and
+      a color of violet (the word violet, not a hexadecimal value).'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Class selectors
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<link type=\"text/css\" rel=\"stylesheet\"
+        href=\"stylesheet.css\"/>\n\t\t<title>Result</title>\n\t</head>\n\t<body>\n\t\t<!--Add
+        your HTML below!-->\n\t\t\n\t</body>\n</html>"
+    - filename: stylesheet.css
+      content: ! '/*Add your CSS below!*/
+
+
+'
+    test_functions: ! '$e(''h3'').to.exist("Did you add an h3 header?");
+
+      $e(''p'').to.exist("Did you add a paragraph?");
+
+
+      $e(''h3'').not.to.be.empty("Make sure to put some text between your <h3></h3>
+      tags!");
+
+      $e(''p'').not.to.be.empty("Make sure to put some text between your <p></p> tags!");
+
+
+      $e(''h3.fancy'').to.exist("Did you give your h3 header a class of ''fancy''?");
+
+      $e(''p.fancy'').to.exist("Did you give your paragraph a class of ''fancy''?");
+
+
+      $e(''.fancy'').to.have.css(''font-family'',''cursive'',"Did you set .fancy to
+      have a font-family of cursive?");
+
+      $e(''.fancy'').to.have.css(''color'',''violet'',"Did you set .fancy to have
+      a color of violet?");'
+    updated_at: 2012-08-26 19:43:22.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDmeKOj9hQACAea+
+    created_at: 2012-08-26 03:55:20.000000000 Z
+    default_code: ''
+    entry: You've also learned about ID selectors, and how they can be used to target
+      a specific element.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: Add another paragraph to the HTML document. Give it an ID of `"serious"`.
+      On the CSS tab, give the `#serious` ID a font family of Courier and a font color
+      of `#8C8C8C`.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: ID selectors
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('p').to.be.above(1,function(){\n\treturn \"Did you remember
+      to add a new paragraph?\";\n})\n\n$e('p#serious').to.exist(\"Did you give your
+      new paragraph an ID of 'serious'?\");\n$e('p#serious').not.to.be.empty(\"Make
+      sure you have some text between your new <p></p> tags!\");\n$e('#serious').to.have.css('font-family','Courier',\"Did
+      you give the #serious ID a font-family of Courier?\");\n$e('#serious').to.have.css('color','#8C8C8C',\"Did
+      you give the #serious ID a color of #8C8C8C?\");"
+    updated_at: 2012-10-14 09:01:19.407000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDmeKNdmawACAfpn
+    created_at: 2012-08-26 03:55:20.000000000 Z
+    default_code: ''
+    entry: Home stretch! Let's toss in some pseudo-class selector magic to finish
+      this bad boy.
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 7
+      total: 9
+      other: 1
+      positive_feedback: 1
+    from_console: false
+    hint: That means you'll need to use `nth-child(4)` to select your paragraph on
+      the CSS tab.
+    instruction: ! 'Add a third paragraph to the HTML document. On the CSS tab, use
+      `nth-child` to give it a font size of 26px. Remember: your paragraph is the
+      third paragraph, but the fourth CHILD of `body`. The `h3` counts as the first
+      child!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Pseudo selectors
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    - filename: stylesheet.css
+      content: ''
+    test_functions: ! "$e('p').to.be.above(2,function(){\n\treturn \"Did you remember
+      to add your third paragraph?\";\n});\n\n$e('p:nth-child(4)').not.to.be.empty(\"Make
+      sure you put some text between the <p></p> tags of your third paragraph!\");\n\np3
+      = $('p:nth-child(4)').css('font-size');\nif (p3 !== '26px') {\n  return \"Did
+      you give your third paragraph a font-size of 26px? It looks like it's currently
+      \" + p3 + \".\";\n}\n\nif(code['stylesheet.css'].match(/nth-child\\(\\s*4\\s*\\)/)
+      === null){\n\treturn \"Did you use 'nth-child' to target your third paragraph?\"\n}\n\nreturn
+      true;"
+    updated_at: 2012-11-14 22:44:34.908000000 Z
+    view: :console_and_editor
+  feedback_total: 11
+  index: 4
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Review
+  num_forum_answers: 15
+  num_forum_questions: 4
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-14 22:44:34.948000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false

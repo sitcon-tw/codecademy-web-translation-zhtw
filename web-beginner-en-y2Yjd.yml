@@ -1,0 +1,812 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.5784355179704015
+classification: :lesson
+created_at: 2012-08-16 19:27:24.000000000 Z
+domain: :freestyle
+down_votes: 411
+entry: Now that you know how to build a webpage, let's learn how to make it look a
+  little nicer. You can add lists, change fonts, and more!
+feedback_total: 105
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGX
+level: :beginner
+locale: en
+name: HTML Basics II
+num_exercises: 16
+num_published_exercises: 16
+num_published_sections: 3
+num_readiness_feedbacks: 143
+num_sections: 3
+num_user_ratings: 2365
+project_scope: 0
+published: true
+published_at: 2012-10-10 15:19:07.481000000 Z
+rating: 1715.5848647651458
+read_feedback_total: 67
+readiness: 93.8
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-08-22 02:38:02.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 10828.0
+up_votes: 2158
+updated_at: 2012-11-26 16:30:44.468000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TsQ+SqeP5gABAAdS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-16 19:27:24.000000000 Z
+  default_view: :console_and_editor
+  entry: ! 'Making ordered and unordered lists. '
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UC1JnBvz1wACBWRk
+    created_at: 2012-08-16 19:27:24.000000000 Z
+    default_code: ''
+    entry: ! 'Let''s continue learning more HTML. You''ve already covered a lot: how
+      to set up `<head>` and `<body>` tags, how to make headings and paragraphs, and
+      how to add images and links.
+
+
+      In this course, we''ll take it to the next level:
+
+
+      a.  making ordered and unordered lists
+
+      b.  changing font size, color and type
+
+      c.  changing the background color
+
+      d.  aligning the text'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Let''s get warmed up by adding a `<title>` in the `<head>`.
+
+      2. In the body, create a paragraph (using `<p>`). Write anything you like!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Introduction
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t\n\t</head>\n\t<body>\n\t\t\n\t</body>\n</html>"
+    test_functions: ! "if (code['test.html'].match(/\\<title\\>/) === null){\n\treturn
+      'Did you remember to insert your title tags?';\n}\n\n$e('p').to.exist('Did you
+      remember to include your paragraph using p tags?');\n\n$e('p').not.to.be.empty('Make
+      sure you put your name and address between your p tags! (You can make up a name
+      and address if you like.)');\n\nreturn true;"
+    updated_at: 2012-10-09 14:21:04.240000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDalfMtl+wACAEMf
+    created_at: 2012-08-23 21:49:48.000000000 Z
+    default_code: ''
+    entry: ! 'Now is a good time to quickly mention **indentation**—that is, the amount
+      each line is spaced in from the margin. You''ll notice that when we place tags
+      inside of other tags, we indent them more. This really helps make your code
+      more readable!
+
+
+      Check out our indentation in the editor to the right. Try to follow this indentation
+      style when you''re writing HTML so you don''t get confused.'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: Hit Run to continue.
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Indentation is your friend
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\t</body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-08-23 21:52:19.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UC1JpbL85AACBUgm
+    created_at: 2012-08-16 19:27:33.000000000 Z
+    default_code: ''
+    entry: ! "Good! Now let's learn how to make **ordered lists**. An ordered list
+      is simply a list that is numbered, like the one below.\n\n1.  On line 8, we
+      begin the ordered list with the opening tag  `<ol>`.\n2.  On lines 9 – 11, we
+      **wrap** (*i.e.* surround) each individual item with `<li>` and `</li>` tags.
+      \n3.  Because each listed item is only on one line, we put the entire **element**
+      on one line.\n4. On line 12, we finish the ordered list with the closing tag
+      `</ol>`.\n\nHow cool is this? We can now add ordered lists to headings and paragraphs
+      as things we can use in our HTML body."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 5
+      typo: 3
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. On line 13, create a h2 sized heading called ''List of things
+      I find OK''.
+
+      2. Starting on line 14, create an ordered list.
+
+      3. Your ordered list should have three items, each wrapped (*i.e.* surrounded)
+      by `<li>` tags.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Ordered lists
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Lists</title>\n\t</head>\n\t<body>\n\t\t<h1>List
+        of my favorite things</h1>\n\t\t\t<ol>\n\t\t\t\t<li>raindrops on roses</li>\n\t\t\t\t<li>whiskas
+        on kittens</li>\n\t\t\t\t<li>call of duty: modern warfare</li>\t\t\t\t\n\t\t\t</ol>\n\t\t\n\t\t\n\t</body>\n</html>"
+    test_functions: ! "$e('h2').to.exist(\"Did you remember your h2 tags?\");\n$e('h2').not.to.be.empty(\"Make
+      sure your h2 header says 'List of things I find OK'!\");\n$e('ol').to.be.above(1,function(){\n\treturn
+      \"Make sure you add your second ordered list using ol tags.\";\n});\n$e('li').to.be.above(5,
+      function(){\n\treturn \"Does your ordered list have three list items?\";\n});\n$e('li').not.to.be.empty(\"Make
+      sure you put text inside your li tags! We want to know what you find OK.\");"
+    updated_at: 2012-11-26 08:00:06.334000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLho1PcngACABjq
+    created_at: 2012-08-21 01:17:23.000000000 Z
+    default_code: ''
+    entry: We really think that ordered lists are excellent. Who doesn't love a bit
+      of order? So let's do a bit more practice.
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 5
+      typo: 1
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! "1. Give your file a title.\n2. In the body, create a h3 heading
+      called 'Most annoying TV celebrities'.\n3. Make an ordered list of the top 3
+      TV celebrities you find not to your taste. I know it is hard to just keep the
+      list to 3. But try! \n4. Under this list, make a h2 heading \"Top 3 things I
+      can do for Mother's Day.\"\n5. Then make an ordered list of those things."
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: One more ordered list
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('title').not.to.be.empty(\"Did you give your webpage a title?\");\n$e('h3').to.exist(\"Did
+      you remember to put in your h3 tags?\")\n$e('h3').not.to.be.empty(\"Make sure
+      your first h3 heading isn't empty!\");\n$e('ol').to.exist('Did you create your
+      ordered list using ol tags?');\n$e('ol').to.be.above(1, function(){\n\treturn
+      \"Did you remember to include both ordered lists?\";\n})\n$e('li').to.be.above(5,function(){\n\treturn
+      \"Make sure you create at least three items in each of your two ordered list
+      using li tags.\";\n});\n$e('li').not.to.be.empty('Make sure you write something
+      between each pair of li tags!');\n$e('h2').to.exist(\"Did you remember to put
+      in your h2 tags?\")\n$e('h2').not.to.be.empty(\"Make sure your h2 heading isn't
+      empty!\");"
+    updated_at: 2012-11-04 22:19:13.015000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLlmPfATwACAClQ
+    created_at: 2012-08-21 01:34:16.000000000 Z
+    default_code: ''
+    entry: ! 'We have learned to make ordered lists. They are good if we want to number
+      things. But what if we just want bullet points? What if we don''t want ordered
+      lists?
+
+
+      We can use **unordered lists**. The best thing about unordered lists is that
+      they work exactly the same way as ordered lists. The only difference is that
+      instead of using `<ol>`, we use `<ul>`. Everything else is the same!'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ! "So an unordered list looks like:\n\n    <ul> \n        <li> random thing
+      1 </li>\n        <li> random thing 2 </li>\n    </ul>"
+    instruction: ! "1. Create a h1 heading called 'Some random thoughts'. \n2. Create
+      a paragraph which contains any text you like that describes your unordered list.\n3.
+      Create an unordered list which contains a list of 4 random things. "
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Unordered lists
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Unordered Lists</title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: ! "$e('h1').to.exist('Did you put in your h1 tags?').and.not.to.be.empty(\"Make
+      sure your h1 header isn't empty!\");\n$e('p').to.exist('Did you remember to
+      add your p tags?').and.not.to.be.empty('Make sure to type your paragraph about
+      your unordered list between your p tags!');\n$e('ul').to.exist('Make sure you
+      use ul tags for your unordered list!')\n$e('li').to.be.above(3,function(){\n\treturn
+      'Remember to include at least four list items in your unordered list.';\n});\n$e('li').not.to.be.empty(\"Remember
+      to write something between each set of li tags!\");"
+    updated_at: 2012-08-28 22:27:45.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDLmclhGxAACAC5O
+    created_at: 2012-08-21 01:37:54.000000000 Z
+    default_code: ''
+    entry: ! "So you've made ordered lists and unordered lists. Top work!\n\nWhat
+      if you have an ordered list, but each item in the ordered list also has an unordered
+      list nested in it? Nested simply means 'inside' the list. The editor has a small
+      example of this. Hit run to see what the result looks like!\n\nRemember: you've
+      been nesting tags already. When you nest tags, the last tag you open is the
+      first one you close. Here's an example:\n\n    <ul><li>Tacos!</li></ul>"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 6
+      positive_feedback: 1
+      correctness_test_issue: 1
+      other: 1
+    from_console: false
+    hint: ! "Try keep your formatting neat and tidy like the example. This will help
+      you as you type out your HTML. \n\na.  Start off first by creating the `<ul>`
+      and `</ul>` tags.\nb.  Then you'll use the `<li>` related to Favorite Boy and
+      Girl names\nc.  Then under each respective `<li>` item, create an ordered list
+      using `<ol>`. **Note**: You should not close your `<li>` before you open and
+      close your `<ol>`. "
+    instruction: ! '1. On line 21, create an unordered list.
+
+      2. Your unordered list should have two items: "Favorite Boys'' Names" and "Favorite
+      Girls'' Names."
+
+      3. Under each item of the unordered list, create an *ordered* list. Use the
+      ordered list to specify your 3 favorite boys'' names and 3 favorite girls''
+      names. Use the sample nested lists above as examples of how to do this.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Lists inside a list
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Nested lists</title>\n\t</head>\n\t<body>\n\t\t<ol>\n\t\t\t<li>Dad's
+        interests\n\t\t\t\t<ul>\n\t\t\t\t\t<li>football</li>\n\t\t\t\t\t<li>knitting</li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t\t<li>Mom's
+        interests\n\t\t\t\t<ul>\n\t\t\t\t\t<li>hating football</li>\n\t\t\t\t\t<li>skydiving</li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t</ol>\n\t\t\n\t</body>\n</html>"
+    test_functions: ! "$e('ul').to.be.above(2,function(){\n\treturn \"Make sure you
+      add an unordered list on line 19.\";\n});\n$e('ul').to.have.children('li','ol',function(){\n\treturn
+      \"Remember: you should have an ordered list with three items inside your unordered
+      list.\";\n});"
+    updated_at: 2012-11-03 04:00:24.166000000 Z
+    view: :console_and_editor
+  feedback_total: 17
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Making lists
+  num_forum_answers: 5
+  num_forum_questions: 3
+  published: true
+  read_feedback_total: 5
+  updated_at: 2012-11-26 08:00:06.355000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-21 03:00:40.000000000 Z
+  default_view: :console_and_editor
+  entry: Great work with lists! Now let's start adding a little stylistic flair.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDL52WozdAACAF0f
+    created_at: 2012-08-21 03:00:41.000000000 Z
+    default_code: ''
+    entry: ! "We have covered a lot about lists. Let's change gears and do some styling.
+      If you recall, HTML is the skeleton of the webpage, and CSS lets you give the
+      skeleton some skin and makeup. \n\nBut it is possible to do some **inline CSS**.
+      This simply means we can do some styling in our HTML file without worrying about
+      a separate CSS file! We'll learn this first because it will make learning CSS
+      a lot easier later.\n\nBefore we dive into fonts, it's important to learn about
+      making comments. You can include little notes in your HTML code that the browser
+      won't display. But it will be in the code to help you remember why you did certain
+      things. "
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 1
+    from_console: false
+    hint: ''
+    instruction: ! "1. Comments start with `<!--` and end with `-->` like this:\n\n
+      \   <!-- This is an example of a comment! -->\n\n2. Make the text on line 1
+      into a comment. Leave the text on line 3 alone!"
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Making comments
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! 'Make me into a comment.
+
+
+        <p>But leave me visible to the user!</p>
+
+
+        <!-- comment -->'
+    test_functions: ! "if (code['test.html'].match(/\\<!--\\s*Make me into a comment.\\s*--\\>/)
+      === null) {\n  return \"Did you turn the text on line 1 into a comment? Double
+      check that it looks like this: <!-- Make me into a comment. -->\";\n}\n\n$e('p').to.exist(\"Make
+      sure you didn't turn your paragraph into a comment!\");\nreturn true;"
+    updated_at: 2012-09-28 22:10:07.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDL+UyWfYwACAGvY
+    created_at: 2012-08-21 03:19:47.000000000 Z
+    default_code: ''
+    entry: ! "Recall that `<p>` and `</p>` are opening and closing **tags**.\n\nWe
+      can give tags more instructions by including **attributes** in the opening tag.
+      An attribute is simply a characteristic or some description for the content
+      in the element. You saw this with `src` in `<img>` and `href` in `<a>`.\n\nLet's
+      change the size of the text. How? We use the **style** attribute. We make it
+      equal to font-size, followed by a colon, the size you want, and end it with
+      `px` (short for \"pixels\"). For example:\n\n    <p style = \"font-size: 12px\">\n\n**Note**:
+      If you're having trouble with your font sizes, reset your browser's zoom by
+      pressing Cmd-0 or Ctrl-0."
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 12
+      total: 18
+      positive_feedback: 1
+      other: 4
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. On line 7, make the text size 8px.
+
+      2. On line 8, make the text size 12px.
+
+      3. On line 9, make the text size 44px.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Font size
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>First font size change</title>\n\t</head>\n\t<body>\n\t\t<p>
+        Some text for you to make tiny! </p>\n\t\t<p> Some text for you to make normal
+        size!</p>\n\t\t<p> Some text for you to make super big!</p>\n\t</body>\n</html>"
+    test_functions: ! "first = $('p:first-child').css('font-size');\nsecond = $('p:nth-child(2)').css('font-size');\nthird
+      = $('p:nth-child(3)').css('font-size');\n\nif (first != '8px') {\n  return \"It
+      looks like your first paragraph's font-size is \" + first + \" instead of 8px.\";\n}\n\nif
+      (second != '12px') {\n  return \"It looks like your second paragraph's font-size
+      is \" + second + \" instead of 12px.\";\n}\n\nif (third != '44px') {\n  return
+      \"It looks like your third paragraph's font-size is \" + third + \" instead
+      of 44px.\";\n}\n\nreturn true;\n\n/*$e('p:first-child').to.have.css('font-size','8px',\"Did
+      you set the first paragraph's font-size to 8px? It looks like it's \" + first
+      + \".\");\n$e('p:nth-child(2)').to.have.css('font-size','12px',\"Did you set
+      the second paragraph's font-size to 12px? It looks like it's \" + second + \".\");\n$e('p:nth-child(3)').to.have.css('font-size','44px',\"Did
+      you set the third paragraph's font-size to 44px? It looks like it's \" + third
+      + \".\");*/"
+    updated_at: 2012-11-22 13:57:37.434000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMArLBBowACAICK
+    created_at: 2012-08-21 03:29:48.000000000 Z
+    default_code: ''
+    entry: ! "What is awesome about the **style** attribute is that we use it a lot!
+      And we can use it with many different tags, not just `<p>`. Let's now change
+      the colors of our text in a heading.\n\nTo change the color of text, simply
+      add the style attribute in the opening tag, then make the style equal to \"color:blue\"
+      (or whatever color you like). For example:\n\n    <h2 style=\"color:red\">\n\nWhat
+      if you want to change the color *and* the size of the text? Simple! Just add
+      a semi-colon between each bit. For example:\n\n    <h2 style=\"color: green;
+      font-size:12px\">\n\nA full list of available colors can be found [here.](http://www.w3.org/TR/css3-color/#svg-color)\n"
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 11
+      total: 15
+      instructional_text_issue: 2
+      other: 1
+      typo: 1
+    from_console: false
+    hint: ! 'It''s important that the quotation marks surround all the words on the
+      right hand side of the equals sign.
+
+
+      Remember: if you have more than two style elements (like font color AND font
+      size), place a semi-colon between them.'
+    instruction: ! '1. Change the heading color to green and its size to 16px.
+
+      2. Change the color of the first paragraph to violet.
+
+      3. Change the color of the second paragraph to red and its font size to 8px.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Font color
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Changing the colors!</title>\n\t</head>\n\t<body>\n\t\t<h1>Big
+        Heading</h1>\n\t\t\t<p>A giant bear and a little duck were friends.</p>\n\t\t\t<p>But
+        the bear got hungry and ate the duck.</p>\n\t</body>\n</html>"
+    test_functions: ! "header = $('h1').css('font-size');\nthird = $('p:nth-child(3)').css('font-size');\n\n$e('h1').to.have.css('color','#008000',
+      'Did you remember to make the h1 header green?');\n\nif (header != '16px') {\n
+      \ return \"It looks like your header's font-size is \" + header + \" instead
+      of 16px.\";\n}\n\n$e('p:nth-child(2)').to.have.css('color','violet',\"Did you
+      remember to make the first paragraph violet?\");\n$e('p:nth-child(3)').to.have.css('color','red',\"Did
+      you remember to make the second paragraph red?\"); \n\nif (third != '8px') {\n
+      \ return \"It looks like your second paragraph's font-size is \" + third + \"
+      instead of 8px.\"\n}\n\nreturn true;"
+    updated_at: 2012-11-22 19:24:50.759000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMCkLnN5gACAIr1
+    created_at: 2012-08-21 03:37:52.000000000 Z
+    default_code: ''
+    entry: ! "We've covered font colors and font sizes. But we want more power! We
+      want to decide what font type to use. In HTML, this is called the font-family.\n\nTo
+      change font type, simply add the style attribute in the opening tag, then make
+      the style equal to \"font-family:Helvetica\" (or whatever font you like). For
+      example:\n\n    <h2 style=\"font-family:Garamond\">\n\nSee [here](http://www.w3.org/TR/CSS21/fonts.html#generic-font-families)
+      for a list of all available fonts."
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 16
+      correctness_test_issue: 7
+      positive_feedback: 2
+      typo: 3
+      other: 2
+    from_console: false
+    hint: ! 'After the style attribute, we have an equals sign, and all words on the
+      right hand side of the equals sign must be surrounded by quotation marks.
+
+
+      Don''t forget to separate the two style elements with a semi-colon!'
+    instruction: ! '1. Change the font size of the first listed item to 16px and the
+      font to Garamond.
+
+      2. Change the font size of the second listed item to 12px and the font to Bodoni.
+
+      3. Change the font size of the third listed item to 8px and the font to Futura.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Font family
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Loving the font changes</title>\n\t</head>\n\t<body>\n\t\t<h1>Big
+        title</h1>\n\t\t <ol>\n\t\t \t<li>This item is big Garamond.</li>\n\t\t \t<li>This
+        item is medium Bodoni.</li>\n\t\t \t<li>This item is small Futura</li>\n\t\t
+        </ol>\n\t</body>\n</html>"
+    test_functions: ! "first = $('li:first-child').css('font-size');\nsecond = $('li:nth-child(2)').css('font-size');\nthird
+      = $('li:nth-child(3)').css('font-size');\n\nif (first != '16px') {\n  return
+      \"It looks like your first li's font-size is \" + first + \" instead of 16px.\";\n}\n\nif
+      (second != '12px') {\n  return \"It looks like your second li's font-size is
+      \" + second + \" instead of 12px.\";\n}\n\nif (third != '8px') {\n  return \"It
+      looks like your third li's font-size is \" + third + \" instead of 8px.\";\n}\n\n$e('li:first-child').to.have.css('font-family','Garamond',\"Did
+      you remember to change the first li to the font Garamond?\");\n\n$e('li:nth-child(2)').to.have.css('font-family','Bodoni',\"Did
+      you remember to change the second li to the font Bodoni?\");\n\n$e('li:nth-child(3)').to.have.css('font-family','Futura',\"Did
+      you remember to change the third li to the font Futura?\");\n\nreturn true;"
+    updated_at: 2012-11-26 08:05:41.093000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMGXYVgnQACAKG6
+    created_at: 2012-08-21 03:54:05.000000000 Z
+    default_code: ''
+    entry: ! "Awesome job! You've now got control of your webpage, including the color,
+      size and type of your font. To recap, we use the style attribute in the opening
+      tag, like so:\n\na.  `font-size: 14px`\nb.  `color: orange`\nc.  `font-family:
+      Bodoni`\n\n    <p style = \"font-size:14px; color: orange; font-family: Bodoni\">\n\nIt's
+      important to know that you can use the style attribute for paragraphs, headings,
+      and even links!"
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 2
+      total: 8
+      other: 3
+      positive_feedback: 3
+    from_console: false
+    hint: ''
+    instruction: ! 'For the paragraph on line 7, make the font have:
+
+
+      a. size of 20px
+
+      b. color of blue
+
+      c. type of Garamond'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Recap
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Putting it all together</title>\n\t</head>\n\t<body>\n\t\t<p>A
+        truly spectacular paragraph!</p>\n\t</body>\n</html>"
+    test_functions: ! "pfont = $('p').css('font-size');\n\nif (pfont != '20px') {\n
+      \ return \"It looks like your paragraph's font-size is \" + pfont + \" instead
+      of 20px.\";\n}\n\n$e('p').to.have.css('color','#0000FF',\"Did you remember to
+      set the color to blue?\");\n$e('p').to.have.css('font-family','Garamond',\"Did
+      you remember to set the font-family to Garamond?\");\n\nreturn true"
+    updated_at: 2012-11-21 01:53:57.277000000 Z
+    view: :console_and_editor
+  feedback_total: 58
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: Styling the font!
+  num_forum_answers: 27
+  num_forum_questions: 13
+  published: true
+  read_feedback_total: 7
+  updated_at: 2012-11-26 08:05:41.117000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-08-21 03:59:59.000000000 Z
+  default_view: :console_and_editor
+  entry: You can never be too stylin'.
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMHv2ozdAACALXa
+    created_at: 2012-08-21 03:59:59.000000000 Z
+    default_code: ''
+    entry: ! "The previous section covered a number of nice tricks to control how
+      the text looks. Now we want to learn about how to change the color of the webpage's
+      background. \n\nAgain, the **style** attribute is used. We make it equal to
+      \"background-color: red\" (or whatever color you want). And it's as easy as
+      that!"
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 15
+      total: 20
+      other: 3
+      instructional_text_issue: 1
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Change the background color of the body to brown. To do so,
+      add the style attribute to the opening `<body>` tag.
+
+      2. Change the background color of the ordered list to yellow.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Background color
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: test.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Sexy background color!</title>\n\t</head>\n\t<body>\n\t\t<h3>Favorite
+        Football Teams</h3>\n\t\t\t<ol>\n\t\t\t\t<li>The Hawthorn Football Club</li>\t\n\t\t\t\t<li>San
+        Franscisco 49ers</li>\n\t\t\t\t<li>Barcelona FC</li>\n\t\t\t</ol>\t\t\t\n\t</body>\n</html>"
+    test_functions: ! "if(code['test.html'].match(/\\<body style\\s*=\\s*['\"]background\\-color\\s*:\\s*brown;?\\s*['\"]\\s*\\>/)
+      === null){\n\treturn \"Make sure you set the body's background-color to brown.\";\n}\n\nif(code['test.html'].match(/\\<ol
+      style\\s*=\\s*['\"]background\\-color\\s*:\\s*yellow;?\\s*['\"]\\s*\\>/) ===
+      null){\n\treturn \"Make sure you set the ordered list's background-color to
+      yellow.\";\n}\n\nreturn true;"
+    updated_at: 2012-11-24 00:14:16.782000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMOggg2yQACAMm/
+    created_at: 2012-08-21 04:28:50.000000000 Z
+    default_code: ''
+    entry: ! "Often it is nice to be able to move the text around. To do so, we again
+      use the **style** atribute. And then we use \"text-align:left\" (or right, or
+      center) to determine the location of the text.\n\n    <h1 style=\"text-align:center\">"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 4
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Make the h3 heading aligned center.
+
+      2. Make the first item in the list align left.
+
+      3. Make the second item align center.
+
+      4. Make the third item align right.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Aligning the text
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Sexy background color!</title>\n\t</head>\n\t<body>\n\t\t<h3>Favorite
+        Football Teams</h3>\n\t\t\t<ol>\n\t\t\t\t<li>The Hawthorn Football Club</li>\t\n\t\t\t\t<li>San
+        Franscisco 49ers</li>\n\t\t\t\t<li>Barcelona FC</li>\n\t\t\t</ol>\t\t\t\n\t</body>\n</html>"
+    test_functions: ! '$e(''h3'').to.have.css(''text-align'',''center'',"Make sure
+      you use ''text-align:center'' for the h3 style attribute.");
+
+
+      $e(''li:first-child'').to.have.css(''text-align'',''left'',"Make sure you use
+      ''text-align:left'' for the first li tag.");
+
+
+      $e(''li:nth-child(2)'').to.have.css(''text-align'',''center'',"Make sure you
+      use ''text-align:center'' for the second li tag.");
+
+
+      $e(''li:nth-child(3)'').to.have.css(''text-align'',''right'',"Make sure you
+      use ''text-align:right'' for the third li tag.");'
+    updated_at: 2012-11-22 19:37:50.983000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMTcqfxdgACAPEB
+    created_at: 2012-08-21 04:49:54.000000000 Z
+    default_code: ''
+    entry: ! 'We can change the appearance of words. What if we want to make them
+      **bold**?
+
+
+      Surprise! We don''t have to use the style attribute. Here are the steps:
+
+
+      1.  Identify the word or words you want to **bold**.
+
+      2.  Surround those words with opening tag `<strong>` and closing tag `</strong>`.
+
+      3.  Celebrate how awesome you are at HTML!'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 4
+      instructional_text_issue: 2
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! '1. Bold the word ''sing'' on line 7.
+
+      2. Bold the word ''too'' on line 8.'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Strong words!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Viva La Revolution!</title>\n\t</head>\n\t<body>\n\t\t<p>Do
+        you hear the people sing?</p>\n\t\t<p>No I don't. I'm too busy eating cake.</p>\n\t</body>\n</html>"
+    test_functions: ! "if (code['index.html'].match(/\\<strong\\>sing\\<\\/strong\\>/)
+      === null){\n\treturn 'Make sure you put <strong> tags around \"sing\"!';\n}\n\nif
+      (code['index.html').match(/\\<strong\\>too\\<\\/strong\\>/) === null){\n\treturn
+      'Make sure you put <strong> tags around \"too\"!';\n}"
+    updated_at: 2012-11-25 07:53:00.906000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMUfbnN5gACAOcj
+    created_at: 2012-08-21 04:54:21.000000000 Z
+    default_code: ''
+    entry: ! 'Aside from bolding words, we often want to *italicize* words for **em**phasis.
+      (Hint, hint.)
+
+
+      Like bolding, we do not need to use the style attribute. Instead:
+
+
+      1.  Identify the word or words you want to italicize.
+
+      2.  Surround the word or words with the opening tag `<em>` and closing tag `</em>`.
+
+      3. Be humble and grateful for your newfound powers.'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: ! '1. On line 7, italicize the word ''that''.
+
+      2. On line 8, italicize the word ''so''.
+
+
+      Make sure you don''t include the `"!"` between the `<em></em>` tags on line
+      7!'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Emphasize words!
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Some nice practice</title>\n\t</head>\n\t<body>\n\t\t<p>Hey,
+        don't say that!</p>\n\t\t<p>I am so tired.</p>\n\t</body>\n</html>"
+    test_functions: ! "if (code['index.html'].match(/\\<em\\>that\\<\\/em\\>/) ===
+      null){\n\treturn 'Make sure you put <em> tags around \"that\"!';\n}\n\nif (code['index.html'].match(/\\<em\\>so\\<\\/em\\>/)
+      === null){\n\treturn 'Make sure you put <em> tags around \"so\"!';\n}\n\nreturn
+      true;"
+    updated_at: 2012-09-28 22:22:00.000000000 Z
+    view: :console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UDMVJ4VgnQACAO+W
+    created_at: 2012-08-21 04:57:11.000000000 Z
+    default_code: ''
+    entry: ! "This has been an incredibly busy lesson, and you've covered a lot. Congratulations!
+      We have learned:\n\n1.  how to make ordered and unordered lists\n2.  change
+      the color, size and type of font\n3.  add comments to our HTML file\n4.  change
+      the page's background color\n5.  align the text \n6.  bold and italicize the
+      text"
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: You're done with this lesson—press Run to finish. If you want to
+      be a real boss, test out your new skills on a project and make something to
+      show your pals!
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Summary
+    solution_code: ''
+    solution_entry: ''
+    tabs:
+    - filename: index.html
+      content: ! "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body></body>\n</html>"
+    test_functions: return true;
+    updated_at: 2012-08-21 15:34:44.000000000 Z
+    view: :console_and_editor
+  feedback_total: 30
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGX
+  name: More nice styling!
+  num_forum_answers: 9
+  num_forum_questions: 6
+  published: true
+  read_feedback_total: 0
+  updated_at: 2012-11-25 07:53:01.021000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TsQ+SqeP5gABAAdS
+  viewable: false
