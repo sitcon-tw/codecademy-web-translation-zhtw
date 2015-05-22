@@ -24,7 +24,7 @@
 ##說明
 
 1. 右方，有個名為 test.html 的檔案。
-2. 將第 2 行的文字改成任何你喜歡的!(在"<strong>" 和 "</strong>" 中間的文字)
+2. 將第 2 行的文字改成任何你喜歡的!(在`<strong>` 和` </strong>` 中間的文字)
 3. 點擊 Save & Submit Code，然後你會看到 test.html 在將會瀏覽器中發生的情形。看到了嗎？
->"<strong></strong>"
+	<strong></strong>
 的語法讓文字變成粗體了！
