@@ -1,6 +1,12 @@
 zh-TW translation of [Codecademy](http://www.codecademy.com/)'s web course
 ===========================================================================
-Translated by pcchou, seadog007, and spyf.
+Translated by
+
+* [Philip Chou](https://github.com/pcchou)
+* [海豹](https://github.com/seadog007)
+* [spyf](https://github.com/spyf)
+* [Zhe-An Lin](https://github.com/ZALin)
+* [Denny Huang](https://github.com/denny0223)
 
 Disclaimer
 ----------
