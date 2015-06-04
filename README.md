@@ -1,4 +1,4 @@
-[Codecademy web](http://www.codecademy.com/) 課程繁體中文翻譯
+zh-TW translation of [Codecademy](http://www.codecademy.com/)'s web course
 ===========================================================================
 翻譯
 
