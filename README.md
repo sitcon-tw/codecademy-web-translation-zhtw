@@ -11,7 +11,7 @@ zh-TW translation of [Codecademy](http://www.codecademy.com/)'s web course
 
 目錄
 ----
-1. HTML
+1. HTML Basics
    1. [1-1 為什麼學習 HTML](1-1_why-learn-html.md)
    2. [1-2 HTML 和 CSS](1-2_html-and-css.md)
    3. [1-3 基本語法](1-3_Basic-terminology.md)
@@ -22,11 +22,11 @@ zh-TW translation of [Codecademy](http://www.codecademy.com/)'s web course
    8. [1-8 使用每個標題](1-8_Using-every-heading.md)
    9. [1-9 課程間的短暫休息](1-9_Mid-lesson-breather.md)
    10. [1-10 你要去的地方](1-10_You're-going-places.md)
-   11. [1-11 新增圖片](1-11_Adding-images.md)	
+   11. [1-11 新增圖片](1-11_Adding-images.md)
    12. [1-12 按那個圖片](1-12_click-that-image.md)
    13. [1-13 圖片與連結](1-13_images-and-links.md)
-   14. [1-14 恭喜！](1-14_congratulations.md)	
-2. CSS
+   14. [1-14 恭喜！](1-14_congratulations.md)
+2. CSS: An Overview
    1. [7-1 眼見為憑](7-1_seeing-is-beliving.md)
    2. [7-2 CSS 是什麼？](7-2_what-css-is.md)
    3. [7-3 為什麼要分離？](7-3_why-seperate-form-from-function.md)
